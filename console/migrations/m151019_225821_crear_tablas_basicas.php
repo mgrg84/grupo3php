@@ -55,6 +55,13 @@ class m151019_225821_crear_tablas_basicas extends Migration
           'ubicacion' => Schema::TYPE_TEXT . ' NOT NULL',
           'prioridad' => Schema::TYPE_INTEGER . ' NOT NULL',
           'horarioAtencion' => Schema::TYPE_TEXT . ' NOT NULL',
+          'lunes' => Schema::TYPE_BOOLEAN . ' NOT NULL',
+          'martes' => Schema::TYPE_BOOLEAN . ' NOT NULL',
+          'miercoles' => Schema::TYPE_BOOLEAN . ' NOT NULL',
+          'jueves' => Schema::TYPE_BOOLEAN . ' NOT NULL',
+          'viernes' => Schema::TYPE_BOOLEAN . ' NOT NULL',
+          'sabado' => Schema::TYPE_BOOLEAN . ' NOT NULL',
+          'domingo' => Schema::TYPE_BOOLEAN . ' NOT NULL',
         ], $tableOptions);
         //JOIN TABLE PEDIDOS DE UN COMERCIO
         $this->createTable('comercio_pedidos', [
@@ -72,11 +79,23 @@ class m151019_225821_crear_tablas_basicas extends Migration
         $this->createTable('ruta', [
           'id' => Schema::TYPE_PK,
           'idUsuario' => Schema::TYPE_INTEGER . ' NOT NULL',
+          'fecha' => Schema::TYPE_DATE . ' NOT NULL',
         ], $tableOptions);
-
-
-        //JOIN TABLE RUTAS DE UN COMERCIO??
-        //TODO SI PINTA
+        //JOIN TABLE RUTAS DE UN USUARIO
+        $this->createTable('user_rutas', [
+          'id' => Schema::TYPE_PK,
+          'idUsuario' => Schema::TYPE_INTEGER . ' NOT NULL',
+          'idRuta' => Schema::TYPE_INTEGER . ' NOT NULL',
+        ], $tableOptions);
+        //JOIN TABLE COMERCIOS DE UNA RUTA
+        $this->createTable('ruta_comercios', [
+          'id' => Schema::TYPE_PK,
+          'idRuta' => Schema::TYPE_INTEGER . ' NOT NULL',
+          'idComercio' => Schema::TYPE_INTEGER . ' NOT NULL',
+          'recorrido' => Schema::TYPE_BOOLEAN . ' NOT NULL DEFAULT false',
+        ], $tableOptions);
+        //ALTER TABLE PARA AGREGAR UBICACION_DOMICILIO AL USUARIO
+        $this->addColumn('user', 'ubicacionDomicilio', Schema::TYPE_TEXT . ' NOT NULL DEFAULT ""');
 
 
         //CLAVE FORANEA: idCategoria en producto => id en categoria
@@ -100,12 +119,20 @@ class m151019_225821_crear_tablas_basicas extends Migration
         $this->addForeignKey("fk_comercio_stock_stock", "comercio_stocks", "idStock", "stock", "id");
         $this->addForeignKey("fk_comercio_stock_comer", "comercio_stocks", "idComercio", "comercio", "id");
 
+        $this->addForeignKey("fk_ruta_user", "ruta", "idUsuario", "user", "id");
+
+        $this->addForeignKey("fk_user_ruta_user", "user_rutas", "idUsuario", "user", "id");
+        $this->addForeignKey("fk_user_ruta_ruta", "user_rutas", "idRuta", "ruta", "id");
+
+        $this->addForeignKey("fk_ruta_comer_ruta", "ruta_comercios", "idRuta", "ruta", "id");
+        $this->addForeignKey("fk_ruta_comer_comer", "ruta_comercios", "idComercio", "comercio", "id");
+
 
     }
 
     public function down()
     {
-        echo "m151019_225821_crear_tablas_basicas cannot be reverted.\n";
+        echo "m151019_225821_crear_tablas_basicas cannot be reverted.\nGood day. Fuck off now.\n";
 
         return false;
     }
