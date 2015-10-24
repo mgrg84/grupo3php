@@ -249,6 +249,9 @@
     <Compile Include="common\mail\layouts\text.php" />
     <Compile Include="common\mail\passwordResetToken-html.php" />
     <Compile Include="common\mail\passwordResetToken-text.php" />
+    <Compile Include="common\models\Comercio.php" />
+    <Compile Include="common\models\ComercioPedidos.php" />
+    <Compile Include="common\models\ComercioStocks.php" />
     <Compile Include="common\models\LoginForm.php" />
     <Compile Include="common\models\User.php" />
     <Compile Include="common\widgets\Alert.php" />
