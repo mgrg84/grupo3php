@@ -5,9 +5,9 @@ use yii\helpers\Html;
 /* @var $content string */
 
 
-if (Yii::$app->controller->action->id === 'login') { 
+if (Yii::$app->controller->action->id === 'login') {
 /**
- * Do not use this code in your template. Remove it. 
+ * Do not use this code in your template. Remove it.
  * Instead, use the code  $this->layout = '//main-login'; in your controller.
  */
     echo $this->render(
@@ -24,19 +24,19 @@ if (Yii::$app->controller->action->id === 'login') {
 
     dmstr\web\AdminLteAsset::register($this);
 
-    $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
-    ?>
-    <?php $this->beginPage() ?>
-    <!DOCTYPE html>
-    <html lang="<?= Yii::$app->language ?>">
-    <head>
-        <meta charset="<?= Yii::$app->charset ?>"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <?= Html::csrfMetaTags() ?>
-        <title><?= Html::encode($this->title) ?></title>
-        <?php $this->head() ?>
-    </head>
-    <body class="skin-blue sidebar-mini">
+    $directoryAsset = Yii::$app->assetManager->getPublishedUrl('web/assets');
+?>
+<?php $this->beginPage() ?>
+<!DOCTYPE html>
+<html lang="<?= Yii::$app->language ?>">
+<head>
+    <meta charset="<?= Yii::$app->charset ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <?= Html::csrfMetaTags() ?>
+    <title>Stock Manager</title>
+    <?php $this->head() ?>
+</head>
+<body class="skin-blue sidebar-mini">
     <?php $this->beginBody() ?>
     <div class="wrapper">
 
@@ -59,7 +59,7 @@ if (Yii::$app->controller->action->id === 'login') {
     </div>
 
     <?php $this->endBody() ?>
-    </body>
-    </html>
-    <?php $this->endPage() ?>
+</body>
+</html>
+<?php $this->endPage() ?>
 <?php } ?>

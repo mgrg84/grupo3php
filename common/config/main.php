@@ -1,5 +1,6 @@
 <?php
 return [
+    'name' => 'Stock Manager',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
         'cache' => [
