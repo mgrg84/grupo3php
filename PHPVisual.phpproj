@@ -30,6 +30,7 @@
     <Compile Include="backend\config\main.php" />
     <Compile Include="backend\config\params-local.php" />
     <Compile Include="backend\config\params.php" />
+    <Compile Include="backend\controllers\ComerciosController.php" />
     <Compile Include="backend\controllers\RecorridosController.php" />
     <Compile Include="backend\controllers\SiteController.php" />
     <Compile Include="backend\models\.gitkeep" />
@@ -196,6 +197,11 @@
     <Compile Include="backend\themes\orange-strings\files\theme\twitter.png" />
     <Compile Include="backend\themes\orange-strings\files\main_style.css" />
     <Compile Include="backend\themes\orange-strings\layouts\main.php" />
+    <Compile Include="backend\views\comercios\create.php" />
+    <Compile Include="backend\views\comercios\index.php" />
+    <Compile Include="backend\views\comercios\update.php" />
+    <Compile Include="backend\views\comercios\view.php" />
+    <Compile Include="backend\views\comercios\_form.php" />
     <Compile Include="backend\views\layouts\main.php" />
     <Compile Include="backend\views\recorridos\index.php" />
     <Compile Include="backend\views\site\error.php" />
@@ -437,6 +443,7 @@
     <Folder Include="backend\themes\orange-strings\layouts" />
     <Folder Include="backend\themes\orange-strings" />
     <Folder Include="backend\themes" />
+    <Folder Include="backend\views\comercios\" />
     <Folder Include="backend\views\layouts" />
     <Folder Include="backend\views\recorridos\" />
     <Folder Include="backend\views\site" />
