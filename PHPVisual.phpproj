@@ -202,11 +202,14 @@
     <Compile Include="backend\views\comercios\update.php" />
     <Compile Include="backend\views\comercios\view.php" />
     <Compile Include="backend\views\comercios\_form.php" />
+    <Compile Include="backend\views\layouts\content.php" />
+    <Compile Include="backend\views\layouts\header.php" />
+    <Compile Include="backend\views\layouts\left.php" />
+    <Compile Include="backend\views\layouts\main-login.php" />
     <Compile Include="backend\views\layouts\main.php" />
     <Compile Include="backend\views\recorridos\index.php" />
     <Compile Include="backend\views\site\error.php" />
     <Compile Include="backend\views\site\index.php" />
-    <Compile Include="backend\views\site\login.php" />
     <Compile Include="backend\web\assets\6afbe66c\jquery.js" />
     <Compile Include="backend\web\assets\6afbe66c\jquery.min.js" />
     <Compile Include="backend\web\assets\6afbe66c\jquery.min.map" />
