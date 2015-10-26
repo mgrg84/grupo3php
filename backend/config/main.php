@@ -14,7 +14,7 @@ return [
     'modules' => [],
     'components' => [
         //TEMAS PARA PONER LINDO EL SITIO
-        /*
+
         'view' => [
             'theme' => [
                 'pathMap' => [
@@ -25,16 +25,16 @@ return [
                 ]
             ]
         ],
-        */
+        
         // FIN TEMAS PARA PONER LINDO EL SITIO
         // TEMA ADMIN LTE
-        'view' => [
-             'theme' => [
-                 'pathMap' => [
-                    '@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app'
-                 ],
-             ],
-        ],
+        //'view' => [
+        //     'theme' => [
+        //         'pathMap' => [
+        //            '@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app'
+        //         ],
+        //     ],
+        //],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
