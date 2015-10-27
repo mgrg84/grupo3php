@@ -21,6 +21,12 @@ use yii\helpers\Html;
 
                 <!-- Messages: style can be found in dropdown.less-->
                 <li class="dropdown messages-menu">
+                    <?= Html::a('Categorias', ['/categoria/']) ?>
+                </li>
+                <li class="dropdown messages-menu">
+                    <?= Html::a('Productos', ['/producto/']) ?>
+                </li>
+                <li class="dropdown messages-menu">
                     <?= Html::a('Recorridos', ['/recorridos/']) ?>
                 </li>
                 <li class="dropdown notifications-menu">
