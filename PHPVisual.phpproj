@@ -36,6 +36,10 @@
     <Compile Include="backend\controllers\RecorridosController.php" />
     <Compile Include="backend\controllers\SiteController.php" />
     <Compile Include="backend\models\.gitkeep" />
+    <Compile Include="backend\models\Categoria.php" />
+    <Compile Include="backend\models\CategoriaSearch.php" />
+    <Compile Include="backend\models\Producto.php" />
+    <Compile Include="backend\models\ProductoSearch.php" />
     <Compile Include="backend\runtime\cache\96\963454f612a8b5fb4a63ba1e97f028a1.bin" />
     <Compile Include="backend\runtime\debug\5622cb9a177cd.data" />
     <Compile Include="backend\runtime\debug\5622cb9a3fa53.data" />
@@ -273,6 +277,8 @@
     <Compile Include="common\mail\layouts\text.php" />
     <Compile Include="common\mail\passwordResetToken-html.php" />
     <Compile Include="common\mail\passwordResetToken-text.php" />
+    <Compile Include="common\models\Comercio.php" />
+    <Compile Include="common\models\ComercioSearch.php" />
     <Compile Include="common\models\LoginForm.php" />
     <Compile Include="common\models\User.php" />
     <Compile Include="common\widgets\Alert.php" />

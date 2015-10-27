@@ -11,7 +11,6 @@ use Yii;
  * @property string $nombre
  * @property string $ubicacion
  * @property integer $prioridad
- * @property string $horarioAtencion
  * @property integer $lunes
  * @property integer $martes
  * @property integer $miercoles
@@ -19,6 +18,8 @@ use Yii;
  * @property integer $viernes
  * @property integer $sabado
  * @property integer $domingo
+ * @property string $horario_desde
+ * @property string $horario_hasta
  *
  * @property ComercioPedidos[] $comercioPedidos
  * @property ComercioStocks[] $comercioStocks
@@ -42,9 +43,10 @@ class Comercio extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nombre', 'ubicacion', 'prioridad', 'horarioAtencion', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'], 'required'],
-            [['nombre', 'ubicacion', 'horarioAtencion'], 'string'],
-            [['prioridad', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'], 'integer']
+            [['nombre', 'ubicacion', 'prioridad', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo', 'horario_desde', 'horario_hasta'], 'required'],
+            [['nombre', 'ubicacion'], 'string'],
+            [['prioridad', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'], 'integer'],
+            [['horario_desde', 'horario_hasta'], 'safe']
         ];
     }
 
@@ -58,7 +60,6 @@ class Comercio extends \yii\db\ActiveRecord
             'nombre' => Yii::t('app', 'Nombre'),
             'ubicacion' => Yii::t('app', 'Ubicacion'),
             'prioridad' => Yii::t('app', 'Prioridad'),
-            'horarioAtencion' => Yii::t('app', 'Horario Atencion'),
             'lunes' => Yii::t('app', 'Lunes'),
             'martes' => Yii::t('app', 'Martes'),
             'miercoles' => Yii::t('app', 'Miercoles'),
@@ -66,6 +67,8 @@ class Comercio extends \yii\db\ActiveRecord
             'viernes' => Yii::t('app', 'Viernes'),
             'sabado' => Yii::t('app', 'Sabado'),
             'domingo' => Yii::t('app', 'Domingo'),
+            'horario_desde' => Yii::t('app', 'Horario Desde'),
+            'horario_hasta' => Yii::t('app', 'Horario Hasta'),
         ];
     }
 
