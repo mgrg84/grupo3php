@@ -4,9 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "547fc80149c040d439ce92aabe8c18f7",
-    "content-hash": "a79f05e5edf2dd36b54753c236f23346",
-
+    "hash": "d8f54c53b8697cafa329c4a938bff857",
+    "content-hash": "ba4a140f83edbd85acff7bc1f57a5a45",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -96,6 +95,43 @@
                 "responsive",
                 "web"
             ]
+        },
+        {
+            "name": "bower-asset/fontawesome",
+            "version": "v4.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FortAwesome/Font-Awesome.git",
+                "reference": "e554555d73a44e0a7d11b0361ad7a5325a5f551c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/e554555d73a44e0a7d11b0361ad7a5325a5f551c",
+                "reference": "e554555d73a44e0a7d11b0361ad7a5325a5f551c",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "less/font-awesome.less",
+                    "scss/font-awesome.scss"
+                ],
+                "bower-asset-ignore": [
+                    "*/.*",
+                    "*.json",
+                    "src",
+                    "*.yml",
+                    "Gemfile",
+                    "Gemfile.lock",
+                    "*.md"
+                ]
+            },
+            "license": [
+                "OFL-1.1",
+                "MIT",
+                "CC-BY-3.0"
+            ],
+            "description": "Font Awesome"
         },
         {
             "name": "bower-asset/jquery",
@@ -544,73 +580,31 @@
             "time": "2013-11-30 08:25:19"
         },
         {
-            "name": "fortawesome/font-awesome",
-            "version": "v4.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FortAwesome/Font-Awesome.git",
-                "reference": "41b9ed01103e6820c3cb043ba7ddab30ecd3f4c0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/41b9ed01103e6820c3cb043ba7ddab30ecd3f4c0",
-                "reference": "41b9ed01103e6820c3cb043ba7ddab30ecd3f4c0",
-                "shasum": ""
-            },
-            "require-dev": {
-                "jekyll": "1.0.2",
-                "lessc": "1.4.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.0.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "OFL-1.1",
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dave Gandy",
-                    "email": "dave@fontawesome.io",
-                    "homepage": "http://twitter.com/davegandy",
-                    "role": "Developer"
-                }
-            ],
-            "description": "The iconic font and CSS framework",
-            "homepage": "http://fontawesome.io/",
-            "keywords": [
-                "FontAwesome",
-                "awesome",
-                "bootstrap",
-                "font",
-                "icon"
-            ],
-            "time": "2015-01-22 18:09:42"
-        },
-        {
             "name": "rmrevin/yii2-fontawesome",
-            "version": "2.9.2",
+            "version": "2.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmrevin/yii2-fontawesome.git",
-                "reference": "717747ffd1f5169e4217b3f17e407366b51d22ca"
+                "reference": "51d33ec9d1d7edab2166f1d42668c1bc8d28c068"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmrevin/yii2-fontawesome/zipball/717747ffd1f5169e4217b3f17e407366b51d22ca",
-                "reference": "717747ffd1f5169e4217b3f17e407366b51d22ca",
+                "url": "https://api.github.com/repos/rmrevin/yii2-fontawesome/zipball/51d33ec9d1d7edab2166f1d42668c1bc8d28c068",
+                "reference": "51d33ec9d1d7edab2166f1d42668c1bc8d28c068",
                 "shasum": ""
             },
             "require": {
-                "fortawesome/font-awesome": "4.3.*",
+                "bower-asset/fontawesome": "4.4.*",
                 "php": ">=5.4.0",
                 "yiisoft/yii2": "2.0.*"
             },
             "type": "yii2-extension",
+            "extra": {
+                "asset-installer-paths": {
+                    "npm-asset-library": "vendor/npm",
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "rmrevin\\yii\\fontawesome\\": ""
@@ -635,7 +629,7 @@
                 "font",
                 "yii"
             ],
-            "time": "2015-04-28 20:15:13"
+            "time": "2015-08-15 16:50:16"
         },
         {
             "name": "swiftmailer/swiftmailer",
