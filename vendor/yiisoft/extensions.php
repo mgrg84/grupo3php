@@ -88,7 +88,7 @@ return array (
   'rmrevin/yii2-fontawesome' => 
   array (
     'name' => 'rmrevin/yii2-fontawesome',
-    'version' => '2.9.2.0',
+    'version' => '2.12.0.0',
     'alias' => 
     array (
       '@rmrevin/yii/fontawesome' => $vendorDir . '/rmrevin/yii2-fontawesome',
