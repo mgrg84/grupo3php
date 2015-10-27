@@ -54,18 +54,18 @@ class Comercio extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'nombre' => 'Nombre',
-            'ubicacion' => 'Ubicacion',
-            'prioridad' => 'Prioridad',
-            'horarioAtencion' => 'Horario Atencion',
-            'lunes' => 'Lunes',
-            'martes' => 'Martes',
-            'miercoles' => 'Miercoles',
-            'jueves' => 'Jueves',
-            'viernes' => 'Viernes',
-            'sabado' => 'Sabado',
-            'domingo' => 'Domingo',
+            'id' => Yii::t('app', 'ID'),
+            'nombre' => Yii::t('app', 'Nombre'),
+            'ubicacion' => Yii::t('app', 'Ubicacion'),
+            'prioridad' => Yii::t('app', 'Prioridad'),
+            'horarioAtencion' => Yii::t('app', 'Horario Atencion'),
+            'lunes' => Yii::t('app', 'Lunes'),
+            'martes' => Yii::t('app', 'Martes'),
+            'miercoles' => Yii::t('app', 'Miercoles'),
+            'jueves' => Yii::t('app', 'Jueves'),
+            'viernes' => Yii::t('app', 'Viernes'),
+            'sabado' => Yii::t('app', 'Sabado'),
+            'domingo' => Yii::t('app', 'Domingo'),
         ];
     }
 

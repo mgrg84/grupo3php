@@ -12,30 +12,31 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'nombre')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'nombre')->textInput() ?>
 
-    <?= $form->field($model, 'ubicacion')->textarea(['rows' => 6]) ?>
+    <!--<?=  $form->field($model, 'ubicacion')->textarea(['rows' => 6]) ?>-->
 
     <?= $form->field($model, 'prioridad')->textInput() ?>
 
     <?= $form->field($model, 'horarioAtencion')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'lunes')->textInput() ?>
+    <h3>Dias de recorrido:</h3>
+    <?= $form->field($model, 'lunes')-> checkbox() ?>
 
-    <?= $form->field($model, 'martes')->textInput() ?>
+    <?= $form->field($model, 'martes')-> checkbox() ?>
 
-    <?= $form->field($model, 'miercoles')->textInput() ?>
+    <?= $form->field($model, 'miercoles')-> checkbox()?>
 
-    <?= $form->field($model, 'jueves')->textInput() ?>
+    <?= $form->field($model, 'jueves')-> checkbox() ?>
 
-    <?= $form->field($model, 'viernes')->textInput() ?>
+    <?= $form->field($model, 'viernes')-> checkbox() ?>
 
-    <?= $form->field($model, 'sabado')->textInput() ?>
+    <?= $form->field($model, 'sabado')-> checkbox() ?>
 
-    <?= $form->field($model, 'domingo')->textInput() ?>
+    <?= $form->field($model, 'domingo')-> checkbox() ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
