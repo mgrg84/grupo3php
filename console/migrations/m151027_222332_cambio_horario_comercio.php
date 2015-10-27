@@ -7,7 +7,9 @@ class m151027_222332_cambio_horario_comercio extends Migration
 {
     public function up()
     {
-
+        $this->dropColumn("comercio", "horarioAtencion");
+        $this->addColumn('comercio', 'horario_desde', Schema::TYPE_TIME. ' NOT NULL DEFAULT ""');
+        $this->addColumn('comercio', 'horario_hasta', Schema::TYPE_TIME . ' NOT NULL DEFAULT ""');
     }
 
     public function down()
