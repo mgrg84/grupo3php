@@ -1,14 +1,14 @@
 <?php
 
-namespace backend\models;
+namespace common\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use backend\models\Producto;
+use common\models\Producto;
 
 /**
- * ProductoSearch represents the model behind the search form about `backend\models\Producto`.
+ * ProductoSearch represents the model behind the search form about `common\models\Producto`.
  */
 class ProductoSearch extends Producto
 {
