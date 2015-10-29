@@ -645,7 +645,10 @@
     <Content Include="backend\web\assets\js\app.js" />
     <Content Include="backend\web\assets\js\app.min.js" />
     <Content Include="backend\web\assets\js\demo.js" />
+    <Content Include="backend\web\assets\js\jquery.ptTimeSelect.js" />
     <Content Include="backend\web\assets\js\pages\dashboard.js" />
     <Content Include="backend\web\assets\js\pages\dashboard2.js" />
+    <Content Include="backend\web\css\jquery-ui.css" />
+    <Content Include="backend\web\css\jquery.ptTimeSelect.css" />
   </ItemGroup>
 </Project>

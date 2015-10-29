@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'nombre:ntext',
             'ubicacion:ntext',
             'prioridad',
-            'horarioAtencion:ntext',
+            //'horarioAtencion:ntext',
             // 'lunes',
             // 'martes',
             // 'miercoles',

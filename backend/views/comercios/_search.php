@@ -23,8 +23,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'prioridad') ?>
 
-    <?= $form->field($model, 'horarioAtencion') ?>
-
     <?php // echo $form->field($model, 'lunes') ?>
 
     <?php // echo $form->field($model, 'martes') ?>

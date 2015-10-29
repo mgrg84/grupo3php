@@ -19,7 +19,7 @@ class ComercioSearch extends Comercio
     {
         return [
             [['id', 'prioridad', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'], 'integer'],
-            [['nombre', 'ubicacion', 'horarioAtencion'], 'safe'],
+            [['nombre', 'ubicacion', 'horario_desde', 'horario_hasta'], 'safe'],
         ];
     }
 
@@ -69,7 +69,7 @@ class ComercioSearch extends Comercio
 
         $query->andFilterWhere(['like', 'nombre', $this->nombre])
             ->andFilterWhere(['like', 'ubicacion', $this->ubicacion])
-            ->andFilterWhere(['like', 'horarioAtencion', $this->horarioAtencion]);
+        ;
 
         return $dataProvider;
     }
