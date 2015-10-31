@@ -1,5 +1,9 @@
 <?php
 return [
+
+    'language' => 'es-UY',//'es-UY', ver si tengo que dejar es-UY --- en-US es por defecto siempre
+
+
     'name' => 'Stock Manager',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [
@@ -22,6 +26,19 @@ return [
 
         ],
         // FIN URL AMIGABLES
+
+        //IDIOMAS
+        'i18n' => [
+                            'translations' => [
+                                '*' => [
+                                    'class' => 'yii\i18n\PhpMessageSource',
+                                    'basePath' => '@common/messages',
+                                ],
+                            ],
+                        ],
+
+                        // fin de idiomas
+
     ],
     'bootstrap' => ['gii'],
 
