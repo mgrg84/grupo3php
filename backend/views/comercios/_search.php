@@ -23,20 +23,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'prioridad') ?>
 
-    <?php // echo $form->field($model, 'lunes') ?>
-
-    <?php // echo $form->field($model, 'martes') ?>
-
-    <?php // echo $form->field($model, 'miercoles') ?>
-
-    <?php // echo $form->field($model, 'jueves') ?>
-
-    <?php // echo $form->field($model, 'viernes') ?>
-
-    <?php // echo $form->field($model, 'sabado') ?>
-
-    <?php // echo $form->field($model, 'domingo') ?>
-
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>
         <?= Html::resetButton(Yii::t('app', 'Reset'), ['class' => 'btn btn-default']) ?>

@@ -1,0 +1,61 @@
+﻿#map {
+        height: 100% !important;
+      }
+
+.controls {
+  margin-top: 10px !important;
+  border: 1px solid transparent !important;
+  border-radius: 2px 0 0 2px !important;
+  box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  height: 32px !important;
+  outline: none !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+#pac-input {
+  background-color: #fff !important;
+  font-family: Roboto !important;
+  font-size: 15px !important;
+  font-weight: 300 !important;
+  margin-left: 12px !important;
+  padding: 0 11px 0 13px !important;
+  text-overflow: ellipsis !important;
+  width: 300px !important;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe !important;
+}
+
+.pac-container {
+  font-family: Roboto !important;
+}
+
+#type-selector {
+  color: #fff !important;
+  background-color: #4d90fe !important;
+  padding: 5px 11px 0px 11px !important;
+}
+
+#type-selector label {
+  font-family: Roboto !important;
+  font-size: 13px !important;
+  font-weight: 300 !important;
+}
+
+#target 
+{
+    width: 345px !important;
+}
+
+#floating-panel {
+  position: absolute;
+  z-index: 5;
+  background-color: #fff;
+  padding: 3px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+}

@@ -24,6 +24,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="backend\assets\AppAsset.php" />
+    <Compile Include="backend\Code\Helpers.php" />
     <Compile Include="backend\config\.gitignore" />
     <Compile Include="backend\config\bootstrap.php" />
     <Compile Include="backend\config\main-local.php" />
@@ -457,6 +458,7 @@
     <Folder Include="backend\config" />
     <Folder Include="backend\controllers" />
     <Folder Include="backend\models" />
+    <Folder Include="backend\Code\" />
     <Folder Include="backend\runtime\cache\96" />
     <Folder Include="backend\runtime\cache" />
     <Folder Include="backend\runtime\debug" />
@@ -492,6 +494,7 @@
     <Folder Include="backend\web\css" />
     <Folder Include="backend\web" />
     <Folder Include="backend" />
+    <Folder Include="backend\web\css\images\" />
     <Folder Include="common\config" />
     <Folder Include="common\mail\layouts" />
     <Folder Include="common\mail" />
@@ -648,7 +651,22 @@
     <Content Include="backend\web\assets\js\jquery.ptTimeSelect.js" />
     <Content Include="backend\web\assets\js\pages\dashboard.js" />
     <Content Include="backend\web\assets\js\pages\dashboard2.js" />
+    <Content Include="backend\web\css\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="backend\web\css\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="backend\web\css\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="backend\web\css\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="backend\web\css\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="backend\web\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="backend\web\css\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="backend\web\css\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="backend\web\css\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="backend\web\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="backend\web\css\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="backend\web\css\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="backend\web\css\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="backend\web\css\images\ui-icons_ffffff_256x240.png" />
     <Content Include="backend\web\css\jquery-ui.css" />
     <Content Include="backend\web\css\jquery.ptTimeSelect.css" />
+    <Content Include="backend\web\css\maps.css" />
   </ItemGroup>
 </Project>

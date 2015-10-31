@@ -28,7 +28,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'nombre:ntext',
             'ubicacion:ntext',
-            'prioridad',
+            [                      // the owner name of the model
+            'label' => Yii::t('app','Prioridad'),
+            'value' => $searchModel->prioridad == 1 ? Yii::t('app', "Baja") : ($searchModel->prioridad == 2 ? Yii::t('app', "Media") : Yii::t('app', "Alta")),
+            ],
             //'horarioAtencion:ntext',
             // 'lunes',
             // 'martes',

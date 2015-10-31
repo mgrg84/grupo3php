@@ -4,28 +4,37 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\widgets\TimePicker;
 
-/* @var $this yii\web\View */
-/* @var $model common\models\Comercio */
-/* @var $form yii\widgets\ActiveForm */
+$baseUrl = Yii::$app->getUrlManager()->getBaseUrl();
+$this->registerJsFile($baseUrl.'/assets/js/jquery.ptTimeSelect.js');
+$this->registerCssFile($baseUrl .'/css/jquery.ptTimeSelect.css');
+$this->registerCssFile($baseUrl .'/css/jquery-ui.css');
+$this->registerCssFile($baseUrl .'/css/maps.css');
+
 ?>
+
 
 <div class="comercio-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(array('options' => array('id' => 'comercioForm'))); ?>
 
     <?= $form->field($model, 'nombre')->textInput() ?>
 
-    <div id='map' streetnumber='946' streetname='LAKE+DESTINY+RD'
-         cityname='ALTAMONTE+SPRINGS' statecode='FL' zipcode='32714'
-         zoom=18 width=500 height=300>
-    </div>
-    <?=  $form->field($model, 'ubicacion')->textarea(['rows' => 6]) ?>
+    <input type="hidden" value="<?=$model->ubicacion?>" id="ubicacion" name="Comercio[ubicacion]" />
 
-    <?= $form->field($model, 'prioridad')->textInput() ?>
+    <div class="form-group" style="height:350px; width:auto; padding-bottom:30px">
+        <label class="control-label" for="pac-input">Ubicacion:</label>
+        <div id="floating-panel">
+            <input id="address" type="textbox" />
+        </div>
+        <div id="map"></div>
+    </div>
+
+
+    <?= $form->field($model, 'prioridad')->dropdownList(['1'=>Yii::t('app', 'Baja'), '2'=>Yii::t('app', 'Media'), '3'=>Yii::t('app', 'Alta')]); ?>
 
     <div class="form-group field-comercio-horario_desde required">
         <label class="control-label" for="comercio-horario_desde">Horario desde:</label>
-        <input type="text" id="comercio-horario_desde" class="form-control" name="Comercio[horario_desde]" value="<?= $model->horario_desde?>"/>
+        <input type="text" id="comercio-horario_desde" class="form-control" name="Comercio[horario_desde]" value="<?= $model->horario_desde?>" />
         <div class="help-block"></div>
     </div>
 
@@ -36,10 +45,10 @@ use yii\widgets\TimePicker;
     </div>
 
     <script type="text/javascript">
-        $(document).ready(function(){
-            $('input[name="Comercio[horario_desde]"]').ptTimeSelect();
-            $('input[name="Comercio[horario_hasta]"]').ptTimeSelect();
-        });
+            $(document).ready(function () {
+                $('input[name="Comercio[horario_desde]"]').ptTimeSelect();
+                $('input[name="Comercio[horario_hasta]"]').ptTimeSelect();
+            });
     </script>
 
     <h3>Dias de recorrido:</h3>
@@ -66,28 +75,105 @@ use yii\widgets\TimePicker;
 </div>
 
 <script>
-$.fn.googlemap = function(){
-    // author: Christian Salazar <christiansalazarh@gmail.com>
-    var src='';
-    $(this).each(function(){
-    var z = $(this);
-    var address = jQuery.trim(z.attr('streetnumber'))
-        +'+'+jQuery.trim(z.attr('streetname'))
-        +'+'+jQuery.trim(z.attr('cityname'))
-        +'+'+jQuery.trim(z.attr('statecode'))
-        +'+'+jQuery.trim(z.attr('zipcode'))
-    ;
-    src="https://maps.google.com/maps?"
-        +"client=safari"
-        +"&q="+address
-        +"&oe=UTF-8&ie=UTF8&hq="
-        +"&hnear="+address
-        +"&gl=us"
-        +"&z="+z.attr('zoom')
-        +"&output=embed";
-        z.html("<iframe src='"+src+"' width="+z.attr('width')+" height="
-        +z.attr('height')+"></iframe>");
+    $('#comercioForm').on('submit', function (e)
+    {
+        var errors = new Array();
+        if ($('#ubicacion').val() == "")
+        {
+            errors.push('Debe indicar la ubicacion del comercio.');
+        }
+        if (!$('#comercio-lunes').is(':checked')
+            && !$('#comercio-martes').is(':checked')
+            && !$('#comercio-miercoles').is(':checked')
+            && !$('#comercio-jueves').is(':checked')
+            && !$('#comercio-viernes').is(':checked')
+            && !$('#comercio-sabado').is(':checked')
+            && !$('#comercio-domingo').is(':checked'))
+        {
+            errors.push('Debe seleccionar al menos un dia de recorrido.');
+        }
+        if ($('#comercio-horario_desde').val() == "" || $('#comercio-horario_hasta').val() == "")
+        {
+            errors.push('Debe ingresar datos de horarios');
+        }
+        if (errors.length > 0)
+        {
+            e.preventDefault();
+            alert(errors.join('\n'));
+        }
     });
-    return src;
-}
+
+    $(document).ready(function ()
+    {
+        $(window).keydown(function (event)
+        {
+            if (event.keyCode == 13)
+            {
+                event.preventDefault();
+                return false;
+            }
+        });
+    });
+
+    function initMap()
+    {
+        //Create map object
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 8,
+            center: {lat: -34.397, lng: 150.644}
+        });
+
+        //var options = {
+        //    types: ['(cities)'],
+        //    componentRestrictions: { country: "uy" }
+        //};
+
+        //var input = document.getElementById('address');
+        //var autocomplete = new google.maps.places.Autocomplete(input, options);
+
+        var geocoder = new google.maps.Geocoder();
+
+        document
+            .getElementById('address')
+            .addEventListener('keyup', function (event)
+            {
+                if (event.keyCode === 13)
+                {
+                    geocodeAddress(geocoder, map);
+                }
+            })
+        ;
+    }
+
+    function handleLocationError(browserHasGeolocation, infoWindow, pos)
+    {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+    }
+
+    function geocodeAddress(geocoder, resultsMap)
+    {
+        var address = document.getElementById('address').value;
+        geocoder.geocode({ 'address': address }, function (results, status)
+        {
+            if (status === google.maps.GeocoderStatus.OK)
+            {
+                resultsMap.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                    map: resultsMap,
+                    position: results[0].geometry.location
+                });
+                $('#ubicacion').val(marker.getPosition().lat() + ';' + marker.getPosition().lng());
+            }
+            else
+            {
+                alert('Geocode was not successful for the following reason: ' + status);
+            }
+        });
+    }
+
 </script>
+<script src="  https://maps.googleapis.com/maps/api/js?key=AIzaSyAkBJbbLObz_qiBTkEgI-k3M2LkC08T7vg&signed_in=true&callback=initMap" async="" defer=""></script>
+
