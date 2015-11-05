@@ -14,7 +14,7 @@
     <PHPDevPort>51267</PHPDevPort>
     <PHPDevHostName>localhost/php/backend/web</PHPDevHostName>
     <IISProjectUrl>http://localhost:51267/</IISProjectUrl>
-    <CustomServerUrl>http://localhost/PHP/backend/web/user/login</CustomServerUrl>
+    <CustomServerUrl>http://127.0.0.1/PHP/backend/web/comercios/create</CustomServerUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <IncludeDebugInformation>true</IncludeDebugInformation>
@@ -278,9 +278,13 @@
     <Compile Include="common\mail\layouts\text.php" />
     <Compile Include="common\mail\passwordResetToken-html.php" />
     <Compile Include="common\mail\passwordResetToken-text.php" />
+    <Compile Include="common\models\Categoria.php" />
+    <Compile Include="common\models\CategoriaSearch.php" />
     <Compile Include="common\models\Comercio.php" />
     <Compile Include="common\models\ComercioSearch.php" />
     <Compile Include="common\models\LoginForm.php" />
+    <Compile Include="common\models\Producto.php" />
+    <Compile Include="common\models\ProductoSearch.php" />
     <Compile Include="common\models\User.php" />
     <Compile Include="common\widgets\Alert.php" />
     <Compile Include="console\config\.gitignore" />
@@ -291,9 +295,20 @@
     <Compile Include="console\config\params.php" />
     <Compile Include="console\controllers\.gitkeep" />
     <Compile Include="console\migrations\m130524_201442_init.php" />
+    <Compile Include="console\migrations\m140209_132017_init.php" />
+    <Compile Include="console\migrations\m140403_174025_create_account_table.php" />
+    <Compile Include="console\migrations\m140504_113157_update_tables.php" />
+    <Compile Include="console\migrations\m140504_130429_create_token_table.php" />
+    <Compile Include="console\migrations\m140830_171933_fix_ip_field.php" />
+    <Compile Include="console\migrations\m140830_172703_change_account_table_name.php" />
+    <Compile Include="console\migrations\m141222_110026_update_ip_field.php" />
+    <Compile Include="console\migrations\m141222_135246_alter_username_length.php" />
+    <Compile Include="console\migrations\m150614_103145_update_social_account_table.php" />
+    <Compile Include="console\migrations\m150623_212711_fix_username_notnull.php" />
     <Compile Include="console\migrations\m151019_225821_crear_tablas_basicas.php" />
     <Compile Include="console\migrations\m151024_162122_fix_categoria_saca_idproducto.php" />
     <Compile Include="console\migrations\m151027_222332_cambio_horario_comercio.php" />
+    <Compile Include="console\migrations\m151103_214430_campo_ubicacion_descripcion_tabla_comercio.php" />
     <Compile Include="console\models\.gitkeep" />
     <Compile Include="console\runtime\logs\app.log" />
     <Compile Include="console\runtime\.gitignore" />

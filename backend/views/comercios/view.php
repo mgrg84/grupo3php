@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use backend\Code\Helpers;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Comercio */
@@ -28,12 +29,14 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
             'nombre:ntext',
-            'ubicacion:ntext',
+             [                      // the owner name of the model
+            'label' => Yii::t('app', 'Ubicacion'),
+            'value' => $model->ubicacion_descripcion,
+            ],
              [                      // the owner name of the model
             'label' => Yii::t('app', 'Prioridad'),
-            'value' => $model->prioridad == 1 ? Yii::t('app', "Baja") : ($model->prioridad == 2 ? Yii::t('app', "Media") : Yii::t('app', "Alta")),
+            'value' => Helpers::GetPriorityDescription($model->prioridad),
             ],
             'horario_desde:ntext',
             'horario_hasta:ntext',

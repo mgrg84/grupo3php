@@ -20,12 +20,11 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
     <?= $form->field($model, 'nombre')->textInput() ?>
 
     <input type="hidden" value="<?=$model->ubicacion?>" id="ubicacion" name="Comercio[ubicacion]" />
+    <input type="hidden" value="<?=$model->ubicacion_descripcion?>" id="ubicacionH" name="Comercio[ubicacion_descripcion]" />
 
     <div class="form-group" style="height:350px; width:auto; padding-bottom:30px">
         <label class="control-label" for="pac-input">Ubicacion:</label>
-        <div id="floating-panel">
-            <input id="address" type="textbox" />
-        </div>
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box" value="<?=$model->ubicacion_descripcion?>"/>
         <div id="map"></div>
     </div>
 
@@ -75,6 +74,7 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
 </div>
 
 <script>
+
     $('#comercioForm').on('submit', function (e)
     {
         var errors = new Array();
@@ -115,65 +115,81 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
         });
     });
 
-    function initMap()
+    function initAutocomplete()
     {
-        //Create map object
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 8,
-            center: {lat: -34.397, lng: 150.644}
+            center: { lat: -34.8912486, lng: -56.187161100000026 },
+            zoom: 13,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 
-        //var options = {
-        //    types: ['(cities)'],
-        //    componentRestrictions: { country: "uy" }
-        //};
+        // Create the search box and link it to the UI element.
+        var input = document.getElementById('pac-input');
+        var searchBox = new google.maps.places.SearchBox(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
-        //var input = document.getElementById('address');
-        //var autocomplete = new google.maps.places.Autocomplete(input, options);
-
-        var geocoder = new google.maps.Geocoder();
-
-        document
-            .getElementById('address')
-            .addEventListener('keyup', function (event)
-            {
-                if (event.keyCode === 13)
-                {
-                    geocodeAddress(geocoder, map);
-                }
-            })
-        ;
-    }
-
-    function handleLocationError(browserHasGeolocation, infoWindow, pos)
-    {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-    }
-
-    function geocodeAddress(geocoder, resultsMap)
-    {
-        var address = document.getElementById('address').value;
-        geocoder.geocode({ 'address': address }, function (results, status)
+        // Bias the SearchBox results towards current map's viewport.
+        map.addListener('bounds_changed', function ()
         {
-            if (status === google.maps.GeocoderStatus.OK)
-            {
-                resultsMap.setCenter(results[0].geometry.location);
-                var marker = new google.maps.Marker({
-                    map: resultsMap,
-                    position: results[0].geometry.location
-                });
-                $('#ubicacion').val(marker.getPosition().lat() + ';' + marker.getPosition().lng());
-            }
-            else
-            {
-                alert('Geocode was not successful for the following reason: ' + status);
-            }
+            searchBox.setBounds(map.getBounds());
         });
+
+        var markers = [];
+        // [START region_getplaces]
+        // Listen for the event fired when the user selects a prediction and retrieve
+        // more details for that place.
+        searchBox.addListener('places_changed', function ()
+        {
+            var places = searchBox.getPlaces();
+
+            if (places.length == 0)
+            {
+                return;
+            }
+
+            // Clear out the old markers.
+            markers.forEach(function (marker)
+            {
+                marker.setMap(null);
+            });
+            markers = [];
+
+            // For each place, get the icon, name and location.
+            var bounds = new google.maps.LatLngBounds();
+            places.forEach(function (place)
+            {
+                var icon = {
+                    url: place.icon,
+                    size: new google.maps.Size(71, 71),
+                    origin: new google.maps.Point(0, 0),
+                    anchor: new google.maps.Point(17, 34),
+                    scaledSize: new google.maps.Size(25, 25)
+                };
+
+
+                // Create a marker for each place.
+                markers.push(new google.maps.Marker({
+                    map: map,
+                    icon: icon,
+                    title: place.name,
+                    position: place.geometry.location
+                }));
+
+                if (place.geometry.viewport)
+                {
+                    // Only geocodes have viewport.
+                    bounds.union(place.geometry.viewport);
+                } else
+                {
+                    bounds.extend(place.geometry.location);
+                }
+                $('#ubicacion').val(markers[0].getPosition().lat() + ';' + markers[0].getPosition().lng());
+                $('#ubicacionH').val($('#pac-input').val())
+            });
+            map.fitBounds(bounds);
+        });
+        // [END region_getplaces]
     }
-
 </script>
-<script src="  https://maps.googleapis.com/maps/api/js?key=AIzaSyAkBJbbLObz_qiBTkEgI-k3M2LkC08T7vg&signed_in=true&callback=initMap" async="" defer=""></script>
-
+<!--<script src="  https://maps.googleapis.com/maps/api/js?key=AIzaSyAkBJbbLObz_qiBTkEgI-k3M2LkC08T7vg&signed_in=true&callback=initMap" async="" defer=""></script> -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkBJbbLObz_qiBTkEgI-k3M2LkC08T7vg&libraries=places&callback=initAutocomplete" async="" defer=""></script>

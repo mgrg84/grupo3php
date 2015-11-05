@@ -1,6 +1,10 @@
 <?php
 
+
 namespace backend\Code;
+
+use Yii;
+
 /**
  * Helpers short summary.
  *
@@ -22,6 +26,21 @@ class Helpers
         else
         {
             $result = $source;
+        }
+        return $result;
+    }
+
+    public static function GetPriorityDescription($value)
+    {
+        $result = "";
+        switch ($value)
+        {
+            case 1: $result = Yii::t('app', "Baja");
+                break;
+            case 2: $result = Yii::t('app', "Media");
+                break;
+            case 3: $result = Yii::t('app', "Alta");
+                break;
         }
         return $result;
     }

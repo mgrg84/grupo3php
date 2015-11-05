@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use backend\Code\Helpers;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\ComercioSearch */
@@ -23,24 +24,16 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
             'nombre:ntext',
-            'ubicacion:ntext',
-            [                      // the owner name of the model
-            'label' => Yii::t('app','Prioridad'),
-            'value' => $searchModel->prioridad == 1 ? Yii::t('app', "Baja") : ($searchModel->prioridad == 2 ? Yii::t('app', "Media") : Yii::t('app', "Alta")),
+            'ubicacion_descripcion:ntext',
+            [
+                'attribute' => Yii::t('app', 'Prioridad'),
+                'value' => function($model) 
+                {
+                    return Helpers::GetPriorityDescription($model->prioridad);
+                },
+                'filter' => Html::activeDropDownList($searchModel, 'prioridad', ['1'=>Yii::t('app', 'Baja'), '2'=>Yii::t('app', 'Media'), '3'=>Yii::t('app', 'Alta')], ['class'=>'form-control','prompt' => Yii::t('app','Seleccionar prioridad')]),
             ],
-            //'horarioAtencion:ntext',
-            // 'lunes',
-            // 'martes',
-            // 'miercoles',
-            // 'jueves',
-            // 'viernes',
-            // 'sabado',
-            // 'domingo',
-
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
