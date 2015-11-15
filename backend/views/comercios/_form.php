@@ -20,7 +20,7 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
     <?= $form->field($model, 'nombre')->textInput() ?>
 
     <input type="hidden" value="<?=$model->ubicacion?>" id="ubicacion" name="Comercio[ubicacion]" />
-    <input type="hidden" value="<?=$model->ubicacion_descripcion?>" id="ubicacionH" name="Comercio[ubicacion_descripcion]" />
+    <input type="hidden" value="<?=$model->ubicacion_descripcion?>" id="ubicacionH" name="Comercio[ubicacion_descripcion    ]" />
 
     <div class="form-group" style="height:350px; width:auto; padding-bottom:30px">
         <label class="control-label" for="pac-input">Ubicacion:</label>
