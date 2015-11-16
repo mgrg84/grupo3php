@@ -30,7 +30,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'nombre:ntext',
-            'imagen:ntext',
+            [
+            'label'=>'Imagen',
+            'format'=>'raw',
+            'value'=>Html::img(Yii::$app->request->baseUrl.'/'.$model->imagen,['height'=>'100px']),
+            ],
             'idCategoria',
         ],
     ]) ?>
