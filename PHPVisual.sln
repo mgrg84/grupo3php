@@ -5,16 +5,36 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "PHPVisual", "PHPVisual.phpproj", "{11619770-6ED2-4F38-83F9-2E0809EDEA81}"
 EndProject
+Project("{1863889A-00DF-4350-BA39-669CA949CB81}") = "PHPVisuals", "PHPVisuals.phpproj", "{612B7951-D364-461E-991D-D9A8DA7C6F36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|PHP 5.4 = Debug|PHP 5.4
+		Debug|PHP 5.5 = Debug|PHP 5.5
 		Release|Any CPU = Release|Any CPU
+		Release|PHP 5.4 = Release|PHP 5.4
+		Release|PHP 5.5 = Release|PHP 5.5
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{11619770-6ED2-4F38-83F9-2E0809EDEA81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{11619770-6ED2-4F38-83F9-2E0809EDEA81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11619770-6ED2-4F38-83F9-2E0809EDEA81}.Debug|PHP 5.4.ActiveCfg = Debug|Any CPU
+		{11619770-6ED2-4F38-83F9-2E0809EDEA81}.Debug|PHP 5.5.ActiveCfg = Debug|Any CPU
 		{11619770-6ED2-4F38-83F9-2E0809EDEA81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11619770-6ED2-4F38-83F9-2E0809EDEA81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11619770-6ED2-4F38-83F9-2E0809EDEA81}.Release|PHP 5.4.ActiveCfg = Release|Any CPU
+		{11619770-6ED2-4F38-83F9-2E0809EDEA81}.Release|PHP 5.5.ActiveCfg = Release|Any CPU
+		{612B7951-D364-461E-991D-D9A8DA7C6F36}.Debug|Any CPU.ActiveCfg = Release|PHP 5.5
+		{612B7951-D364-461E-991D-D9A8DA7C6F36}.Debug|Any CPU.Deploy.0 = Release|PHP 5.5
+		{612B7951-D364-461E-991D-D9A8DA7C6F36}.Debug|PHP 5.4.ActiveCfg = Release|PHP 5.5
+		{612B7951-D364-461E-991D-D9A8DA7C6F36}.Debug|PHP 5.4.Deploy.0 = Release|PHP 5.5
+		{612B7951-D364-461E-991D-D9A8DA7C6F36}.Debug|PHP 5.5.ActiveCfg = Release|PHP 5.5
+		{612B7951-D364-461E-991D-D9A8DA7C6F36}.Debug|PHP 5.5.Deploy.0 = Release|PHP 5.5
+		{612B7951-D364-461E-991D-D9A8DA7C6F36}.Release|Any CPU.ActiveCfg = Release|PHP 5.5
+		{612B7951-D364-461E-991D-D9A8DA7C6F36}.Release|PHP 5.4.ActiveCfg = Release|PHP 5.5
+		{612B7951-D364-461E-991D-D9A8DA7C6F36}.Release|PHP 5.5.ActiveCfg = Release|PHP 5.5
+		{612B7951-D364-461E-991D-D9A8DA7C6F36}.Release|PHP 5.5.Deploy.0 = Release|PHP 5.5
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

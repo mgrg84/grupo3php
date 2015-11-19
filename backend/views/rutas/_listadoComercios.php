@@ -14,6 +14,13 @@ use yii\helpers\ArrayHelper;
 ?>
 
 
-<div>
-    <h1>Hola</h1>
+<div class="input-group" style="margin:20px;">
+	<?php
+	foreach($comercios as $comercio)
+	{
+		$com = $comercio['comercio'];
+		echo Html::label($com->nombre.' (distancia '.$comercio['distancia'].'mts)', 'comercio['.$com->id.']');
+		echo Html::checkbox('comercio['.$com->id.']', true);
+	}
+	?>
 </div>

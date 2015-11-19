@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "40f7564e22b0c39595acd4aee01844c2",
-    "content-hash": "233fd6b529d603ff6070c31d6b906f57",
+    "hash": "389188f3fcb5ada244d4c802b6a169b0",
+    "content-hash": "c7bd69021a3c63b318c62418e8035e88",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -453,7 +453,7 @@
                 },
                 "asset-installer-paths": {
                     "npm-asset-library": "vendor/npm",
-                    "bower-asset-library": "vendor\bower-asset"
+                    "bower-asset-library": "vendor/bower"
                 }
             },
             "autoload": {
@@ -806,26 +806,26 @@
             "time": "2015-06-16 05:19:57"
         },
         {
-            "name": "kartik-v/yii2-widget-datetimepicker",
+            "name": "kartik-v/yii2-widget-datepicker",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/kartik-v/yii2-widget-datetimepicker.git",
-                "reference": "2ad71f7a8f4fdd03b999c4f50257f42b2c1b74fe"
+                "url": "https://github.com/kartik-v/yii2-widget-datepicker.git",
+                "reference": "520ba281f592d6bbbf2be33386a03423bccc8cd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-datetimepicker/zipball/2ad71f7a8f4fdd03b999c4f50257f42b2c1b74fe",
-                "reference": "2ad71f7a8f4fdd03b999c4f50257f42b2c1b74fe",
+                "url": "https://api.github.com/repos/kartik-v/yii2-widget-datepicker/zipball/520ba281f592d6bbbf2be33386a03423bccc8cd0",
+                "reference": "520ba281f592d6bbbf2be33386a03423bccc8cd0",
                 "shasum": ""
             },
             "require": {
-                "kartik-v/yii2-krajee-base": "*"
+                "kartik-v/yii2-krajee-base": "~1.7"
             },
             "type": "yii2-extension",
             "autoload": {
                 "psr-4": {
-                    "kartik\\datetime\\": ""
+                    "kartik\\date\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -839,10 +839,10 @@
                     "homepage": "http://www.krajee.com/"
                 }
             ],
-            "description": "Enhanced Yii2 wrapper for the bootstrap datetimepicker plugin (sub repo split from yii2-widgets)",
-            "homepage": "https://github.com/kartik-v/yii2-widget-datetimepicker",
+            "description": "Enhanced Yii2 wrapper for the bootstrap datepicker plugin (sub repo split from yii2-widgets).",
+            "homepage": "https://github.com/kartik-v/yii2-widget-datepicker",
             "keywords": [
-                "datetime",
+                "date",
                 "extension",
                 "form",
                 "jquery",
@@ -852,7 +852,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2015-11-04 18:46:05"
+            "time": "2015-11-14 12:47:50"
         },
         {
             "name": "rmrevin/yii2-fontawesome",
@@ -877,7 +877,7 @@
             "extra": {
                 "asset-installer-paths": {
                     "npm-asset-library": "vendor/npm",
-                    "bower-asset-library": "vendor\bower-asset"
+                    "bower-asset-library": "vendor/bower"
                 }
             },
             "autoload": {
@@ -1120,7 +1120,7 @@
                 },
                 "asset-installer-paths": {
                     "npm-asset-library": "vendor/npm",
-                    "bower-asset-library": "vendor\bower-asset"
+                    "bower-asset-library": "vendor/bower"
                 }
             },
             "autoload": {
@@ -1217,7 +1217,7 @@
                 },
                 "asset-installer-paths": {
                     "npm-asset-library": "vendor/npm",
-                    "bower-asset-library": "vendor\bower-asset"
+                    "bower-asset-library": "vendor/bower"
                 }
             },
             "autoload": {
@@ -1573,7 +1573,7 @@
                 },
                 "asset-installer-paths": {
                     "npm-asset-library": "vendor/npm",
-                    "bower-asset-library": "vendor\bower-asset"
+                    "bower-asset-library": "vendor/bower"
                 }
             },
             "autoload": {
@@ -1605,7 +1605,7 @@
     "stability-flags": {
         "dektrium/yii2-user": 20,
         "kartik-v/yii2-datecontrol": 20,
-        "kartik-v/yii2-widget-datetimepicker": 20
+        "kartik-v/yii2-widget-datepicker": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
