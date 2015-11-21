@@ -20,6 +20,7 @@ use Yii;
  * @property integer $domingo
  * @property string $horario_desde
  * @property string $horario_hasta
+ * @property string $ubicacion_descripcion
  *
  * @property ComercioPedidos[] $comercioPedidos
  * @property ComercioStocks[] $comercioStocks
@@ -44,7 +45,7 @@ class Comercio extends \yii\db\ActiveRecord
     {
         return [
             [['nombre', 'ubicacion', 'prioridad', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo', 'horario_desde', 'horario_hasta'], 'required'],
-            [['nombre', 'ubicacion'], 'string'],
+            [['nombre', 'ubicacion', 'ubicacion_descripcion'], 'string'],
             [['prioridad', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'], 'integer'],
             [['horario_desde', 'horario_hasta'], 'safe']
         ];
@@ -69,6 +70,7 @@ class Comercio extends \yii\db\ActiveRecord
             'domingo' => Yii::t('app', 'Domingo'),
             'horario_desde' => Yii::t('app', 'Horario Desde'),
             'horario_hasta' => Yii::t('app', 'Horario Hasta'),
+            'ubicacion_descripcion' => Yii::t('app', 'Ubicacion'),
         ];
     }
 

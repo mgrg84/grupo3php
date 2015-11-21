@@ -9,11 +9,16 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+use yii\web\UploadedFile;
+
 /**
  * ProductoController implements the CRUD actions for Producto model.
  */
 class ProductoController extends Controller
 {
+
+    public $imagen;
+    
     public function behaviors()
     {
         return [
@@ -58,11 +63,56 @@ class ProductoController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    /*public function actionCreate()
     {
         $model = new Producto();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        } else {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        }
+    }*/
+
+    public function getImageFile() 
+    {
+        return isset($this->avatar) ? Yii::$app->params['uploadPath'] . $this->avatar : null;
+    }
+
+    public function uploadImage() {
+        // get the uploaded file instance. for multiple file uploads
+        // the following data will return an array (you may need to use
+        // getInstances method)
+        $imagen = UploadedFile::getInstance($this, 'imagen');
+
+        // if no image was uploaded abort the upload
+        if (empty($imagen)) {
+            return false;
+        }
+
+        // store the source file name
+        $this->filename = $imagen->name;
+        $ext = end((explode(".", $imagen->name)));
+
+        // generate a unique file name
+        $this->avatar = Yii::$app->security->generateRandomString().".{$ext}";
+
+        // the uploaded image instance
+        return $imagen;
+    }
+
+    public function actionCreate()
+    {
+        $model = new Producto();
+
+        if ($model->load(Yii::$app->request->post())) {
+            $nombreImagen = $model->nombre;
+            $model->file = UploadedFile::getInstance($model, 'file');
+            $model->imagen = 'imagenes/'.$nombreImagen.'.'.$model->file->extension;
+            $model->save();
+            $model->file->saveAs('imagenes/'.$nombreImagen.'.'.$model->file->extension);
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -81,7 +131,12 @@ class ProductoController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $nombreImagen = $model->nombre;
+            $model->file = UploadedFile::getInstance($model, 'file');
+            $model->imagen = 'imagenes/'.$nombreImagen.'.'.$model->file->extension;
+            $model->save();
+            $model->file->saveAs('imagenes/'.$nombreImagen.'.'.$model->file->extension);
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [

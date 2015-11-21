@@ -8,6 +8,7 @@ use common\models\ComercioSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\Code\Helpers;
 
 /**
  * ComerciosController implements the CRUD actions for Comercio model.
@@ -66,8 +67,8 @@ class ComerciosController extends Controller
         
         if ($model->load(Yii::$app->request->post())) 
         {
-            $model->horario_desde = $this->FormatHours($model->horario_desde);
-            $model->horario_hasta = $this->FormatHours($model->horario_hasta);
+            $model->horario_desde = Helpers::FormatHours($model->horario_desde);
+            $model->horario_hasta = Helpers::FormatHours($model->horario_hasta);
             if($model->save())
             {
                 return $this->redirect(['view', 'id' => $model->id]);
@@ -81,20 +82,7 @@ class ComerciosController extends Controller
         }
     }
 
-    public function FormatHours($source)
-    {
-        $result = null;
-        if(substr($source, strlen($source)-2,2) == "PM")
-        {
-            $hours = split(":", $source)[0];
-            $result = str_replace($hours, $hours + 12, $source);
-        }
-        else
-        {
-            $result = $source;
-        }
-        return $result;
-    }
+   
     /**
      * Updates an existing Comercio model.
      * If update is successful, the browser will be redirected to the 'view' page.
@@ -107,8 +95,8 @@ class ComerciosController extends Controller
 
         if ($model->load(Yii::$app->request->post())) 
         {
-            $model->horario_desde = $this->FormatHours($model->horario_desde);
-            $model->horario_hasta = $this->FormatHours($model->horario_hasta);
+            $model->horario_desde = Helpers::FormatHours($model->horario_desde);
+            $model->horario_hasta = Helpers::FormatHours($model->horario_hasta);
             if($model->save())
             {
                 return $this->redirect(['view', 'id' => $model->id]);

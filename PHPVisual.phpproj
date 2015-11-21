@@ -14,7 +14,7 @@
     <PHPDevPort>51267</PHPDevPort>
     <PHPDevHostName>localhost/php/backend/web</PHPDevHostName>
     <IISProjectUrl>http://localhost:51267/</IISProjectUrl>
-    <CustomServerUrl>http://localhost/PHP/backend/web/user/login</CustomServerUrl>
+    <CustomServerUrl>http://127.0.0.1/PHP/backend/web/comercios/create</CustomServerUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <IncludeDebugInformation>true</IncludeDebugInformation>
@@ -24,6 +24,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="backend\assets\AppAsset.php" />
+    <Compile Include="backend\Code\Helpers.php" />
     <Compile Include="backend\config\.gitignore" />
     <Compile Include="backend\config\bootstrap.php" />
     <Compile Include="backend\config\main-local.php" />
@@ -31,9 +32,9 @@
     <Compile Include="backend\config\params-local.php" />
     <Compile Include="backend\config\params.php" />
     <Compile Include="backend\controllers\CategoriaController.php" />
+    <Compile Include="backend\controllers\RutasController.php" />
     <Compile Include="backend\controllers\ComerciosController.php" />
     <Compile Include="backend\controllers\ProductoController.php" />
-    <Compile Include="backend\controllers\RecorridosController.php" />
     <Compile Include="backend\controllers\SiteController.php" />
     <Compile Include="backend\models\.gitkeep" />
     <Compile Include="backend\models\Categoria.php" />
@@ -226,7 +227,13 @@
     <Compile Include="backend\views\producto\view.php" />
     <Compile Include="backend\views\producto\_form.php" />
     <Compile Include="backend\views\producto\_search.php" />
-    <Compile Include="backend\views\recorridos\index.php" />
+    <Compile Include="backend\views\rutas\create.php" />
+    <Compile Include="backend\views\rutas\index.php" />
+    <Compile Include="backend\views\rutas\update.php" />
+    <Compile Include="backend\views\rutas\view.php" />
+    <Compile Include="backend\views\rutas\_form.php" />
+    <Compile Include="backend\views\rutas\_listadoComercios.php" />
+    <Compile Include="backend\views\rutas\_search.php" />
     <Compile Include="backend\views\site\error.php" />
     <Compile Include="backend\views\site\index.php" />
     <Compile Include="backend\web\assets\6afbe66c\jquery.js" />
@@ -277,9 +284,16 @@
     <Compile Include="common\mail\layouts\text.php" />
     <Compile Include="common\mail\passwordResetToken-html.php" />
     <Compile Include="common\mail\passwordResetToken-text.php" />
+    <Compile Include="common\models\Categoria.php" />
+    <Compile Include="common\models\CategoriaSearch.php" />
     <Compile Include="common\models\Comercio.php" />
+    <Compile Include="common\models\RutaSearch.php" />
     <Compile Include="common\models\ComercioSearch.php" />
     <Compile Include="common\models\LoginForm.php" />
+    <Compile Include="common\models\Producto.php" />
+    <Compile Include="common\models\ProductoSearch.php" />
+    <Compile Include="common\models\Ruta.php" />
+    <Compile Include="common\models\RutaComercios.php" />
     <Compile Include="common\models\User.php" />
     <Compile Include="common\widgets\Alert.php" />
     <Compile Include="console\config\.gitignore" />
@@ -290,9 +304,20 @@
     <Compile Include="console\config\params.php" />
     <Compile Include="console\controllers\.gitkeep" />
     <Compile Include="console\migrations\m130524_201442_init.php" />
+    <Compile Include="console\migrations\m140209_132017_init.php" />
+    <Compile Include="console\migrations\m140403_174025_create_account_table.php" />
+    <Compile Include="console\migrations\m140504_113157_update_tables.php" />
+    <Compile Include="console\migrations\m140504_130429_create_token_table.php" />
+    <Compile Include="console\migrations\m140830_171933_fix_ip_field.php" />
+    <Compile Include="console\migrations\m140830_172703_change_account_table_name.php" />
+    <Compile Include="console\migrations\m141222_110026_update_ip_field.php" />
+    <Compile Include="console\migrations\m141222_135246_alter_username_length.php" />
+    <Compile Include="console\migrations\m150614_103145_update_social_account_table.php" />
+    <Compile Include="console\migrations\m150623_212711_fix_username_notnull.php" />
     <Compile Include="console\migrations\m151019_225821_crear_tablas_basicas.php" />
     <Compile Include="console\migrations\m151024_162122_fix_categoria_saca_idproducto.php" />
     <Compile Include="console\migrations\m151027_222332_cambio_horario_comercio.php" />
+    <Compile Include="console\migrations\m151103_214430_campo_ubicacion_descripcion_tabla_comercio.php" />
     <Compile Include="console\models\.gitkeep" />
     <Compile Include="console\runtime\logs\app.log" />
     <Compile Include="console\runtime\.gitignore" />
@@ -457,6 +482,7 @@
     <Folder Include="backend\config" />
     <Folder Include="backend\controllers" />
     <Folder Include="backend\models" />
+    <Folder Include="backend\Code\" />
     <Folder Include="backend\runtime\cache\96" />
     <Folder Include="backend\runtime\cache" />
     <Folder Include="backend\runtime\debug" />
@@ -470,8 +496,8 @@
     <Folder Include="backend\views\categoria\" />
     <Folder Include="backend\views\comercios\" />
     <Folder Include="backend\views\layouts" />
+    <Folder Include="backend\views\rutas\" />
     <Folder Include="backend\views\producto\" />
-    <Folder Include="backend\views\recorridos\" />
     <Folder Include="backend\views\site" />
     <Folder Include="backend\views" />
     <Folder Include="backend\web\assets\6afbe66c" />
@@ -492,6 +518,7 @@
     <Folder Include="backend\web\css" />
     <Folder Include="backend\web" />
     <Folder Include="backend" />
+    <Folder Include="backend\web\css\images\" />
     <Folder Include="common\config" />
     <Folder Include="common\mail\layouts" />
     <Folder Include="common\mail" />
@@ -648,7 +675,22 @@
     <Content Include="backend\web\assets\js\jquery.ptTimeSelect.js" />
     <Content Include="backend\web\assets\js\pages\dashboard.js" />
     <Content Include="backend\web\assets\js\pages\dashboard2.js" />
+    <Content Include="backend\web\css\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="backend\web\css\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="backend\web\css\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="backend\web\css\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="backend\web\css\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="backend\web\css\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="backend\web\css\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="backend\web\css\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="backend\web\css\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="backend\web\css\images\ui-icons_222222_256x240.png" />
+    <Content Include="backend\web\css\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="backend\web\css\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="backend\web\css\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="backend\web\css\images\ui-icons_ffffff_256x240.png" />
     <Content Include="backend\web\css\jquery-ui.css" />
     <Content Include="backend\web\css\jquery.ptTimeSelect.css" />
+    <Content Include="backend\web\css\maps.css" />
   </ItemGroup>
 </Project>

@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\web\UploadedFile;
 
 /**
  * This is the model class for table "producto".
@@ -19,6 +20,12 @@ use Yii;
  */
 class Producto extends \yii\db\ActiveRecord
 {
+
+    /**
+     * @var UploadedFile file attribute
+     */
+    public $file;
+    
     /**
      * @inheritdoc
      */
@@ -33,8 +40,9 @@ class Producto extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nombre', 'imagen', 'idCategoria'], 'required'],
-            [['nombre', 'imagen'], 'string'],
+            [['nombre', 'idCategoria'], 'required'],
+            [['nombre'], 'string'],
+            [['file'], 'file', 'extensions' => 'png, jpg'],
             [['idCategoria'], 'integer']
         ];
     }
@@ -47,7 +55,7 @@ class Producto extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'nombre' => Yii::t('app', 'Nombre'),
-            'imagen' => Yii::t('app', 'Imagen'),
+            'file' => Yii::t('app', 'Imagen'),
             'idCategoria' => Yii::t('app', 'Id Categoria'),
         ];
     }
@@ -83,4 +91,5 @@ class Producto extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Stock::className(), ['idProducto' => 'id']);
     }
+    
 }

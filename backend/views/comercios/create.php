@@ -10,11 +10,6 @@ $this->title = Yii::t('app', 'Create Comercio');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Comercios'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 
-$baseUrl = Yii::$app->getUrlManager()->getBaseUrl(); 
-$this->registerJsFile($baseUrl.'/assets/js/jquery.ptTimeSelect.js');
-$this->registerCssFile($baseUrl .'/css/jquery.ptTimeSelect.css');
-$this->registerCssFile($baseUrl .'/css/jquery-ui.css');
-
 ?>
 <div class="comercio-create">
 
