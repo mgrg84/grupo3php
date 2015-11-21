@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "40f7564e22b0c39595acd4aee01844c2",
-    "content-hash": "233fd6b529d603ff6070c31d6b906f57",
+    "hash": "7b2eee4c7fd2b5e3ef26ff4224b51754",
+    "content-hash": "d8714528a33caafebf16e2f45d1e30b8",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -284,16 +284,16 @@
         },
         {
             "name": "bower-asset/yii2-pjax",
-            "version": "v2.0.4",
+            "version": "v2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/jquery-pjax.git",
-                "reference": "3f20897307cca046fca5323b318475ae9dac0ca0"
+                "reference": "6818718408086db6bdcf33649cecb86b6b4f9b67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/jquery-pjax/zipball/3f20897307cca046fca5323b318475ae9dac0ca0",
-                "reference": "3f20897307cca046fca5323b318475ae9dac0ca0",
+                "url": "https://api.github.com/repos/yiisoft/jquery-pjax/zipball/6818718408086db6bdcf33649cecb86b6b4f9b67",
+                "reference": "6818718408086db6bdcf33649cecb86b6b4f9b67",
                 "shasum": ""
             },
             "require": {
@@ -453,7 +453,7 @@
                 },
                 "asset-installer-paths": {
                     "npm-asset-library": "vendor/npm",
-                    "bower-asset-library": "vendor\bower-asset"
+                    "bower-asset-library": "vendor/bower"
                 }
             },
             "autoload": {
@@ -877,7 +877,7 @@
             "extra": {
                 "asset-installer-paths": {
                     "npm-asset-library": "vendor/npm",
-                    "bower-asset-library": "vendor\bower-asset"
+                    "bower-asset-library": "vendor/bower"
                 }
             },
             "autoload": {
@@ -1120,7 +1120,7 @@
                 },
                 "asset-installer-paths": {
                     "npm-asset-library": "vendor/npm",
-                    "bower-asset-library": "vendor\bower-asset"
+                    "bower-asset-library": "vendor/bower"
                 }
             },
             "autoload": {
@@ -1217,7 +1217,7 @@
                 },
                 "asset-installer-paths": {
                     "npm-asset-library": "vendor/npm",
-                    "bower-asset-library": "vendor\bower-asset"
+                    "bower-asset-library": "vendor/bower"
                 }
             },
             "autoload": {
@@ -1573,7 +1573,7 @@
                 },
                 "asset-installer-paths": {
                     "npm-asset-library": "vendor/npm",
-                    "bower-asset-library": "vendor\bower-asset"
+                    "bower-asset-library": "vendor/bower"
                 }
             },
             "autoload": {
