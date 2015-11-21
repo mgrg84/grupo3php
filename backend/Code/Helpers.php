@@ -35,14 +35,36 @@ class Helpers
         $result = "";
         switch ($value)
         {
-            case 1: $result = Yii::t('app', "Baja");
+			case 1: $result = Yii::t('app', "Normal");
                 break;
-            case 2: $result = Yii::t('app', "Media");
-                break;
-            case 3: $result = Yii::t('app', "Alta");
+			case 2: $result = Yii::t('app', "Alta");
                 break;
         }
         return $result;
     }
+	
+	public static function GetSpanishDay($date)
+	{ 
+		$result = null;
+		$day = date('l', strtotime($date));
+		switch($day)
+		{
+			case "Monday": $result = 'lunes';
+				break;
+			case 'Tuesday': $result = 'martes';
+				break;	
+			case 'Wednesday': $result = 'miercoles';
+				break;
+			case 'Thursday': $result = 'jueves';
+				break;
+			case 'Friday': $result = 'viernes';
+				break;
+			case 'Saturday': $result = 'sabado';
+				break;
+			case 'Sunday': $result = 'domingo';
+				break;
+		}
+		return $result;
+	}
 }
 ?>

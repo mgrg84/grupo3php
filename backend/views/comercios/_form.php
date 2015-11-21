@@ -29,7 +29,7 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
     </div>
 
 
-    <?= $form->field($model, 'prioridad')->dropdownList(['1'=>Yii::t('app', 'Baja'), '2'=>Yii::t('app', 'Media'), '3'=>Yii::t('app', 'Alta')]); ?>
+    <?= $form->field($model, 'prioridad')->dropdownList(['1'=>Yii::t('app', 'Normal'), '2'=>Yii::t('app', 'Alta')]); ?>
 
     <div class="form-group field-comercio-horario_desde required">
         <label class="control-label" for="comercio-horario_desde">Horario desde:</label>
@@ -72,6 +72,8 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
     <?php ActiveForm::end(); ?>
 
 </div>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
 <script>
 
