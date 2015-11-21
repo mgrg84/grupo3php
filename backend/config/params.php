@@ -1,5 +1,5 @@
 <?php
 return [
     'adminEmail' => 'admin@example.com',
-	'MaxUserRadius' => '5', //kilometers
+	'MaxUserRadius' => '25', //kilometers
 ];

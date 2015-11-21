@@ -20,6 +20,10 @@ class RutasController extends Controller
 	public function behaviors()
 	{
 		return [
+			/*'pageCache' => [
+				'class' => 'yii\filters\PageCache',
+				'enabled' => false,
+			],*/
 			'verbs' => [
 					'class' => VerbFilter::className(),
 					'actions' => [
@@ -93,50 +97,28 @@ class RutasController extends Controller
 		$filteredMarkets = [];
 		$user = User::findOne((int)$userID);
 		
-		var_dump($user);
-		$day = date('l', strtotime($date));
-		$filterDay = null;
+		//var_dump($user);
+		$filterDay = Helpers::GetSpanishDay($date);
 		
-		
-		switch($day)
+		$userLocation = split(";", $user->ubicacionDomicilio);
+		$comercios = Comercio::find()
+			->where($filterDay.' = true ')
+			->orderBy(['prioridad'=>SORT_DESC])
+			->all()
+		;
+		foreach ($comercios as $comercio)
 		{
-			case "Monday": $filterDay = 'lunes';
-				break;
-			case 'Tuesday': $filterDay = 'martes';
-				break;	
-			case 'Wednesday': $filterDay = 'miercoles';
-				break;
-			case 'Thursday': $filterDay = 'jueves';
-				break;
-			case 'Friday': $filterDay = 'viernes';
-				break;
-			case 'Saturday': $filterDay = 'sabado';
-				break;
-			case 'Sunday': $filterDay = 'domingo';
-				break;
-		}
-		
-		if ($user != null)
-		{
-			$userLocation = split(";", $user->ubicacionDomicilio);
-			$comercios = Comercio::find()
-				->where($filterDay.' = true ')
-				->orderBy(['prioridad'=>SORT_DESC])
-				->all()
-			;
-			foreach ($comercios as $comercio)
+			$comercioLocation = split(";", $comercio->ubicacion);
+			if(count($userLocation) > 1 && count($comercioLocation) > 1)
 			{
-				$comercioLocation = split(";", $comercio->ubicacion);
-				if(count($userLocation) > 1 && count($comercioLocation) > 1)
+				$distance = $this->distance($userLocation[0], $userLocation[1], $comercioLocation[0], $comercioLocation[1], "M");
+				if($distance <= Yii::$app->params['MaxUserRadius'] * 1000)
 				{
-					$distance = $this->distance($userLocation[0], $userLocation[1], $comercioLocation[0], $comercioLocation[1], "M");
-					if($distance <= Yii::$app->params['MaxUserRadius'] * 1000)
-					{
-						array_push($filteredMarkets, ['comercio'=> $comercio, 'distancia' => $distance]);
-					}
+					array_push($filteredMarkets, ['comercio'=> $comercio, 'distancia' => $distance, 'ubicacionUsuario' => $userLocation]);
 				}
 			}
 		}
+		
 		return $this->renderPartial('_listadoComercios', [ 'comercios' => $filteredMarkets ] );
 	}
 

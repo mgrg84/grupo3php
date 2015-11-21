@@ -59,16 +59,16 @@ return [
         ],
 
         // set your display timezone
-        'displayTimezone' => 'Asia/Kolkata',
+        //'displayTimezone' => 'Asia/Kolkata',
 
         // set your timezone for date saved to db
-        'saveTimezone' => 'UTC',
+        //'saveTimezone' => 'UTC',
 
         // automatically use kartik\widgets for each of the above formats
         'autoWidget' => true,
 
         // use ajax conversion for processing dates from display format to save format.
-        'ajaxConversion' => true,
+        'ajaxConversion' => false,
 
         // default settings for each widget from kartik\widgets used when autoWidget is true
         'autoWidgetSettings' => [
