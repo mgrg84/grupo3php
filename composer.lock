@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "389188f3fcb5ada244d4c802b6a169b0",
-    "content-hash": "c7bd69021a3c63b318c62418e8035e88",
+    "hash": "f099674cf4d00e2f91d632a7f530125d",
+    "content-hash": "38a1f6f3630f7b693d857e4d23200517",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -856,16 +856,16 @@
         },
         {
             "name": "rmrevin/yii2-fontawesome",
-            "version": "2.12.1",
+            "version": "2.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rmrevin/yii2-fontawesome.git",
-                "reference": "6bfb628f5d93170bfe896866faac494c24783c2e"
+                "reference": "62308687477734c166753de0ad9e2333dc7dce32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rmrevin/yii2-fontawesome/zipball/6bfb628f5d93170bfe896866faac494c24783c2e",
-                "reference": "6bfb628f5d93170bfe896866faac494c24783c2e",
+                "url": "https://api.github.com/repos/rmrevin/yii2-fontawesome/zipball/62308687477734c166753de0ad9e2333dc7dce32",
+                "reference": "62308687477734c166753de0ad9e2333dc7dce32",
                 "shasum": ""
             },
             "require": {
@@ -904,7 +904,7 @@
                 "font",
                 "yii"
             ],
-            "time": "2015-11-09 15:03:05"
+            "time": "2015-11-20 09:17:45"
         },
         {
             "name": "swiftmailer/swiftmailer",

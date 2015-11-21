@@ -45,6 +45,10 @@ $baseUrl = Yii::$app->getUrlManager()->getBaseUrl();
  async defer></script>
 
 <script>
+	var directionDisplay;
+	var directionsService;
+	var map;
+
 	$("#ruta-fecha-disp").on("change", loadMarkets);
 	$("#ruta-idusuario").on("change", loadMarkets);
     
@@ -79,9 +83,6 @@ $baseUrl = Yii::$app->getUrlManager()->getBaseUrl();
 		}
     };
 
-  var directionDisplay;
-  var directionsService;
-  var map;
 
   function initialize() {
 	directionsService = new google.maps.DirectionsService();
@@ -100,8 +101,11 @@ $baseUrl = Yii::$app->getUrlManager()->getBaseUrl();
   
   function calcRoute(userLocation) 
   {
+	//Clean current routes
+	directionsDisplay.setDirections({routes: []});
+	
+	
 	//Obtener ubicacion de comercios
-	//
 	var waypoints = [];
 	var marketChecks = $('input[type="checkbox"][id^="comLoc"]:checked');
 	marketChecks.each(function() {
