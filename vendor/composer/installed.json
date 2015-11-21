@@ -1135,6 +1135,45 @@
         ]
     },
     {
+        "name": "bower-asset/fontawesome",
+        "version": "v4.4.0",
+        "version_normalized": "4.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FortAwesome/Font-Awesome.git",
+            "reference": "e554555d73a44e0a7d11b0361ad7a5325a5f551c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/e554555d73a44e0a7d11b0361ad7a5325a5f551c",
+            "reference": "e554555d73a44e0a7d11b0361ad7a5325a5f551c",
+            "shasum": ""
+        },
+        "type": "bower-asset-library",
+        "extra": {
+            "bower-asset-main": [
+                "less/font-awesome.less",
+                "scss/font-awesome.scss"
+            ],
+            "bower-asset-ignore": [
+                "*/.*",
+                "*.json",
+                "src",
+                "*.yml",
+                "Gemfile",
+                "Gemfile.lock",
+                "*.md"
+            ]
+        },
+        "installation-source": "dist",
+        "license": [
+            "OFL-1.1",
+            "MIT",
+            "CC-BY-3.0"
+        ],
+        "description": "Font Awesome"
+    },
+    {
         "name": "rmrevin/yii2-fontawesome",
         "version": "2.12.0",
         "version_normalized": "2.12.0.0",
@@ -1189,48 +1228,6 @@
         ]
     },
     {
-        "name": "almasaeed2010/adminlte",
-        "version": "v2.3.2",
-        "version_normalized": "2.3.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/almasaeed2010/AdminLTE.git",
-            "reference": "1ee281b3b99e8d8cccdc72fb8437c6888149cb46"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/almasaeed2010/AdminLTE/zipball/1ee281b3b99e8d8cccdc72fb8437c6888149cb46",
-            "reference": "1ee281b3b99e8d8cccdc72fb8437c6888149cb46",
-            "shasum": ""
-        },
-        "time": "2015-10-23 14:50:49",
-        "type": "library",
-        "installation-source": "dist",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Abdullah Almsaeed",
-                "email": "support@almsaeedstudio.com"
-            }
-        ],
-        "description": "AdminLTE - admin control panel and dashboard that's based on Bootstrap 3",
-        "homepage": "http://almsaeedstudio.com/",
-        "keywords": [
-            "JS",
-            "admin",
-            "back-end",
-            "css",
-            "less",
-            "responsive",
-            "template",
-            "theme",
-            "web"
-        ]
-    },
-    {
         "name": "cebe/yii2-gravatar",
         "version": "1.1",
         "version_normalized": "1.1.0.0",
@@ -1273,6 +1270,48 @@
         "keywords": [
             "gravatar",
             "yii"
+        ]
+    },
+    {
+        "name": "almasaeed2010/adminlte",
+        "version": "v2.3.2",
+        "version_normalized": "2.3.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/almasaeed2010/AdminLTE.git",
+            "reference": "1ee281b3b99e8d8cccdc72fb8437c6888149cb46"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/almasaeed2010/AdminLTE/zipball/1ee281b3b99e8d8cccdc72fb8437c6888149cb46",
+            "reference": "1ee281b3b99e8d8cccdc72fb8437c6888149cb46",
+            "shasum": ""
+        },
+        "time": "2015-10-23 14:50:49",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Abdullah Almsaeed",
+                "email": "support@almsaeedstudio.com"
+            }
+        ],
+        "description": "AdminLTE - admin control panel and dashboard that's based on Bootstrap 3",
+        "homepage": "http://almsaeedstudio.com/",
+        "keywords": [
+            "JS",
+            "admin",
+            "back-end",
+            "css",
+            "less",
+            "responsive",
+            "template",
+            "theme",
+            "web"
         ]
     },
     {
@@ -1330,44 +1369,5 @@
             "extension",
             "yii2"
         ]
-    },
-    {
-        "name": "bower-asset/fontawesome",
-        "version": "v4.4.0",
-        "version_normalized": "4.4.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/FortAwesome/Font-Awesome.git",
-            "reference": "e554555d73a44e0a7d11b0361ad7a5325a5f551c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/e554555d73a44e0a7d11b0361ad7a5325a5f551c",
-            "reference": "e554555d73a44e0a7d11b0361ad7a5325a5f551c",
-            "shasum": ""
-        },
-        "type": "bower-asset-library",
-        "extra": {
-            "bower-asset-main": [
-                "less/font-awesome.less",
-                "scss/font-awesome.scss"
-            ],
-            "bower-asset-ignore": [
-                "*/.*",
-                "*.json",
-                "src",
-                "*.yml",
-                "Gemfile",
-                "Gemfile.lock",
-                "*.md"
-            ]
-        },
-        "installation-source": "dist",
-        "license": [
-            "OFL-1.1",
-            "MIT",
-            "CC-BY-3.0"
-        ],
-        "description": "Font Awesome"
     }
 ]
