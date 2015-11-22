@@ -12,8 +12,8 @@ use Yii;
  * @property integer $idComercio
  * @property integer $recorrido
  *
- * @property Comercio $idComercio0
- * @property Ruta $idRuta0
+ * @property Comercio $Comercio
+ * @property Ruta $Ruta
  */
 class RutaComercios extends \yii\db\ActiveRecord
 {
@@ -52,7 +52,7 @@ class RutaComercios extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIdComercio0()
+    public function getComercio()
     {
         return $this->hasOne(Comercio::className(), ['id' => 'idComercio']);
     }
@@ -60,7 +60,7 @@ class RutaComercios extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIdRuta0()
+    public function getRuta()
     {
         return $this->hasOne(Ruta::className(), ['id' => 'idRuta']);
     }

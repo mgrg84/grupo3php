@@ -1,5 +1,6 @@
 <?php
 return [
     'adminEmail' => 'admin@example.com',
-	'MaxUserRadius' => '25', //kilometers
+	'MaxUserRadius' => '50', //kilometers,
+	'marketDelay' => '1500', //seconds
 ];
