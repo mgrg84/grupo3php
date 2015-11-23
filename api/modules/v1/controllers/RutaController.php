@@ -1,11 +1,10 @@
 <?php
 
-namespace api\modules\v1\controllers;
+namespace app\modules\v1\controllers;
 
 use yii\rest\ActiveController;
 
 class RutaController extends ActiveController
 {
-    public $modelClass = 'common\models\Ruta';
-	
+	public $modelClass = 'app\modules\v1\models\ruta';
 }
