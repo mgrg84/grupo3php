@@ -20,6 +20,106 @@
     {
     "ProjRelPath" = "T"
     }
+    ".httpd.conf"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\.bowerrc"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\.htaccess"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\config"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\config\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\config\\aliases.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\config\\api.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\config\\db.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\config\\main-local.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\config\\main.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\config\\main.php~"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\config\\params.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\modules"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\modules\\v1"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\modules\\v1\\controllers"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\modules\\v1\\controllers\\RutaController.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\modules\\v1\\models"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\modules\\v1\\models\\Comercio.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\modules\\v1\\models\\Ruta.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\modules\\v1\\models\\RutaComercios.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\modules\\v1\\models\\User.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\modules\\v1\\Module.php"
+    {
+    "ProjRelPath" = "T"
+    }
     "backend"
     {
     "ProjRelPath" = "T"
@@ -3448,6 +3548,78 @@
     {
     "ProjRelPath" = "T"
     }
+    "frontend\\api"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\api\\.bowerrc"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\api\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\api\\.htaccess"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\api\\config"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\api\\config\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\api\\config\\api.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\api\\config\\params.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\api\\index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\api\\index.php~"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\api\\modules"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\api\\modules\\v1"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\api\\modules\\v1\\controllers"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\api\\modules\\v1\\controllers\\CountriesController.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\api\\modules\\v1\\controllers\\ProjectController.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\api\\modules\\v1\\controllers\\ProjectController.php~"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\api\\modules\\v1\\controllers\\RutaController.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\api\\modules\\v1\\Module1.php"
+    {
+    "ProjRelPath" = "T"
+    }
     "frontend\\assets"
     {
     "ProjRelPath" = "T"
@@ -3465,6 +3637,10 @@
     "ProjRelPath" = "T"
     }
     "frontend\\config\\bootstrap.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\config\\db.php"
     {
     "ProjRelPath" = "T"
     }
@@ -3620,11 +3796,27 @@
     {
     "ProjRelPath" = "T"
     }
+    "php.ini"
+    {
+    "ProjRelPath" = "T"
+    }
     "PHPVisual.intellisense.cache"
     {
     "ProjRelPath" = "T"
     }
+    "PHPVisual.phpproj"
+    {
+    "ProjRelPath" = "T"
+    }
     "PHPVisual.phpproj.user"
+    {
+    "ProjRelPath" = "T"
+    }
+    "PHPVisual.sln"
+    {
+    "ProjRelPath" = "T"
+    }
+    "PHPVisuals.intellisense.cache"
     {
     "ProjRelPath" = "T"
     }

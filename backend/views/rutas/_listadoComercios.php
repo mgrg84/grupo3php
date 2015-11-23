@@ -33,7 +33,6 @@ use backend\Code\Helpers;
 	echo "<th/>";
 	echo "</thead>";
 	echo "<tbody>";
-	$marketIndex = 0;
 		foreach($comercios as $comercio)
 		{
 			echo "<tr>";
@@ -41,9 +40,8 @@ use backend\Code\Helpers;
 			echo "<td>".$com->nombre."</td>";
 			echo "<td>".$comercio['distancia']."</td>";
 			echo "<td>".Yii::t('app', Helpers::GetPriorityDescription($com->prioridad))."</td>";
-			echo "<td>".Html::checkbox('comercio['.$com->id.']', true, $com->prioridad == 2 ? ['disabled' => '', 'ubicacion'=> $com->ubicacion, 'id' => "comLoc".$marketIndex ] : ['ubicacion'=> $com->ubicacion, 'id' => "comLoc".$marketIndex ])."</td>";
+			echo "<td>".Html::checkbox('comercio['.$com->id.']', true, $com->prioridad == 2 ? ['disabled' => '', 'ubicacion'=> $com->ubicacion, 'id' => "comID".$com->id ] : ['ubicacion'=> $com->ubicacion, 'id' => "comID".$com->id ])."</td>";
 			echo "</tr>";
-			$marketIndex++;
 		}
 	echo "</tbody>";
 	echo "</table>";

@@ -94,15 +94,6 @@ return array (
       '@cebe/gravatar' => $vendorDir . '/cebe/yii2-gravatar/cebe/gravatar',
     ),
   ),
-  'kartik-v/yii2-krajee-base' => 
-  array (
-    'name' => 'kartik-v/yii2-krajee-base',
-    'version' => '1.7.7.0',
-    'alias' => 
-    array (
-      '@kartik/base' => $vendorDir . '/kartik-v/yii2-krajee-base',
-    ),
-  ),
   'kartik-v/yii2-datecontrol' => 
   array (
     'name' => 'kartik-v/yii2-datecontrol',
@@ -146,6 +137,15 @@ return array (
     'alias' => 
     array (
       '@rmrevin/yii/fontawesome' => $vendorDir . '/rmrevin/yii2-fontawesome',
+    ),
+  ),
+  'kartik-v/yii2-krajee-base' => 
+  array (
+    'name' => 'kartik-v/yii2-krajee-base',
+    'version' => '1.7.8.0',
+    'alias' => 
+    array (
+      '@kartik/base' => $vendorDir . '/kartik-v/yii2-krajee-base',
     ),
   ),
 );
