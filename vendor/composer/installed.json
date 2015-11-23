@@ -1222,45 +1222,6 @@
         ]
     },
     {
-        "name": "bower-asset/fontawesome",
-        "version": "v4.4.0",
-        "version_normalized": "4.4.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/FortAwesome/Font-Awesome.git",
-            "reference": "e554555d73a44e0a7d11b0361ad7a5325a5f551c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/e554555d73a44e0a7d11b0361ad7a5325a5f551c",
-            "reference": "e554555d73a44e0a7d11b0361ad7a5325a5f551c",
-            "shasum": ""
-        },
-        "type": "bower-asset-library",
-        "extra": {
-            "bower-asset-main": [
-                "less/font-awesome.less",
-                "scss/font-awesome.scss"
-            ],
-            "bower-asset-ignore": [
-                "*/.*",
-                "*.json",
-                "src",
-                "*.yml",
-                "Gemfile",
-                "Gemfile.lock",
-                "*.md"
-            ]
-        },
-        "installation-source": "dist",
-        "license": [
-            "OFL-1.1",
-            "MIT",
-            "CC-BY-3.0"
-        ],
-        "description": "Font Awesome"
-    },
-    {
         "name": "kartik-v/php-date-formatter",
         "version": "v1.3.1",
         "version_normalized": "1.3.1.0",
@@ -1505,57 +1466,6 @@
         ]
     },
     {
-        "name": "kartik-v/yii2-widget-datepicker",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/kartik-v/yii2-widget-datepicker.git",
-            "reference": "520ba281f592d6bbbf2be33386a03423bccc8cd0"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/kartik-v/yii2-widget-datepicker/zipball/520ba281f592d6bbbf2be33386a03423bccc8cd0",
-            "reference": "520ba281f592d6bbbf2be33386a03423bccc8cd0",
-            "shasum": ""
-        },
-        "require": {
-            "kartik-v/yii2-krajee-base": "~1.7"
-        },
-        "time": "2015-11-14 12:47:50",
-        "type": "yii2-extension",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "kartik\\date\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Kartik Visweswaran",
-                "email": "kartikv2@gmail.com",
-                "homepage": "http://www.krajee.com/"
-            }
-        ],
-        "description": "Enhanced Yii2 wrapper for the bootstrap datepicker plugin (sub repo split from yii2-widgets).",
-        "homepage": "https://github.com/kartik-v/yii2-widget-datepicker",
-        "keywords": [
-            "date",
-            "extension",
-            "form",
-            "jquery",
-            "picker",
-            "plugin",
-            "select2",
-            "widget",
-            "yii2"
-        ]
-    },
-    {
         "name": "rmrevin/yii2-fontawesome",
         "version": "2.12.2",
         "version_normalized": "2.12.2.0",
@@ -1610,29 +1520,69 @@
         ]
     },
     {
-        "name": "kartik-v/yii2-krajee-base",
-        "version": "v1.7.8",
-        "version_normalized": "1.7.8.0",
+        "name": "bower-asset/fontawesome",
+        "version": "v4.4.0",
+        "version_normalized": "4.4.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/kartik-v/yii2-krajee-base.git",
-            "reference": "f90b9ff515ced4e40ff5ec8156a5c9f7f51e2a7f"
+            "url": "https://github.com/FortAwesome/Font-Awesome.git",
+            "reference": "e554555d73a44e0a7d11b0361ad7a5325a5f551c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/f90b9ff515ced4e40ff5ec8156a5c9f7f51e2a7f",
-            "reference": "f90b9ff515ced4e40ff5ec8156a5c9f7f51e2a7f",
+            "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/e554555d73a44e0a7d11b0361ad7a5325a5f551c",
+            "reference": "e554555d73a44e0a7d11b0361ad7a5325a5f551c",
+            "shasum": ""
+        },
+        "type": "bower-asset-library",
+        "extra": {
+            "bower-asset-main": [
+                "less/font-awesome.less",
+                "scss/font-awesome.scss"
+            ],
+            "bower-asset-ignore": [
+                "*/.*",
+                "*.json",
+                "src",
+                "*.yml",
+                "Gemfile",
+                "Gemfile.lock",
+                "*.md"
+            ]
+        },
+        "installation-source": "dist",
+        "license": [
+            "OFL-1.1",
+            "MIT",
+            "CC-BY-3.0"
+        ],
+        "description": "Font Awesome"
+    },
+    {
+        "name": "kartik-v/yii2-widget-datepicker",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/kartik-v/yii2-widget-datepicker.git",
+            "reference": "520ba281f592d6bbbf2be33386a03423bccc8cd0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/kartik-v/yii2-widget-datepicker/zipball/520ba281f592d6bbbf2be33386a03423bccc8cd0",
+            "reference": "520ba281f592d6bbbf2be33386a03423bccc8cd0",
             "shasum": ""
         },
         "require": {
-            "yiisoft/yii2-bootstrap": "@dev"
+            "kartik-v/yii2-krajee-base": "~1.7"
         },
-        "time": "2015-11-22 06:35:23",
+        "time": "2015-11-14 12:47:50",
         "type": "yii2-extension",
-        "installation-source": "dist",
+        "installation-source": "source",
         "autoload": {
             "psr-4": {
-                "kartik\\base\\": ""
+                "kartik\\date\\": ""
+
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -1646,13 +1596,16 @@
                 "homepage": "http://www.krajee.com/"
             }
         ],
-        "description": "Base library and foundation components for all Yii2 Krajee extensions.",
-        "homepage": "https://github.com/kartik-v/yii2-krajee-base",
+        "description": "Enhanced Yii2 wrapper for the bootstrap datepicker plugin (sub repo split from yii2-widgets).",
+        "homepage": "https://github.com/kartik-v/yii2-widget-datepicker",
         "keywords": [
-            "base",
+            "date",
             "extension",
-            "foundation",
-            "krajee",
+            "form",
+            "jquery",
+            "picker",
+            "plugin",
+            "select2",
             "widget",
             "yii2"
         ]
