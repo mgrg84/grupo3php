@@ -44,7 +44,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "api\\config\\main-local.php~"
+    "api\\config\\aliases.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\config\\main-local.php"
     {
     "ProjRelPath" = "T"
     }
@@ -92,11 +96,11 @@
     {
     "ProjRelPath" = "T"
     }
-    "api\\modules\\v1\\Module.php"
+    "api\\modules\\v1\\controllers\\RutaController.php"
     {
     "ProjRelPath" = "T"
     }
-    "api\\modules\\v1\\Module.php~"
+    "api\\modules\\v1\\Module.php"
     {
     "ProjRelPath" = "T"
     }
