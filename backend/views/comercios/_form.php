@@ -20,7 +20,7 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
     <?= $form->field($model, 'nombre')->textInput() ?>
 
     <input type="hidden" value="<?=$model->ubicacion?>" id="ubicacion" name="Comercio[ubicacion]" />
-    <input type="hidden" value="<?=$model->ubicacion_descripcion?>" id="ubicacionH" name="Comercio[ubicacion_descripcion    ]" />
+    <input type="hidden" value="<?=$model->ubicacion_descripcion?>" id="ubicacionH" name="Comercio[ubicacion_descripcion]" />
 
     <div class="form-group" style="height:350px; width:auto; padding-bottom:30px">
         <label class="control-label" for="pac-input">Ubicacion:</label>
@@ -33,13 +33,13 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
 
     <div class="form-group field-comercio-horario_desde required">
         <label class="control-label" for="comercio-horario_desde">Horario desde:</label>
-        <input type="text" id="comercio-horario_desde" class="form-control" name="Comercio[horario_desde]" value="<?= $model->horario_desde?>" />
+        <input autocomplete="off" type="text" id="comercio-horario_desde" class="form-control" name="Comercio[horario_desde]" value="<?= $model->horario_desde?>" />
         <div class="help-block"></div>
     </div>
 
     <div class="form-group field-comercio-horario_hasta required">
         <label class="control-label" for="comercio-horario_hasta">Horario hasta:</label>
-        <input type="text" id="comercio-horario_hasta" class="form-control" name="Comercio[horario_hasta]" value="<?= $model->horario_hasta?>" />
+        <input autocomplete="off" type="text" id="comercio-horario_hasta" class="form-control" name="Comercio[horario_hasta]" value="<?= $model->horario_hasta?>" />
         <div class="help-block"></div>
     </div>
 
