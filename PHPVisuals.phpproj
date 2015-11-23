@@ -20,6 +20,662 @@
     {
     "ProjRelPath" = "T"
     }
+    "api"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\.bowerrc"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\.htaccess"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\config"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\config\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\config\\main-local.php~"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\config\\main.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\config\\main.php~"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\config\\params.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\index.php~"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\modules"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\modules\\v1"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\modules\\v1\\controllers"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\modules\\v1\\controllers\\CountriesController.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\modules\\v1\\controllers\\ProjectController.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\modules\\v1\\controllers\\ProjectController.php~"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\modules\\v1\\Module.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\modules\\v1\\Module.php~"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\runtime"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\runtime\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception.yml"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\_output"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\_output\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\_bootstrap.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\_output"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\_output\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\acceptance"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\acceptance.suite.yml"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\acceptance\\_bootstrap.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\acceptance\\LoginCept.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\codeception.yml"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\functional"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\functional.suite.yml"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\functional\\_bootstrap.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\functional\\LoginCept.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\unit"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\unit.suite.yml"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\unit\\_bootstrap.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\unit\\DbTestCase.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\unit\\fixtures"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\unit\\fixtures\\data"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\unit\\fixtures\\data\\.gitkeep"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\backend\\unit\\TestCase.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\bin"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\bin\\_bootstrap.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\bin\\yii"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\bin\\yii.bat"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\_bootstrap.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\_output"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\_output\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\_pages"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\_pages\\LoginPage.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\_support"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\_support\\FixtureHelper.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\codeception.yml"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\fixtures"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\fixtures\\data"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\fixtures\\data\\init_login.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\fixtures\\UserFixture.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\templates"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\templates\\fixtures"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\templates\\fixtures\\user.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\unit"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\unit.suite.yml"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\unit\\_bootstrap.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\unit\\DbTestCase.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\unit\\fixtures"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\unit\\fixtures\\data"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\unit\\fixtures\\data\\models"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\unit\\fixtures\\data\\models\\user.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\unit\\models"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\unit\\models\\LoginFormTest.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\common\\unit\\TestCase.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config\\acceptance.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config\\backend"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config\\backend\\acceptance.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config\\backend\\config.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config\\backend\\functional.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config\\backend\\unit.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config\\common"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config\\common\\unit.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config\\config.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config\\console"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config\\console\\unit.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config\\frontend"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config\\frontend\\acceptance.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config\\frontend\\config.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config\\frontend\\functional.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config\\frontend\\unit.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config\\functional.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\config\\unit.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\console"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\console\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\console\\_bootstrap.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\console\\_output"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\console\\_output\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\console\\codeception.yml"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\console\\unit"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\console\\unit.suite.yml"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\console\\unit\\_bootstrap.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\console\\unit\\DbTestCase.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\console\\unit\\fixtures"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\console\\unit\\fixtures\\data"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\console\\unit\\fixtures\\data\\.gitkeep"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\console\\unit\\TestCase.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\_bootstrap.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\_output"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\_output\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\_pages"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\_pages\\AboutPage.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\_pages\\ContactPage.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\_pages\\SignupPage.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\acceptance"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\acceptance.suite.yml"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\acceptance\\_bootstrap.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\acceptance\\AboutCept.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\acceptance\\ContactCept.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\acceptance\\HomeCept.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\acceptance\\LoginCept.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\acceptance\\SignupCest.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\codeception.yml"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\functional"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\functional.suite.yml"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\functional\\_bootstrap.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\functional\\AboutCept.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\functional\\ContactCept.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\functional\\HomeCept.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\functional\\LoginCept.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\functional\\SignupCest.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\unit"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\unit.suite.yml"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\unit\\_bootstrap.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\unit\\DbTestCase.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\unit\\fixtures"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\unit\\fixtures\\data"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\unit\\fixtures\\data\\models"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\unit\\fixtures\\data\\models\\user.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\unit\\models"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\unit\\models\\ContactFormTest.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\unit\\models\\PasswordResetRequestFormTest.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\unit\\models\\ResetPasswordFormTest.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\unit\\models\\SignupFormTest.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\codeception\\frontend\\unit\\TestCase.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\tests\\README.md"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\web"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\web\\.htaccess"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\web\\assets"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\web\\assets\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\web\\css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\web\\css\\site.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\web\\favicon.ico"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\web\\index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "api\\web\\robots.txt"
+    {
+    "ProjRelPath" = "T"
+    }
     "backend"
     {
     "ProjRelPath" = "T"
@@ -3620,11 +4276,27 @@
     {
     "ProjRelPath" = "T"
     }
+    "php.ini"
+    {
+    "ProjRelPath" = "T"
+    }
     "PHPVisual.intellisense.cache"
     {
     "ProjRelPath" = "T"
     }
+    "PHPVisual.phpproj"
+    {
+    "ProjRelPath" = "T"
+    }
     "PHPVisual.phpproj.user"
+    {
+    "ProjRelPath" = "T"
+    }
+    "PHPVisual.sln"
+    {
+    "ProjRelPath" = "T"
+    }
+    "PHPVisuals.intellisense.cache"
     {
     "ProjRelPath" = "T"
     }
