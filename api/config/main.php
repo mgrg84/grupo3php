@@ -75,8 +75,14 @@ return [
     
 ];*/
 
-$db     = require(__DIR__ . '/../../config/db.php');
-$params = require(__DIR__ . '/params.php');
+//$db     = require(__DIR__ . '/../../config/db.php');
+//$params = require(__DIR__ . '/params.php');
+$params = array_merge(
+	require(__DIR__ . '/../../common/config/params.php'),
+	require(__DIR__ . '/../../common/config/params-local.php'),
+	require(__DIR__ . '/params.php')
+	//require(__DIR__ . '/params-local.php')
+);
 
 $config = [
     'id' => 'api-app',
@@ -110,7 +116,7 @@ $config = [
             'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
-                ['class' => 'yii\rest\UrlRule', 'controller' => ['v1/project','v1/time']],
+                ['class' => 'yii\rest\UrlRule', 'controller' => 'v1/ruta'],
 
 		/*AQUI VA ALGO ASI PARA LOS CONTROLADORES
 
@@ -135,7 +141,7 @@ $config = [
     ],
     'modules' => [
         'v1' => [
-		'basePath' => '@app/modules/v1',
+		//'basePath' => '@app/modules/v1',
             //'class' => 'app\api\modules\v1\Module',
 		'class' => 'api\modules\v1\Module',
         ],
