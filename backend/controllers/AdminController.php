@@ -14,21 +14,34 @@ use backend\filtros\AdminControl;
  */
 class AdminController extends Controller
 {
-    
     public function actionIndex()
     {
     	return $this->redirect(array('site/index'));
     }
-
+    public function beforeAction($action) {
+        $this->enableCsrfValidation = false;
+        return parent::beforeAction($action);
+    }
     public function actionLogin() 
     {
-    	$_POST = Yii::$app->request->post();
-    	if( isset($_POST['nick']) && isset($_POST['pass']) ) {
-    		if( ($_POST['nick'] == 'admin') && ($_POST['pass'] == 'admin') ) {
-    			$_SESSION['admin'] = true;
-    			//return $this->render('login', ['error' => true]);
-    		} else {
-    			//return $this->redirect(array('site/index'));
+    	$post = Yii::$app->request->post();
+        $session = Yii::$app->session;
+        
+        $admin = $session['admin'];
+        if( $session->isActive && isset($admin)) {
+            return $this->redirect(array('site/index'));
+            echo $session['admin'];
+        }
+    	if( isset($post['nickname']) && isset($post['password']) ) {
+            if( ($post['nickname'] == 'admin') && ($post['password'] == 'admin') ) {
+                if( !$session->isActive ) 
+                    $session->open();
+
+                $session['admin'] = true;
+
+    			return $this->redirect(array('site/index'));
+            } else {
+                return $this->render('login', ['error' => true]);
     		}
     	} else {
     		return $this->render('login');
@@ -36,8 +49,9 @@ class AdminController extends Controller
     }
 
     public function actionLogout() {
-    	if( isset($_SESSION['admin']))
-    		unset($_SESSION['admin']);
+        $session = Yii::$app->session;
+        if( !$session->isActive ) 
+    		unset($session['admin']);
     	return $this->redirect(array('admin/login'));
     }
 
