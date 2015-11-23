@@ -52,7 +52,7 @@ class Ruta extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getUsuarios()
+    public function getUsuario()
     {
         return $this->hasOne(User::className(), ['id' => 'idUsuario']);
     }

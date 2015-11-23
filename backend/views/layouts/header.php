@@ -33,10 +33,8 @@ use yii\helpers\Html;
                     <?= Html::a('Recorridos', ['/rutas/']) ?>
                 </li>
                 <!-- Tasks: style can be found in dropdown.less -->
-                <li class="dropdown tasks-menu">
-                    <a href="#" class="dropdown-toggle">
-                        Usuarios
-                    </a>
+                <li class="dropdown notifications-menu">
+                    <?= Html::a('Usuarios', ['/usuario/']) ?>
                 </li>
                 <!-- User Account: style can be found in dropdown.less -->
 

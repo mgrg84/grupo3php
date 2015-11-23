@@ -1,8 +1,12 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\ArrayHelper;
 use yii\grid\GridView;
 use backend\Code\Helpers;
+use common\models\User;
+use kartik\datecontrol\DateControl;
+use yii\widgets\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\ComercioSearch */
@@ -24,16 +28,29 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            'fecha:datetime',
+    		[
+    			'attribute' => Yii::t('app', 'Fecha'),
+    			'value' =>  function($model)
+    				{
+    					return date("d-M-y",  strtotime($model->fecha));
+    				},
+    			'filter' => DateControl::widget(['name'=>'RutaSearch[fecha]', 'displayFormat' => 'php:d-M-y', 'saveFormat' => 'yyyy-MM-dd']),
+				'format' => 'html',
+    		],
             [
                 'attribute' => Yii::t('app', 'Usuario'),
-                'value' => function($model) 
-                {
-                    return $model->Usuario->username;
-                },
-                //'filter' => Html::activeDropDownList($searchModel, 'prioridad', ['1'=>Yii::t('app', 'Baja'), '2'=>Yii::t('app', 'Media'), '3'=>Yii::t('app', 'Alta')], ['class'=>'form-control','prompt' => Yii::t('app','Seleccionar prioridad')]),
+    			'value' => 'usuario.username',
+    			'filter' => Html::activeDropDownList($searchModel, 'idUsuario', ArrayHelper::map(User::find()->all(), 'id', 'username'), ['class'=>'form-control','prompt' => Yii::t('app','Seleccionar relevador')]),
             ],
-            ['class' => 'yii\grid\ActionColumn'],
+    		[
+    			'attribute' => Yii::t('app', 'Comercios'),
+    			'value' => function($model)
+					{
+						$marketNames = array_map(create_function('$rutaComercios', 'return $rutaComercios->comercio->nombre;'), $model->rutaComercios);
+    					return implode(", ", $marketNames);	
+					},
+    		],
+            ['class' => 'yii\grid\ActionColumn', 'template' => '{view} {delete}'],
         ],
     ]); ?>
 

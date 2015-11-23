@@ -7,7 +7,7 @@ use yii\helpers\Html;
 /* @var $model common\models\Comercio */
 
 $this->title = Yii::t('app', 'Create Route');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Comercios'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Rutas'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
