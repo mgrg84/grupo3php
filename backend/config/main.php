@@ -13,22 +13,23 @@ return [
     'bootstrap' => ['log'],
     'modules' => [
         'user' => [
-            'enableUnconfirmedLogin' => true,
-            'confirmWithin' => 21600,
-            'cost' => 12,
-            'admins' => ['admin']
+            'class' => 'dektrium\user\Module',
+            'enableRegistration' => false,
+            'enablePasswordRecovery' => false,
+            'enableUnconfirmedLogin' => false,
         ],
     ],
     'components' => [
         //TEMAS PARA PONER LINDO EL SITIO
-
         'view' => [
             'theme' => [
                 'pathMap' => [
                     '@backend/views' => [
                         '@backend/themes/views',
+
                     ],
-                  
+                    // reescribir vistas de yii2-user
+                    '@dektrium/user/views' => '@app/views/admin'
                 ]
             ]
         ],

@@ -13,10 +13,10 @@ return [
     'controllerNamespace' => 'frontend\controllers',
     'modules' => [
         'user' => [
-            'enableUnconfirmedLogin' => true,
-            'confirmWithin' => 21600,
-            'cost' => 12,
-            'admins' => ['admin']
+            'class' => 'dektrium\user\Module',
+            'enableConfirmation' => true,
+            'enableUnconfirmedLogin' => false,
+            'cost' => 12
         ],
     ],
     'components' => [

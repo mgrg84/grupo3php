@@ -29,8 +29,7 @@ class AdminController extends Controller
         
         $admin = $session['admin'];
         if( $session->isActive && isset($admin)) {
-            return $this->redirect(array('site/index'));
-            echo $session['admin'];
+            return $this->redirect(array('home/'));
         }
     	if( isset($post['nickname']) && isset($post['password']) ) {
             if( ($post['nickname'] == 'admin') && ($post['password'] == 'admin') ) {
@@ -38,8 +37,8 @@ class AdminController extends Controller
                     $session->open();
 
                 $session['admin'] = true;
-
-    			return $this->redirect(array('site/index'));
+                
+    			return $this->redirect(array('home/'));
             } else {
                 return $this->render('login', ['error' => true]);
     		}

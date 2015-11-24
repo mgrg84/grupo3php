@@ -32,9 +32,6 @@ class UsuarioController extends Controller
      */
     public function actionIndex()
     {
-        if( !AdminControl::esAdmin(Yii::$app->user->identity->username) )
-            return $this->redirect(Yii::$app->urlManager->createUrl('./../../frontend/web/'));
-
         $searchModel = new PostSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -51,9 +48,6 @@ class UsuarioController extends Controller
      */
     public function actionView($id)
     {
-        if( !AdminControl::esAdmin(Yii::$app->user->identity->username) )
-            return $this->redirect(Yii::$app->urlManager->createUrl('./../../frontend/web/'));
-
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -66,9 +60,6 @@ class UsuarioController extends Controller
      */
     public function actionCreate()
     {
-        if( !AdminControl::esAdmin(Yii::$app->user->identity->username) )
-            return $this->redirect(Yii::$app->urlManager->createUrl('./../../frontend/web/'));
-
         $model = new User();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -88,9 +79,6 @@ class UsuarioController extends Controller
      */
     public function actionUpdate($id)
     {
-        if( !AdminControl::esAdmin(Yii::$app->user->identity->username) )
-            return $this->redirect(Yii::$app->urlManager->createUrl('./../../frontend/web/'));
-
         $model = $this->findModel($id);
         
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -113,9 +101,6 @@ class UsuarioController extends Controller
      */
     public function actionDelete($id)
     {
-        if( !AdminControl::esAdmin(Yii::$app->user->identity->username) )
-            return $this->redirect(Yii::$app->urlManager->createUrl('./../../frontend/web/'));
-
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
@@ -128,9 +113,7 @@ class UsuarioController extends Controller
      */
     public function actionConfirmar($id)
     {
-        if( !AdminControl::esAdmin(Yii::$app->user->identity->username) )
-            return $this->redirect(Yii::$app->urlManager->createUrl('./../../frontend/web/'));
-        
+       
         $model = $this->findModel($id);
         $model->confirm();
 
