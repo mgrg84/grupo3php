@@ -75,9 +75,11 @@ $this->params['breadcrumbs'][] = $this->title;
 		directionsDisplay.setMap(map);
 		calcRoute();
 	}
-  
+
 	function calcRoute() 
 	{
+		var lastmarketLoc;
+		
 		//Clean current routes
 		var summaryPanel = document.getElementById("directions_panel");
 		summaryPanel.innerHTML = "";
@@ -109,16 +111,25 @@ $this->params['breadcrumbs'][] = $this->title;
 			
 			if( marketloc.length > 0)
 			{
-				 marketloc.forEach(function(entry) {
-					waypoints.push({ 
-						location: new google.maps.LatLng(entry.split(";")[0], entry.split(";")[1]),
-						stopover:true
-					});
+				 marketloc.forEach(function(entry, index)
+				 {
+					var comLoc = new google.maps.LatLng(entry.split(";")[0], entry.split(";")[1]);
+					if(index < marketloc.length -1 )
+					{
+						waypoints.push({ 
+							location: comLoc,
+							stopover:true
+						});
+					}
+					else //last waypoint
+					{
+						lastmarketLoc = comLoc;
+					}
 				});
 		
 				var request = {
 					origin: userLocation,
-					destination: userLocation,
+					destination: lastmarketLoc,
 					waypoints: waypoints,
 					optimizeWaypoints: false,
 					travelMode: google.maps.DirectionsTravelMode.WALKING
@@ -135,18 +146,18 @@ $this->params['breadcrumbs'][] = $this->title;
 						summaryPanel.innerHTML += "<b>Detalles de recorrido: </b><br />";
 						for (var i = 0; i < route.legs.length; i++)
 						{
-							if(route.legs.length - 1 == i)
+							/*if(route.legs.length - 1 == i)
 							{
 								//Do nothing
 							}
 							else
-							{
+							{*/
 								var routeSegment = i + 1;
 								summaryPanel.innerHTML += "Desde: " + route.legs[i].start_address + "<br />" ;
 								summaryPanel.innerHTML += "Hasta: " + route.legs[i].end_address + "<br />" ;
 								summaryPanel.innerHTML += "Distancia: " + route.legs[i].distance.text + "<br />";
 								summaryPanel.innerHTML += "Tiempo aprox: " + Math.round(((route.legs[i].duration.value + <?= Yii::$app->params['marketDelay'] ?>) / 3600) * 10) / 10 + " <?= Yii::t('app', 'horas') ?>  <br /><br />";
-							}
+							/*}*/
 						}
 						summaryPanel.style.display = 'inline-block';
 					}
