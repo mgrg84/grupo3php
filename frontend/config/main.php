@@ -12,10 +12,24 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-    'components' => [
+    'modules' => [
         'user' => [
-            'identityClass' => 'common\models\User',
-            'enableAutoLogin' => true,
+            'class' => 'dektrium\user\Module',
+            'enableConfirmation' => true,
+            'enableUnconfirmedLogin' => false,
+            'cost' => 12
+        ],
+    ],
+    'components' => [
+        'authClientCollection' => [
+            'class'   => \yii\authclient\Collection::className(),
+            'clients' => [
+                'facebook' => [
+                    'class'        => 'dektrium\user\clients\Facebook',
+                    'clientId'     => '1510544775929969',
+                    'clientSecret' => '0c165e222a87664c6f3cca453d869ad0',
+                ],
+            ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
