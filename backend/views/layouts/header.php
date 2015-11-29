@@ -61,7 +61,7 @@ use yii\helpers\Html;
                                 <?=
                                     Html::a(
                                     'Sign out',
-                                    ['/site/logout'],
+                                    ['/admin/logout'],
                                     ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']
                                 )
                                 ?>

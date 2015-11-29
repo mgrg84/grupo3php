@@ -8,7 +8,7 @@ use app\models\PostSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use backend\filtros\AdminControl;
 /**
  * UsuarioController implements the CRUD actions for User model.
  */
@@ -113,14 +113,11 @@ class UsuarioController extends Controller
      */
     public function actionConfirmar($id)
     {
-        
+       
         $model = $this->findModel($id);
         $model->confirm();
 
         return $this->redirect(['view', 'id' => $model->id]);
-
-        
-
     }
 
     /**

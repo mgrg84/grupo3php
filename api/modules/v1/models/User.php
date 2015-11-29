@@ -57,6 +57,16 @@ class User extends \yii\db\ActiveRecord
         ];
     }
 
+	public function fields()
+	{
+		return [
+			'id',
+			'username',
+			'email',
+			'ubicacionDomicilio'
+		];
+	}
+	
     /**
      * @inheritdoc
      */

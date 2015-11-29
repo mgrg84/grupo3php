@@ -3664,6 +3664,10 @@
     {
     "ProjRelPath" = "T"
     }
+    "frontend\\controllers\\RutasController.php"
+    {
+    "ProjRelPath" = "T"
+    }
     "frontend\\controllers\\SiteController.php"
     {
     "ProjRelPath" = "T"
@@ -3708,6 +3712,22 @@
     {
     "ProjRelPath" = "T"
     }
+    "frontend\\views\\rutas"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\views\\rutas\\_search.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\views\\rutas\\index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\views\\rutas\\view.php"
+    {
+    "ProjRelPath" = "T"
+    }
     "frontend\\views\\site"
     {
     "ProjRelPath" = "T"
@@ -3749,6 +3769,10 @@
     "ProjRelPath" = "T"
     }
     "frontend\\web\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\.htaccess"
     {
     "ProjRelPath" = "T"
     }

@@ -6,6 +6,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use common\models\LoginForm;
 use yii\filters\VerbFilter;
+use backend\filtros\AdminControl;
 
 /**
  * Site controller
@@ -63,15 +64,14 @@ class SiteController extends Controller
         if (!\Yii::$app->user->isGuest) {
             return $this->goHome();
         }
-
+        
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
-            return $this->render('login', [
-                'model' => $model,
-            ]);
+            return $this->render('login', ['model' => $model,]);
         }
+
     }
 
     public function actionLogout()

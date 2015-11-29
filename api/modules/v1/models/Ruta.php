@@ -48,6 +48,21 @@ class Ruta extends \yii\db\ActiveRecord
             'fecha' => Yii::t('app', 'Fecha'),
         ];
     }
+	
+	public function fields()
+	{
+		return [
+			'fecha',
+			'usuario' => function ($model)
+			{
+				return $model->usuario; // Return related model property, correct according to your structure
+			},
+			'rutaComercios' => function ($model)
+			{
+				return $model->rutaComercios; // Return related model property, correct according to your structure
+			},
+		];
+	}
 
     /**
      * @return \yii\db\ActiveQuery

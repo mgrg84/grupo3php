@@ -9,9 +9,6 @@ use yii\grid\GridView;
 
 $this->title = Yii::t('app', 'Users');
 $this->params['breadcrumbs'][] = $this->title;
-$t=time();
-echo($t . "<br>");
-echo(date("Y-m-d",$t));
 ?>
 <div class="user-index">
 
@@ -39,7 +36,7 @@ echo(date("Y-m-d",$t));
                 'format'    => 'raw',
                 'value'     => function ($model) {
                     if ($model->confirmed_at != null) {
-                        return $model->confirmed_at; 
+                        return date("d-m-Y",$model->confirmed_at); 
                     } else {
                         return 'Sin Confirmar';
                     }
