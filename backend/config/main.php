@@ -11,17 +11,25 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+        'user' => [
+            'class' => 'dektrium\user\Module',
+            'enableRegistration' => false,
+            'enablePasswordRecovery' => false,
+            'enableUnconfirmedLogin' => false,
+        ],
+    ],
     'components' => [
         //TEMAS PARA PONER LINDO EL SITIO
-
         'view' => [
             'theme' => [
                 'pathMap' => [
                     '@backend/views' => [
                         '@backend/themes/views',
+
                     ],
-                  
+                    // reescribir vistas de yii2-user
+                    '@dektrium/user/views' => '@app/views/admin'
                 ]
             ]
         ],

@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 {
                     return Helpers::GetPriorityDescription($model->prioridad);
                 },
-    					'filter' => Html::activeDropDownList($searchModel, 'prioridad', ['1'=>Yii::t('app', 'Normal'), '2'=>Yii::t('app', 'Alta')], ['class'=>'form-control','prompt' => Yii::t('app','Seleccionar prioridad')]),
+    			'filter' => Html::activeDropDownList($searchModel, 'prioridad',  ['1'=>Yii::t('app', 'Normal'), '2'=>Yii::t('app', 'Alta')], ['class'=>'form-control','prompt' => Yii::t('app','Seleccionar prioridad')]),
             ],
             ['class' => 'yii\grid\ActionColumn'],
         ],

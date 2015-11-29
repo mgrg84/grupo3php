@@ -21,6 +21,9 @@ use yii\helpers\Html;
 
                 <!-- Messages: style can be found in dropdown.less-->
                 <li class="dropdown messages-menu">
+                    <?= Html::a('Pedidos', ['/pedido/']) ?>
+                </li>
+                <li class="dropdown messages-menu">
                     <?= Html::a('Categorias', ['/categoria/']) ?>
                 </li>
                 <li class="dropdown messages-menu">
@@ -33,10 +36,8 @@ use yii\helpers\Html;
                     <?= Html::a('Recorridos', ['/rutas/']) ?>
                 </li>
                 <!-- Tasks: style can be found in dropdown.less -->
-                <li class="dropdown tasks-menu">
-                    <a href="#" class="dropdown-toggle">
-                        Usuarios
-                    </a>
+                <li class="dropdown notifications-menu">
+                    <?= Html::a('Usuarios', ['/usuario/']) ?>
                 </li>
                 <!-- User Account: style can be found in dropdown.less -->
 
@@ -63,7 +64,7 @@ use yii\helpers\Html;
                                 <?=
                                     Html::a(
                                     'Sign out',
-                                    ['/site/logout'],
+                                    ['/admin/logout'],
                                     ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']
                                 )
                                 ?>
