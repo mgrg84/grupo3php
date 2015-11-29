@@ -7,7 +7,7 @@ use yii\test\ActiveFixture;
 /**
  * User fixture
  */
-class UserFixture extends ActiveFixture
+class ProductoFixture extends ActiveFixture
 {
-    public $modelClass = 'common\models\User';
+    public $modelClass = 'common\models\Producto';
 }
