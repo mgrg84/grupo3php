@@ -22,7 +22,8 @@
         "dmstr/yii2-adminlte-asset": "2.*",
         "kartik-v/yii2-datecontrol": "dev-master",
         "kartik-v/yii2-widget-datepicker": "@dev",
-        "iutbay/yii2-fontawesome" : "*"
+        "iutbay/yii2-fontawesome": "*",
+        "sjaakp/yii2-gcharts": "*"  
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

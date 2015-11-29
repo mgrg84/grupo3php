@@ -21,10 +21,6 @@ class RutasController extends Controller
 	public function behaviors()
 	{
 		return [
-			/*'pageCache' => [
-				'class' => 'yii\filters\PageCache',
-				'enabled' => false,
-			],*/
 			'verbs' => [
 					'class' => VerbFilter::className(),
 					'actions' => [

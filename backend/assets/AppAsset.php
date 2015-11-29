@@ -18,13 +18,14 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
+        //'css/site.css',
+		'css/jquery-ui.css',
     ];
     public $jsOptions = array(
         'position' => \yii\web\View::POS_HEAD
     );
     public $js = [
-        //'assets/js/jquery.ptTimeSelect.js'
+		'assets/js/jquery-ui.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

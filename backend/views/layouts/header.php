@@ -32,6 +32,9 @@ use yii\helpers\Html;
                 <li class="dropdown notifications-menu">
                     <?= Html::a('Recorridos', ['/rutas/']) ?>
                 </li>
+				 <li class="dropdown notifications-menu">
+                    <?= Html::a('Estadisticas', ['/estadisticas/']) ?>
+                </li>
                 <!-- Tasks: style can be found in dropdown.less -->
                 <li class="dropdown notifications-menu">
                     <?= Html::a('Usuarios', ['/usuario/']) ?>
