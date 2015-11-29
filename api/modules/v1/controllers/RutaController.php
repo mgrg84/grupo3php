@@ -6,5 +6,5 @@ use yii\rest\ActiveController;
 
 class RutaController extends ActiveController
 {
-	public $modelClass = 'app\modules\v1\models\ruta';
+	public $modelClass = 'app\modules\v1\models\Ruta';
 }
