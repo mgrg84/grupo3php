@@ -133,10 +133,13 @@ class ProductoController extends Controller
 
         if ($model->load(Yii::$app->request->post())) {
             $nombreImagen = $model->nombre;
-            $model->file = UploadedFile::getInstance($model, 'file');
-            $model->imagen = 'imagenes/'.$nombreImagen.'.'.$model->file->extension;
+            if (($model->file = UploadedFile::getInstance($model, 'file')) != null){
+                $model->imagen = 'imagenes/'.$nombreImagen.'.'.$model->file->extension;
+            }
             $model->save();
-            $model->file->saveAs('imagenes/'.$nombreImagen.'.'.$model->file->extension);
+            if (($model->file)!=null){
+                $model->file->saveAs('imagenes/'.$nombreImagen.'.'.$model->file->extension);
+            }
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [

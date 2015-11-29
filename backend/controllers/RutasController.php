@@ -106,22 +106,36 @@ class RutasController extends Controller
 		$filteredMarkets = [];
 		$user = User::findOne((int)$userID);
 		
-		//var_dump($user);
 		$filterDay = Helpers::GetSpanishDay($date);
 		
 		$userLocation = split(";", $user->ubicacionDomicilio);
+		
+		$routeIDs = Ruta::find()
+			->where("fecha = '".date("y-m-d",  strtotime($date))."'")
+			->select('id')
+			->asArray()
+		;
+		
+		$alreadyAddedMarkets = RutaComercios::find()
+			->where(['idRuta' => $routeIDs])
+			->select('idComercio')	
+			->asArray()
+		;
+		
 		$comercios = Comercio::find()
 			->where($filterDay.' = true ')
+			->andWhere(['NOT IN', 'id', $alreadyAddedMarkets])
 			->orderBy(['prioridad'=>SORT_DESC])
 			->all()
 		;
+		
 		foreach ($comercios as $comercio)
 		{
 			$comercioLocation = split(";", $comercio->ubicacion);
 			if(count($userLocation) > 1 && count($comercioLocation) > 1)
 			{
 				$distance = Helpers::GetDistance($userLocation[0], $userLocation[1], $comercioLocation[0], $comercioLocation[1], "M");
-				if($distance <= Yii::$app->params['MaxUserRadius'] * 1000)
+				if($distance <= Yii::$app->params['MaxUserRadius'] * 1000 && $distance > 0)
 				{
 					array_push($filteredMarkets, ['comercio'=> $comercio, 'distancia' => $distance, 'ubicacionUsuario' => $userLocation]);
 				}

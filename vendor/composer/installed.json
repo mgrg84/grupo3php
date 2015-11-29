@@ -1214,52 +1214,17 @@
         "installation-source": "dist"
     },
     {
-        "name": "bower-asset/yii2-pjax",
-        "version": "v2.0.4",
-        "version_normalized": "2.0.4.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/yiisoft/jquery-pjax.git",
-            "reference": "3f20897307cca046fca5323b318475ae9dac0ca0"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/jquery-pjax/zipball/3f20897307cca046fca5323b318475ae9dac0ca0",
-            "reference": "3f20897307cca046fca5323b318475ae9dac0ca0",
-            "shasum": ""
-        },
-        "require": {
-            "bower-asset/jquery": ">=1.8"
-        },
-        "type": "bower-asset-library",
-        "extra": {
-            "bower-asset-main": "./jquery.pjax.js",
-            "bower-asset-ignore": [
-                ".travis.yml",
-                "Gemfile",
-                "Gemfile.lock",
-                "vendor/",
-                "script/",
-                "test/"
-            ]
-        },
-        "installation-source": "dist",
-        "license": [
-            "MIT"
-        ]
-    },
-    {
         "name": "kartik-v/php-date-formatter",
         "version": "v1.3.1",
         "version_normalized": "1.3.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/iutbay/yii2-fontawesome.git",
-            "reference": "70bb5cd17bf555700879ce8ea2fbccf5b1e53a1d"
+            "url": "https://github.com/kartik-v/php-date-formatter.git",
+            "reference": "7d3dc3495dd10bd1909c0dfdecd673967019cc21"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/iutbay/yii2-fontawesome/zipball/70bb5cd17bf555700879ce8ea2fbccf5b1e53a1d",
+            "url": "https://api.github.com/repos/kartik-v/php-date-formatter/zipball/7d3dc3495dd10bd1909c0dfdecd673967019cc21",
             "reference": "70bb5cd17bf555700879ce8ea2fbccf5b1e53a1d",
             "shasum": ""
         },
@@ -1291,11 +1256,12 @@
         ]
     },
     {
-        "name": "kartik-v/yii2-datecontrol",
+        "name": "kartik-v/yii2-widget-datepicker",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
+
             "url": "https://github.com/kartik-v/yii2-datecontrol.git",
             "reference": "4e858b5cd38130c37739b2f582b66a044f77c95c"
         },
@@ -1340,65 +1306,151 @@
         ]
     },
     {
-        "name": "rmrevin/yii2-fontawesome",
-        "version": "2.12.2",
-        "version_normalized": "2.12.2.0",
+        "name": "bower-asset/yii2-pjax",
+        "version": "v2.0.5",
+        "version_normalized": "2.0.5.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/twitter/typeahead.js.git",
-            "reference": "5f198b87d1af845da502ea9df93a5e84801ce742"
+            "url": "https://github.com/yiisoft/jquery-pjax.git",
+            "reference": "6818718408086db6bdcf33649cecb86b6b4f9b67"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/twitter/typeahead.js/zipball/5f198b87d1af845da502ea9df93a5e84801ce742",
-            "reference": "5f198b87d1af845da502ea9df93a5e84801ce742",
+            "url": "https://api.github.com/repos/yiisoft/jquery-pjax/zipball/6818718408086db6bdcf33649cecb86b6b4f9b67",
+            "reference": "6818718408086db6bdcf33649cecb86b6b4f9b67",
             "shasum": ""
         },
         "require": {
-            "bower-asset/jquery": ">=1.7"
-        },
-        "require-dev": {
-            "bower-asset/jasmine-ajax": "~1.3.1",
-            "bower-asset/jasmine-jquery": "~1.5.2",
-            "bower-asset/jquery": "~1.7"
+            "bower-asset/jquery": ">=1.8"
         },
         "type": "bower-asset-library",
         "extra": {
-            "bower-asset-main": "dist/typeahead.bundle.js"
+            "bower-asset-main": "./jquery.pjax.js",
+            "bower-asset-ignore": [
+                ".travis.yml",
+                "Gemfile",
+                "Gemfile.lock",
+                "vendor/",
+                "script/",
+                "test/"
+            ]
+        },
+        "installation-source": "dist",
+        "license": [
+            "MIT"
+        ]
+    },
+    {
+        "name": "kartik-v/yii2-krajee-base",
+        "version": "v1.7.9",
+        "version_normalized": "1.7.9.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/kartik-v/yii2-krajee-base.git",
+            "reference": "6f10fd0a0bfccd729764c65fa65eb4ccf2cbade9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/kartik-v/yii2-krajee-base/zipball/6f10fd0a0bfccd729764c65fa65eb4ccf2cbade9",
+            "reference": "6f10fd0a0bfccd729764c65fa65eb4ccf2cbade9",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2-bootstrap": "@dev"
+        },
+        "time": "2015-11-25 07:03:35",
+        "type": "yii2-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "kartik\\base\\": ""
+            }
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Kartik Visweswaran",
+                "email": "kartikv2@gmail.com",
+                "homepage": "http://www.krajee.com/"
+            }
+        ],
+        "description": "Base library and foundation components for all Yii2 Krajee extensions.",
+        "homepage": "https://github.com/kartik-v/yii2-krajee-base",
+        "keywords": [
+            "base",
+            "extension",
+            "foundation",
+            "krajee",
+            "widget",
+            "yii2"
+        ]
+    },
+    {
+        "name": "fortawesome/font-awesome",
+        "version": "v4.5.0",
+        "version_normalized": "4.5.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FortAwesome/Font-Awesome.git",
+            "reference": "dbc8d1b9b67daaab357bcc41dbf549c3684cf5f1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/dbc8d1b9b67daaab357bcc41dbf549c3684cf5f1",
+            "reference": "dbc8d1b9b67daaab357bcc41dbf549c3684cf5f1",
+            "shasum": ""
+        },
+        "require-dev": {
+            "jekyll": "1.0.2",
+            "lessc": "1.4.2"
+        },
+        "time": "2015-11-23 14:42:32",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "4.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "OFL-1.1",
             "MIT"
         ],
         "authors": [
             {
-                "name": "Revin Roman",
-                "email": "roman@rmrevin.com",
-                "homepage": "https://rmrevin.com/"
+                "name": "Dave Gandy",
+                "email": "dave@fontawesome.io",
+                "homepage": "http://twitter.com/davegandy",
+                "role": "Developer"
             }
         ],
-        "description": "Asset Bundle for Yii2 with Font Awesome",
+        "description": "The iconic font and CSS framework",
+        "homepage": "http://fontawesome.io/",
         "keywords": [
-            "asset",
+            "FontAwesome",
             "awesome",
-            "bundle",
+            "bootstrap",
             "font",
-            "yii"
+            "icon"
         ]
     },
     {
         "name": "bower-asset/fontawesome",
-        "version": "v4.4.0",
-        "version_normalized": "4.4.0.0",
+        "version": "v4.5.0",
+        "version_normalized": "4.5.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/FortAwesome/Font-Awesome.git",
-            "reference": "e554555d73a44e0a7d11b0361ad7a5325a5f551c"
+            "reference": "dbc8d1b9b67daaab357bcc41dbf549c3684cf5f1"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/e554555d73a44e0a7d11b0361ad7a5325a5f551c",
-            "reference": "e554555d73a44e0a7d11b0361ad7a5325a5f551c",
+            "url": "https://api.github.com/repos/FortAwesome/Font-Awesome/zipball/dbc8d1b9b67daaab357bcc41dbf549c3684cf5f1",
+            "reference": "dbc8d1b9b67daaab357bcc41dbf549c3684cf5f1",
             "shasum": ""
         },
         "type": "bower-asset-library",
@@ -1426,54 +1478,61 @@
         "description": "Font Awesome"
     },
     {
-        "name": "kartik-v/yii2-widget-datepicker",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "name": "rmrevin/yii2-fontawesome",
+        "version": "2.13.0",
+        "version_normalized": "2.13.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/kartik-v/yii2-widget-datepicker.git",
-            "reference": "520ba281f592d6bbbf2be33386a03423bccc8cd0"
+            "url": "https://github.com/rmrevin/yii2-fontawesome.git",
+            "reference": "2efbfacb22be59f373d11a7e3dfa9213e2ba18a9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/kartik-v/yii2-widget-datepicker/zipball/520ba281f592d6bbbf2be33386a03423bccc8cd0",
-            "reference": "520ba281f592d6bbbf2be33386a03423bccc8cd0",
+            "url": "https://api.github.com/repos/rmrevin/yii2-fontawesome/zipball/2efbfacb22be59f373d11a7e3dfa9213e2ba18a9",
+            "reference": "2efbfacb22be59f373d11a7e3dfa9213e2ba18a9",
             "shasum": ""
         },
         "require": {
-            "kartik-v/yii2-krajee-base": "~1.7"
+            "bower-asset/fontawesome": "4.5.*",
+            "php": ">=5.4.0",
+            "yiisoft/yii2": "2.0.*"
         },
-        "time": "2015-11-14 12:47:50",
+        "time": "2015-11-26 15:24:53",
         "type": "yii2-extension",
-        "installation-source": "source",
+        "extra": {
+            "asset-installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            }
+        },
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
+
                 "kartik\\date\\": ""
+
+                "rmrevin\\yii\\fontawesome\\": ""
+
             }
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "BSD-3-Clause"
+            "MIT"
         ],
         "authors": [
             {
-                "name": "Kartik Visweswaran",
-                "email": "kartikv2@gmail.com",
-                "homepage": "http://www.krajee.com/"
+                "name": "Revin Roman",
+                "email": "roman@rmrevin.com",
+                "homepage": "https://rmrevin.com/"
             }
         ],
-        "description": "Enhanced Yii2 wrapper for the bootstrap datepicker plugin (sub repo split from yii2-widgets).",
-        "homepage": "https://github.com/kartik-v/yii2-widget-datepicker",
+        "description": "Asset Bundle for Yii2 with Font Awesome",
         "keywords": [
-            "date",
-            "extension",
-            "form",
-            "jquery",
-            "picker",
-            "plugin",
-            "select2",
-            "widget",
-            "yii2"
+            "asset",
+            "awesome",
+            "bundle",
+            "font",
+            "yii"
         ]
     },
     {

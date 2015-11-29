@@ -49,6 +49,17 @@ class RutaComercios extends \yii\db\ActiveRecord
         ];
     }
 
+	public function fields()
+	{
+		return [
+			'id',
+			'recorrido',
+			'comercio' => function ($model)
+			{
+				return $model->comercio; // Return related model property, correct according to your structure
+			},
+		];
+	}
     /**
      * @return \yii\db\ActiveQuery
      */

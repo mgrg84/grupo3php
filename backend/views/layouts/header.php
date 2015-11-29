@@ -21,6 +21,9 @@ use yii\helpers\Html;
 
                 <!-- Messages: style can be found in dropdown.less-->
                 <li class="dropdown messages-menu">
+                    <?= Html::a('Pedidos', ['/pedido/']) ?>
+                </li>
+                <li class="dropdown messages-menu">
                     <?= Html::a('Categorias', ['/categoria/']) ?>
                 </li>
                 <li class="dropdown messages-menu">
@@ -61,7 +64,7 @@ use yii\helpers\Html;
                                 <?=
                                     Html::a(
                                     'Sign out',
-                                    ['/site/logout'],
+                                    ['/admin/logout'],
                                     ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']
                                 )
                                 ?>
