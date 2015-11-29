@@ -9,6 +9,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use backend\filtros\AdminControl;
+use dektrium\user\models\RegistrationForm;
+
 /**
  * UsuarioController implements the CRUD actions for User model.
  */
@@ -60,6 +62,16 @@ class UsuarioController extends Controller
      */
     public function actionCreate()
     {
+        $model = Yii::createObject(RegistrationForm::className());
+
+        if ($model->load(Yii::$app->request->post()) && $model->register()) {
+            return $this->redirect('index');
+        } else {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        }
+        /*
         $model = new User();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -69,6 +81,7 @@ class UsuarioController extends Controller
                 'model' => $model,
             ]);
         }
+        */
     }
 
     /**
