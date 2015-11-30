@@ -29,49 +29,64 @@ class EstadisticasController extends Controller
 	}
 
 
-	public function actionProductsalesbymarket($market)
+	public function actionProductsalesbymarket($marketId)
 	{
+		$markets = Comercio::find()->all();
+		
+		if($marketId == "")
+		{
+			$marketId = -1;
+		}
+		
 		$dataProvider = new ActiveDataProvider([
 			'query' => Pedido::find()
-			//->joinWith('comercio')
-			//->groupBy('idComercio')
-			//->select(['idComercio', 'SUM(cantidad) as cantidad', 'comercio.nombre as nombreComercio']),
-			,'pagination' => false
+				->where('idComercio = '.$marketId)
+				->joinWith('producto')
+				->select(['idProducto', 'producto.nombre as nombreProducto', 'SUM(cantidad) as cantidad'])
+				->groupBy('idProducto')
+				->orderBy(['cantidad' => SORT_DESC]) 
+			,
+			'pagination' => false
 		]);
-		//var_dump($dataProvider);
-		$a = Pedido::find()
-			->joinWith('comercio')
-			->groupBy('idComercio')
-			->select(['idComercio', 'SUM(cantidad) as cantidad', 'comercio.nombre as nombreComercio'])
-			//->innerJoin(['Comercio'], ['idComercio' => 'id'])
-			//->select(['Comercio.nombre', 'cantidad'])
-			->all()
-		;
-		//var_dump($a);
-		return $this->render('ventasPorComercio', ['dataProvider' => $dataProvider	]);
+
+		return $this->render('ventasPorComercio', ['dataProvider' => $dataProvider, 'model' => $markets, 'marketId' => $marketId]);
 	}
 	
 	public function actionSuccessroutesbyuser()
 	{
-		/*$dataProvider = new ActiveDataProvider([
-			'query' => Country::find(),
+		$dataProvider = new ActiveDataProvider([
+			'query' => User::find(),
 			'pagination' => false
 			]);
-		
-		return $this->render('pie', [
-			'dataProvider' => $dataProvider
-			]);*/
-		return $this->render('cumplimientoRecorridos');
+
+		return $this->render('cumplimientoRecorridos', ['dataProvider' => $dataProvider	]);
 	}
 	
 	public function actionProductordersbymarket($dateFrom, $dateTo)
 	{
-		/*$dataProvider = new ActiveDataProvider([
-			'query' => Country::find(),
+		$dateConditions = 'true';
+		if($dateFrom != '')
+		{
+			$dateConditions = "fecha >= '".$dateFrom."'";
+		}
+		if($dateTo != '')
+		{
+			if($dateConditions != 'true')
+			{
+				$dateConditions = $dateConditions.' and ';	
+			}
+			$dateConditions = $dateConditions."fecha <= '".$dateTo."'";
+		}
+		$dataProvider = new ActiveDataProvider([
+			'query' => Pedido::find()
+			->where($dateConditions)
+			->joinWith('comercio')
+			->groupBy('idComercio')
+			->select(['idComercio', 'SUM(cantidad) as cantidad', 'comercio.nombre as nombreComercio']),
 			'pagination' => false
-			]);*/
-		
-		return $this->render('pedidosComercios');
+			]);
+
+		return $this->render('pedidosComercios', ['dataProvider' => $dataProvider	]);
 	}
 
 	/**

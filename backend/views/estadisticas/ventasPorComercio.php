@@ -1,23 +1,35 @@
-<div class="col-sm-5">
-
 <?php
-use scotthuangzl\googlechart\GoogleChart;
+use common\models\Comercio;
+use sjaakp\gcharts\ColumnChart;
+use yii\helpers\ArrayHelper;
+use yii\helpers\Html;
 
-
- echo GoogleChart::widget(array('visualization' => 'BarChart',
-    'data' => array(
-		array('Producto', 'unidades vendidas'),
-        array('2004', 1000),
-        array('2005', 1170),
-        array('2006', 660),
-        array('2007', 1030),
-    ),
-    'options' => array(
-	'title' => 'Ventas de productos',
-	'titleTextStyle' => array('color' => '#FF0000'),
-	'curveType' => 'function', //smooth curve or not
-	'legend' => array('position' => 'bottom'),
-	)));
-
+$this->title = Yii::t('app', 'Estadisticas');
 ?>
+
+<div class="comercio-form">
+	<form method="get" id="comercio-form">
+	 <?= Html::dropDownList('marketId', $marketId, ArrayHelper::map(Comercio::find()->all(), 'id', 'nombre'), ['class' => 'form-control', 'id' => 'marketId', 'prompt' => Yii::t('app','Seleccionar comercio')])?>
+	</form>
 </div>
+
+<?= ColumnChart::widget([
+	'height' => '400px',
+	'dataProvider' => $dataProvider,
+	'columns' => 
+	[
+		'nombreProducto.nombre:string',
+		'cantidad',
+	],
+	'options' => 
+	[
+		'title' => 'Productos mas vendidos por comercio'
+	],
+	]);
+?>
+<script>
+	$("#marketId").on('change', function()
+	{
+		$("#comercio-form").submit();
+	});
+</script>

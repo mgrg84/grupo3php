@@ -31,6 +31,7 @@ use Yii;
  */
 class User extends \yii\db\ActiveRecord
 {
+	
     /**
      * @inheritdoc
      */
@@ -79,6 +80,35 @@ class User extends \yii\db\ActiveRecord
         ];
     }
 
+	public function getComerciosRecorridos()
+    {
+		$rutasRecorridos = $this->getRutas()
+			->joinWith('rutaComercios')
+			->count()
+		;
+		
+		return $comerciosRecorridos = $this->getRutas()
+			->joinWith('rutaComercios')
+			->sum('ruta_Comercios.recorrido')
+		;
+		if($comerciosRecorridos == 0)
+		{
+			return 0;		
+		}
+		else
+		{
+			return ($comerciosRecorridos * 100) / $rutasRecorridos;
+		}
+    }
+	
+	public function getComerciosAsignados()
+	{
+		return $this->getRutas()
+			->joinWith('rutaComercios')
+			->count()
+		;
+	}
+	
     /**
      * @return \yii\db\ActiveQuery
      */

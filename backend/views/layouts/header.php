@@ -39,7 +39,7 @@ use yii\helpers\Html;
 				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estadisticas <span class="caret"></span></a>
 				  <ul class="dropdown-menu">
 					<li>
-						<?= Html::a('Productos mas Vendidos', ['/estadisticas/productsalesbymarket?market=']) ?>
+						<?= Html::a('Productos mas Vendidos', ['/estadisticas/productsalesbymarket?marketId=']) ?>
 					</li>
 					<li>
 						<?= Html::a('Cumplimiento de Recorridos', ['/estadisticas/successroutesbyuser']) ?>

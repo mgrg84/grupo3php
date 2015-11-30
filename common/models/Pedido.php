@@ -16,7 +16,7 @@ use Yii;
  *
  * @property ComercioPedidos[] $comercioPedidos
  * @property Comercio $Comercio
- * @property Producto $idProducto0
+ * @property Producto $Producto
  * @property User $idUsuario0
  */
 class Pedido extends \yii\db\ActiveRecord
@@ -56,6 +56,11 @@ class Pedido extends \yii\db\ActiveRecord
         ];
     }
 
+	public function getNombreProducto()
+	{
+		return $this->getProducto()->one();
+	}
+	
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -75,7 +80,7 @@ class Pedido extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIdProducto0()
+    public function getProducto()
     {
         return $this->hasOne(Producto::className(), ['id' => 'idProducto']);
     }
@@ -83,7 +88,7 @@ class Pedido extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIdUsuario0()
+	public function getUsuario()
     {
         return $this->hasOne(User::className(), ['id' => 'idUsuario']);
     }

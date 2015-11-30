@@ -148,13 +148,13 @@ return array (
       '@kartik/base' => $vendorDir . '/kartik-v/yii2-krajee-base',
     ),
   ),
-  'scotthuangzl/yii2-google-chart' => 
+  'sjaakp/yii2-gcharts' => 
   array (
-    'name' => 'scotthuangzl/yii2-google-chart',
-    'version' => '9999999-dev',
+    'name' => 'sjaakp/yii2-gcharts',
+    'version' => '1.0.0.0',
     'alias' => 
     array (
-      '@scotthuangzl/googlechart' => $vendorDir . '/scotthuangzl/yii2-google-chart',
+      '@sjaakp/gcharts' => $vendorDir . '/sjaakp/yii2-gcharts',
     ),
   ),
 );
