@@ -15,7 +15,7 @@ use Yii;
  * @property integer $idComercio
  *
  * @property ComercioPedidos[] $comercioPedidos
- * @property Comercio $idComercio0
+ * @property Comercio $Comercio
  * @property Producto $idProducto0
  * @property User $idUsuario0
  */
@@ -67,7 +67,7 @@ class Pedido extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIdComercio0()
+    public function getComercio()
     {
         return $this->hasOne(Comercio::className(), ['id' => 'idComercio']);
     }

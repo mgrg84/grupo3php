@@ -1236,11 +1236,19 @@
     {
     "ProjRelPath" = "T"
     }
-    "backend\\views\\estadisticas\\_ventasPorComercio.php"
+    "backend\\views\\estadisticas\\cumplimientoRecorridos.php"
     {
     "ProjRelPath" = "T"
     }
     "backend\\views\\estadisticas\\index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\estadisticas\\pedidosComercios.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\estadisticas\\ventasPorComercio.php"
     {
     "ProjRelPath" = "T"
     }

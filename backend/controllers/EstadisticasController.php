@@ -29,42 +29,49 @@ class EstadisticasController extends Controller
 	}
 
 
-	public function actionProductsalesbymarket()
+	public function actionProductsalesbymarket($market)
 	{
-		var_dump(Yii::$app);
 		$dataProvider = new ActiveDataProvider([
 			'query' => Pedido::find()
-			->joinWith(['comercio'])
+			//->joinWith('comercio')
+			//->groupBy('idComercio')
+			//->select(['idComercio', 'SUM(cantidad) as cantidad', 'comercio.nombre as nombreComercio']),
+			,'pagination' => false
+		]);
+		//var_dump($dataProvider);
+		$a = Pedido::find()
+			->joinWith('comercio')
 			->groupBy('idComercio')
-			->select(['comercio.nombre', 'SUM(pedido.cantidad) as cnt']),
-			'pagination' => false
-			]);
-		
-		return $this->renderPartial('_ventasPorComercio', ['dataProvider' => $dataProvider	]);
+			->select(['idComercio', 'SUM(cantidad) as cantidad', 'comercio.nombre as nombreComercio'])
+			//->innerJoin(['Comercio'], ['idComercio' => 'id'])
+			//->select(['Comercio.nombre', 'cantidad'])
+			->all()
+		;
+		//var_dump($a);
+		return $this->render('ventasPorComercio', ['dataProvider' => $dataProvider	]);
 	}
 	
-	public function actionSuccessRoutesByUser()
+	public function actionSuccessroutesbyuser()
 	{
-		$dataProvider = new ActiveDataProvider([
+		/*$dataProvider = new ActiveDataProvider([
 			'query' => Country::find(),
 			'pagination' => false
 			]);
 		
 		return $this->render('pie', [
 			'dataProvider' => $dataProvider
-			]);
+			]);*/
+		return $this->render('cumplimientoRecorridos');
 	}
 	
-	public function actionProductOrdersByMarket($dateFrom, $dateTo)
+	public function actionProductordersbymarket($dateFrom, $dateTo)
 	{
-		$dataProvider = new ActiveDataProvider([
+		/*$dataProvider = new ActiveDataProvider([
 			'query' => Country::find(),
 			'pagination' => false
-			]);
+			]);*/
 		
-		return $this->render('pie', [
-			'dataProvider' => $dataProvider
-			]);
+		return $this->render('pedidosComercios');
 	}
 
 	/**

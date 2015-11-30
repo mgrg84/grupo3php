@@ -20,6 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
 		<li><a id="t3" href="#tabs-3">Ventas</a></li>
 	  </ul>
 	  <div id="tabs-1">
+		<iframe src="<?php echo Yii::$app->request->baseUrl. '/estadisticas/productsalesbymarket'?>"></iframe>
 	  </div>
 	  <div id="tabs-2">
 	  </div>
@@ -37,7 +38,8 @@ $this->params['breadcrumbs'][] = $this->title;
 	
 	$("#t1").on("click", function()
 	{
-		$.ajax({
+		$("#tabs-1").load('<?php echo Yii::$app->request->baseUrl. '/estadisticas/productsalesbymarket'?>');
+	/*	$.ajax({
 			url: '<?php echo Yii::$app->request->baseUrl. '/estadisticas/productsalesbymarket'?>',
 			type: 'get',
 			data: {},
@@ -45,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			{
 				$("#tabs-1").html(data);
 			}
-		});
+		});*/
 	});
 	
 	$("#t2").on("click", function()
