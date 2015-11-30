@@ -15,7 +15,7 @@ $config = [
     'components' => [
 		'user' => 
 		[
-			'identityClass' => 'common\models\User',
+			'identityClass' => 'dektrium\user\models\User',
 			'enableAutoLogin' => true,
 		],
         'request' => [
