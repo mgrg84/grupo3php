@@ -1105,3 +1105,329 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1448858214.671
     'REQUEST_TIME' => 1448858214
 ]
+2015-11-30 05:06:58 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'app\modules\v1\models\Stock' in file: /var/www/html/grupo3php/api/modules/v1/models/Stock.php. Namespace missing?' in /var/www/html/grupo3php/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\modules\v1\...')
+#1 /var/www/html/grupo3php/vendor/yiisoft/yii2/rest/IndexAction.php(61): spl_autoload_call('app\modules\v1\...')
+#2 /var/www/html/grupo3php/vendor/yiisoft/yii2/rest/IndexAction.php(44): yii\rest\IndexAction->prepareDataProvider()
+#3 [internal function]: yii\rest\IndexAction->run()
+#4 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Action.php(92): call_user_func_array(Array, Array)
+#5 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\Action->runWithParams(Array)
+#6 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('index', Array)
+#7 /var/www/html/grupo3php/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/stock/index', Array)
+#8 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/grupo3php/api/index.php(18): yii\base\Application->run()
+#10 {main}
+2015-11-30 05:06:58 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'REDIRECT_APPLICATION_ENV' => 'dev-local'
+    'REDIRECT_STATUS' => '200'
+    'APPLICATION_ENV' => 'dev-local'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.99 Safari/537.36'
+    'HTTP_POSTMAN_TOKEN' => '20a3dc35-25c0-f515-1768-c21d5ce6043b'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/grupo3php/api/index.php'
+    'REMOTE_PORT' => '58240'
+    'REDIRECT_URL' => '/grupo3php/api/v1/stocks'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/api/v1/stocks'
+    'SCRIPT_NAME' => '/grupo3php/api/index.php'
+    'PHP_SELF' => '/grupo3php/api/index.php'
+    'REQUEST_TIME_FLOAT' => 1448860018.883
+    'REQUEST_TIME' => 1448860018
+]
+2015-11-30 05:07:25 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'app\modules\v1\models\Stock' in file: /var/www/html/grupo3php/api/modules/v1/models/Stock.php. Namespace missing?' in /var/www/html/grupo3php/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\modules\v1\...')
+#1 /var/www/html/grupo3php/vendor/yiisoft/yii2/rest/IndexAction.php(61): spl_autoload_call('app\modules\v1\...')
+#2 /var/www/html/grupo3php/vendor/yiisoft/yii2/rest/IndexAction.php(44): yii\rest\IndexAction->prepareDataProvider()
+#3 [internal function]: yii\rest\IndexAction->run()
+#4 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Action.php(92): call_user_func_array(Array, Array)
+#5 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\Action->runWithParams(Array)
+#6 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('index', Array)
+#7 /var/www/html/grupo3php/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/stock/index', Array)
+#8 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/grupo3php/api/index.php(18): yii\base\Application->run()
+#10 {main}
+2015-11-30 05:07:25 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'e7894ff46f90e2a4cea83ff03f9b87692a86b1913dea66f4bacf5374c93e2c9ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0ATZ3PMyAWQlDX4VJKvl-1jnY658gg28\";}'
+    'PHPSESSID' => 'sshajld9hd596bst6fba2lh371'
+]
+
+$_SERVER = [
+    'REDIRECT_APPLICATION_ENV' => 'dev-local'
+    'REDIRECT_STATUS' => '200'
+    'APPLICATION_ENV' => 'dev-local'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.99 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => '_csrf=e7894ff46f90e2a4cea83ff03f9b87692a86b1913dea66f4bacf5374c93e2c9ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220ATZ3PMyAWQlDX4VJKvl-1jnY658gg28%22%3B%7D; PHPSESSID=sshajld9hd596bst6fba2lh371'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/grupo3php/api/index.php'
+    'REMOTE_PORT' => '58245'
+    'REDIRECT_URL' => '/grupo3php/api/v1/stocks'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/api/v1/stocks'
+    'SCRIPT_NAME' => '/grupo3php/api/index.php'
+    'PHP_SELF' => '/grupo3php/api/index.php'
+    'REQUEST_TIME_FLOAT' => 1448860045.763
+    'REQUEST_TIME' => 1448860045
+]
+2015-11-30 05:07:36 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'app\modules\v1\models\Stock' in file: /var/www/html/grupo3php/api/modules/v1/models/Stock.php. Namespace missing?' in /var/www/html/grupo3php/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\modules\v1\...')
+#1 /var/www/html/grupo3php/vendor/yiisoft/yii2/rest/IndexAction.php(61): spl_autoload_call('app\modules\v1\...')
+#2 /var/www/html/grupo3php/vendor/yiisoft/yii2/rest/IndexAction.php(44): yii\rest\IndexAction->prepareDataProvider()
+#3 [internal function]: yii\rest\IndexAction->run()
+#4 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Action.php(92): call_user_func_array(Array, Array)
+#5 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\Action->runWithParams(Array)
+#6 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('index', Array)
+#7 /var/www/html/grupo3php/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/stock/index', Array)
+#8 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/grupo3php/api/index.php(18): yii\base\Application->run()
+#10 {main}
+2015-11-30 05:07:36 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'e7894ff46f90e2a4cea83ff03f9b87692a86b1913dea66f4bacf5374c93e2c9ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0ATZ3PMyAWQlDX4VJKvl-1jnY658gg28\";}'
+    'PHPSESSID' => 'sshajld9hd596bst6fba2lh371'
+]
+
+$_SERVER = [
+    'REDIRECT_APPLICATION_ENV' => 'dev-local'
+    'REDIRECT_STATUS' => '200'
+    'APPLICATION_ENV' => 'dev-local'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.99 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => '_csrf=e7894ff46f90e2a4cea83ff03f9b87692a86b1913dea66f4bacf5374c93e2c9ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220ATZ3PMyAWQlDX4VJKvl-1jnY658gg28%22%3B%7D; PHPSESSID=sshajld9hd596bst6fba2lh371'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/grupo3php/api/index.php'
+    'REMOTE_PORT' => '58246'
+    'REDIRECT_URL' => '/grupo3php/api/v1/stocks'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/api/v1/stocks'
+    'SCRIPT_NAME' => '/grupo3php/api/index.php'
+    'PHP_SELF' => '/grupo3php/api/index.php'
+    'REQUEST_TIME_FLOAT' => 1448860056.814
+    'REQUEST_TIME' => 1448860056
+]
+2015-11-30 05:07:37 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'app\modules\v1\models\Stock' in file: /var/www/html/grupo3php/api/modules/v1/models/Stock.php. Namespace missing?' in /var/www/html/grupo3php/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\modules\v1\...')
+#1 /var/www/html/grupo3php/vendor/yiisoft/yii2/rest/IndexAction.php(61): spl_autoload_call('app\modules\v1\...')
+#2 /var/www/html/grupo3php/vendor/yiisoft/yii2/rest/IndexAction.php(44): yii\rest\IndexAction->prepareDataProvider()
+#3 [internal function]: yii\rest\IndexAction->run()
+#4 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Action.php(92): call_user_func_array(Array, Array)
+#5 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\Action->runWithParams(Array)
+#6 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('index', Array)
+#7 /var/www/html/grupo3php/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/stock/index', Array)
+#8 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/grupo3php/api/index.php(18): yii\base\Application->run()
+#10 {main}
+2015-11-30 05:07:37 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'e7894ff46f90e2a4cea83ff03f9b87692a86b1913dea66f4bacf5374c93e2c9ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0ATZ3PMyAWQlDX4VJKvl-1jnY658gg28\";}'
+    'PHPSESSID' => 'sshajld9hd596bst6fba2lh371'
+]
+
+$_SERVER = [
+    'REDIRECT_APPLICATION_ENV' => 'dev-local'
+    'REDIRECT_STATUS' => '200'
+    'APPLICATION_ENV' => 'dev-local'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.99 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => '_csrf=e7894ff46f90e2a4cea83ff03f9b87692a86b1913dea66f4bacf5374c93e2c9ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220ATZ3PMyAWQlDX4VJKvl-1jnY658gg28%22%3B%7D; PHPSESSID=sshajld9hd596bst6fba2lh371'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/grupo3php/api/index.php'
+    'REMOTE_PORT' => '58247'
+    'REDIRECT_URL' => '/grupo3php/api/v1/stocks'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/api/v1/stocks'
+    'SCRIPT_NAME' => '/grupo3php/api/index.php'
+    'PHP_SELF' => '/grupo3php/api/index.php'
+    'REQUEST_TIME_FLOAT' => 1448860057.74
+    'REQUEST_TIME' => 1448860057
+]
+2015-11-30 05:09:17 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in /var/www/html/grupo3php/vendor/yiisoft/yii2/web/Request.php:190
+Stack trace:
+#0 /var/www/html/grupo3php/vendor/yiisoft/yii2/web/Application.php(75): yii\web\Request->resolve()
+#1 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /var/www/html/grupo3php/api/index.php(18): yii\base\Application->run()
+#3 {main}
+2015-11-30 05:09:17 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'e7894ff46f90e2a4cea83ff03f9b87692a86b1913dea66f4bacf5374c93e2c9ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0ATZ3PMyAWQlDX4VJKvl-1jnY658gg28\";}'
+    'PHPSESSID' => 'sshajld9hd596bst6fba2lh371'
+]
+
+$_SERVER = [
+    'REDIRECT_APPLICATION_ENV' => 'dev-local'
+    'REDIRECT_STATUS' => '200'
+    'APPLICATION_ENV' => 'dev-local'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.99 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => '_csrf=e7894ff46f90e2a4cea83ff03f9b87692a86b1913dea66f4bacf5374c93e2c9ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220ATZ3PMyAWQlDX4VJKvl-1jnY658gg28%22%3B%7D; PHPSESSID=sshajld9hd596bst6fba2lh371'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/grupo3php/api/index.php'
+    'REMOTE_PORT' => '58256'
+    'REDIRECT_URL' => '/grupo3php/api/v1/stock'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/api/v1/stock'
+    'SCRIPT_NAME' => '/grupo3php/api/index.php'
+    'PHP_SELF' => '/grupo3php/api/index.php'
+    'REQUEST_TIME_FLOAT' => 1448860157.1
+    'REQUEST_TIME' => 1448860157
+]
+2015-11-30 05:09:21 [127.0.0.1][-][-][error][yii\base\UnknownClassException] exception 'yii\base\UnknownClassException' with message 'Unable to find 'app\modules\v1\models\Stock' in file: /var/www/html/grupo3php/api/modules/v1/models/Stock.php. Namespace missing?' in /var/www/html/grupo3php/vendor/yiisoft/yii2/BaseYii.php:291
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\modules\v1\...')
+#1 /var/www/html/grupo3php/vendor/yiisoft/yii2/rest/IndexAction.php(61): spl_autoload_call('app\modules\v1\...')
+#2 /var/www/html/grupo3php/vendor/yiisoft/yii2/rest/IndexAction.php(44): yii\rest\IndexAction->prepareDataProvider()
+#3 [internal function]: yii\rest\IndexAction->run()
+#4 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Action.php(92): call_user_func_array(Array, Array)
+#5 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\Action->runWithParams(Array)
+#6 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('index', Array)
+#7 /var/www/html/grupo3php/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('v1/stock/index', Array)
+#8 /var/www/html/grupo3php/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /var/www/html/grupo3php/api/index.php(18): yii\base\Application->run()
+#10 {main}
+2015-11-30 05:09:21 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'e7894ff46f90e2a4cea83ff03f9b87692a86b1913dea66f4bacf5374c93e2c9ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0ATZ3PMyAWQlDX4VJKvl-1jnY658gg28\";}'
+    'PHPSESSID' => 'sshajld9hd596bst6fba2lh371'
+]
+
+$_SERVER = [
+    'REDIRECT_APPLICATION_ENV' => 'dev-local'
+    'REDIRECT_STATUS' => '200'
+    'APPLICATION_ENV' => 'dev-local'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.99 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'es'
+    'HTTP_COOKIE' => '_csrf=e7894ff46f90e2a4cea83ff03f9b87692a86b1913dea66f4bacf5374c93e2c9ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220ATZ3PMyAWQlDX4VJKvl-1jnY658gg28%22%3B%7D; PHPSESSID=sshajld9hd596bst6fba2lh371'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/grupo3php/api/index.php'
+    'REMOTE_PORT' => '58256'
+    'REDIRECT_URL' => '/grupo3php/api/v1/stocks'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/api/v1/stocks'
+    'SCRIPT_NAME' => '/grupo3php/api/index.php'
+    'PHP_SELF' => '/grupo3php/api/index.php'
+    'REQUEST_TIME_FLOAT' => 1448860161.307
+    'REQUEST_TIME' => 1448860161
+]
