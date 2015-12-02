@@ -31,6 +31,7 @@ class RutaTest extends DbTestCase
     public function testCreate()
     {
         $model = new Ruta([
+            'idUsuario'=> '1',
             'fecha' => '2015-11-17',
 
         ]);
@@ -39,6 +40,7 @@ class RutaTest extends DbTestCase
 
         $this->specify('Que se haya creado una Ruta', function () use ($model){
             
+            expect('Que exista una ruta con la idUsuario', $model->attributes['idUsuario']=='1')->true();
             expect('Que exista una ruta con la fecha creada', $model->attributes['fecha']=='2015-11-17')->true();
         });
     }

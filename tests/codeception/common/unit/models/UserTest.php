@@ -41,15 +41,15 @@ class UserTest extends DbTestCase
             
             'username' => 'Marianela',
             'email' => 'mgrg84@gmail.com',
-            'password_hash' => '123456789',
-            'auth_key' => '123456789',
-            'confirmed_at' => '123456789',
+            'password_hash' => '123',
+            'auth_key' => '123',
+            'confirmed_at' => '123',
             'unconfirmed_email' => '1',
-            'blocked_at' => '123456789',
-            'registration_ip' => '123456789',
-            'created_at' => '123456789',
-            'updated_at' => '123456789',
-            'flags' => '123456789',
+            'blocked_at' => '123',
+            'registration_ip' => '123',
+            'created_at' => '123',
+            'updated_at' => '123',
+            'flags' => '123',
             'ubicacionDomicilio' => 'Mi domicilio es este',
         ]);
 
@@ -61,24 +61,24 @@ class UserTest extends DbTestCase
 
             expect('Que exista una email con el nombre creado', $model->attributes['email']=='mgrg84@gmail.com')->true();
 
-            expect('Que exista una password_hash con el nombre creado', $model->attributes['password_hash']=='123456789')->true();
+            expect('Que exista una password_hash con el nombre creado', $model->attributes['password_hash']=='123')->true();
 
-            expect('Que exista una auth_key con el nombre creado', $model->attributes['auth_key']=='123456789')->true();
+            expect('Que exista una auth_key con el nombre creado', $model->attributes['auth_key']=='123')->true();
 
-            expect('Que exista una confirmed_at con el nombre creado', $model->attributes['confirmed_at']=='123456789')->true();
+            expect('Que exista una confirmed_at con el nombre creado', $model->attributes['confirmed_at']=='123')->true();
 
 
-            expect('Que exista una unconfirmed_email con el nombre creado', $model->attributes['unconfirmed_email']=='123456789')->true();
+            expect('Que exista una unconfirmed_email con el nombre creado', $model->attributes['unconfirmed_email']=='123')->true();
 
-            expect('Que exista una blocked_at con el nombre creado', $model->attributes['blocked_at']=='123456789')->true();
+            expect('Que exista una blocked_at con el nombre creado', $model->attributes['blocked_at']=='123')->true();
 
-            expect('Que exista una registration_ip con el nombre creado', $model->attributes['registration_ip']=='123456789')->true();
+            expect('Que exista una registration_ip con el nombre creado', $model->attributes['registration_ip']=='123')->true();
 
-            expect('Que exista una created_at con el nombre creado', $model->attributes['created_at']=='123456789')->true();
+            expect('Que exista una created_at con el nombre creado', $model->attributes['created_at']=='123')->true();
 
             expect('Que exista una email con el nombre creado', $model->attributes['updated_at']=='mgrg84@gmail.com')->true();
 
-            expect('Que exista una updated_at con el nombre creado', $model->attributes['flags']=='123456789')->true();
+            expect('Que exista una updated_at con el nombre creado', $model->attributes['flags']=='123')->true();
 
             expect('Que exista una ubicacionDomicilio con el nombre creado', $model->attributes['ubicacionDomicilio']=='Mi domicilio es este')->true();
 
