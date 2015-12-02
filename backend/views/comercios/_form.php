@@ -7,7 +7,6 @@ use yii\widgets\TimePicker;
 $baseUrl = Yii::$app->getUrlManager()->getBaseUrl();
 $this->registerJsFile($baseUrl.'/assets/js/jquery.ptTimeSelect.js');
 $this->registerCssFile($baseUrl .'/css/jquery.ptTimeSelect.css');
-$this->registerCssFile($baseUrl .'/css/jquery-ui.css');
 $this->registerCssFile($baseUrl .'/css/maps.css');
 
 ?>
@@ -72,8 +71,6 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
     <?php ActiveForm::end(); ?>
 
 </div>
-
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
 <script>
 
@@ -193,5 +190,4 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
         // [END region_getplaces]
     }
 </script>
-<!--<script src="  https://maps.googleapis.com/maps/api/js?key=AIzaSyAkBJbbLObz_qiBTkEgI-k3M2LkC08T7vg&signed_in=true&callback=initMap" async="" defer=""></script> -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkBJbbLObz_qiBTkEgI-k3M2LkC08T7vg&libraries=places&callback=initAutocomplete" async="" defer=""></script>

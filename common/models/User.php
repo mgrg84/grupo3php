@@ -31,6 +31,7 @@ use Yii;
  */
 class User extends \yii\db\ActiveRecord
 {
+	
     /**
      * @inheritdoc
      */
@@ -63,22 +64,52 @@ class User extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'username' => 'Username',
-            'email' => 'Email',
-            'password_hash' => 'Password Hash',
-            'auth_key' => 'Auth Key',
-            'confirmed_at' => 'Confirmed At',
-            'unconfirmed_email' => 'Unconfirmed Email',
-            'blocked_at' => 'Blocked At',
-            'registration_ip' => 'Registration Ip',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
-            'flags' => 'Flags',
-            'ubicacionDomicilio' => 'Ubicacion Domicilio',
+            'id' => Yii::t('app', 'ID'),
+            'username' => Yii::t('app', 'Username'),
+            'email' => Yii::t('app', 'Email'),
+            'password_hash' => Yii::t('app', 'Password Hash'),
+            'auth_key' => Yii::t('app', 'Auth Key'),
+            'confirmed_at' => Yii::t('app', 'Confirmed At'),
+            'unconfirmed_email' => Yii::t('app', 'Unconfirmed Email'),
+            'blocked_at' => Yii::t('app', 'Blocked At'),
+            'registration_ip' => Yii::t('app', 'Registration Ip'),
+            'created_at' => Yii::t('app', 'Created At'),
+            'updated_at' => Yii::t('app', 'Updated At'),
+            'flags' => Yii::t('app', 'Flags'),
+            'ubicacionDomicilio' => Yii::t('app', 'Ubicacion Domicilio'),
+            //'nombre' => Yii::t('app', 'Nombre'),
         ];
     }
 
+	public function getComerciosRecorridos()
+    {
+		$rutasRecorridos = $this->getRutas()
+			->joinWith('rutaComercios')
+			->count()
+		;
+		
+		return $comerciosRecorridos = $this->getRutas()
+			->joinWith('rutaComercios')
+			->sum('ruta_Comercios.recorrido')
+		;
+		if($comerciosRecorridos == 0)
+		{
+			return 0;		
+		}
+		else
+		{
+			return ($comerciosRecorridos * 100) / $rutasRecorridos;
+		}
+    }
+	
+	public function getComerciosAsignados()
+	{
+		return $this->getRutas()
+			->joinWith('rutaComercios')
+			->count()
+		;
+	}
+	
     /**
      * @return \yii\db\ActiveQuery
      */

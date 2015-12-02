@@ -7,19 +7,30 @@ use yii\helpers\Html;
 
 <header class="main-header">
 
-    <?= Html::a('<span class="logo-mini">S.M</span><span class="logo-lg">' . Yii::$app->name . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
 
-    <nav class="navbar navbar-static-top" role="navigation">
+    <nav class="navbar navbar-default" role="navigation" style="margin-left: 0px;">
 
-        <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-            <span class="sr-only">Toggle navigation</span>
-        </a>
+        <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#stkmngr-navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+		<?= Html::a('<span class="logo-mini">S.M</span><span class="logo-lg">' . Yii::$app->name . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
+    </div>
 
-        <div class="navbar-custom-menu">
 
-            <ul class="nav navbar-nav">
+        <div class="collapse navbar-collapse"  id="stkmngr-navbar-collapse">
+
+            <ul class="nav navbar-nav navbar-right">
 
                 <!-- Messages: style can be found in dropdown.less-->
+                <li class="dropdown messages-menu">
+                    <?= Html::a('Pedidos', ['/pedido/']) ?>
+                </li>
                 <li class="dropdown messages-menu">
                     <?= Html::a('Categorias', ['/categoria/']) ?>
                 </li>
@@ -32,43 +43,26 @@ use yii\helpers\Html;
                 <li class="dropdown notifications-menu">
                     <?= Html::a('Recorridos', ['/rutas/']) ?>
                 </li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estadisticas <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li>
+						<?= Html::a('Productos mas Vendidos', ['/estadisticas/productsalesbymarket?marketId=']) ?>
+					</li>
+					<li>
+						<?= Html::a('Cumplimiento de Recorridos', ['/estadisticas/successroutesbyuser']) ?>
+					</li>
+					<li>
+						<?= Html::a('Pedidos por comercio', ['/estadisticas/productordersbymarket?dateFrom=&dateTo=']) ?>
+					</li>
+				  </ul>
+				</li>
                 <!-- Tasks: style can be found in dropdown.less -->
                 <li class="dropdown notifications-menu">
                     <?= Html::a('Usuarios', ['/usuario/']) ?>
                 </li>
                 <!-- User Account: style can be found in dropdown.less -->
 
-                <li class="dropdown user user-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="user-image" alt="User Image" />
-                        <span class="hidden-xs">Alexander Pierce</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <!-- User image -->
-                        <li class="user-header">
-                            <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="img-circle"
-                                alt="User Image" />
-                            <p>
-                                Alexander Pierce - Web Developer
-                                <small>Member since Nov. 2012</small>
-                            </p>
-                        </li>
-                        <li class="user-footer">
-                            <div class="pull-left">
-                                <a href="#" class="btn btn-default btn-flat">Profile</a>
-                            </div>
-                            <div class="pull-right">
-                                <?=
-                                    Html::a(
-                                    'Sign out',
-                                    ['/admin/logout'],
-                                    ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']
-                                )
-                                ?>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
             </ul>
         </div>
     </nav>

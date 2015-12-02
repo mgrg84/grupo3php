@@ -34,16 +34,17 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
-    	['label' => 'Recorridos', 'url' => ['/rutas']],
-    ];
-    if (Yii::$app->user->isGuest) {
+    if (Yii::$app->user->isGuest) 
+	{
         $menuItems[] = ['label' => 'Signup', 'url' => ['/user/registration/register']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/user/security/login']];
-    } else {
+    }
+	else 
+	{
+		$menuItems = [
+    		['label' => 'Recorridos', 'url' => ['/rutas']],
+			['label' => 'Pedido', 'url' => ['/pedido']],
+		];
         $menuItems[] = [
             'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
             'url' => ['/user/security/logout'],

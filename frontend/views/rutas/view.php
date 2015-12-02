@@ -71,6 +71,7 @@ $this->params['breadcrumbs'][] = $this->title;
 		$.ajax({
 			url: '<?php echo Yii::$app->params['apiBaseUrl']. 'v1/rutas/';?>' + routeID,
 			type: 'get',
+			format: JSON,
 			success: function (data)
 			{
 				var userLoc = data['usuario']['ubicacionDomicilio'];
@@ -147,19 +148,21 @@ $this->params['breadcrumbs'][] = $this->title;
 					
 					if(hereMarker != null)
 					{
-						hereMarker.setMap(null);
+						hereMarker.setPosition(initialLocation);
 					}
-					
-					hereMarker = new google.maps.Marker({
-						position: initialLocation,
-						map: map,
-						title: 'Tu ubicacion'
-					});
+					else
+					{
+						hereMarker = new google.maps.Marker({
+							position: initialLocation,
+							map: map,
+							title: 'Tu ubicacion'
+						});
+					}
 
 					
 					//map.setCenter(initialLocation);
 				}, function() {
-					alert("No fue posible determinar su ubicacion.");
+					//alert("No fue posible determinar su ubicacion.");
 				}
 			);
 		}
