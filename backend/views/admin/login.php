@@ -32,6 +32,6 @@ $this->params['breadcrumbs'][] = $this->title;
 			<label for="password"><?php Yii::t('app', 'Password'); ?></label>
 			<input type="password" class="form-control" id="password" placeholder="<?php Yii::t('app', 'Password'); ?>" name="password">
 		</div>
-		<button type="submit" class="btn btn-default"><?php Yii::t('app', 'Submit'); ?></button>
+		<button type="submit" class="btn btn-default"><?php Yii::t('app', 'Login'); ?></button>
 	</form>
 </div>
