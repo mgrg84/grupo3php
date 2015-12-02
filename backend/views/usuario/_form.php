@@ -27,7 +27,7 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
 
     <?= $form->field($model, 'password')->passwordInput() ?>
 
-    <input type="hidden" value="" id="ubicacionDomicilio" name="Usuario[ubicacionDomicilio]" />
+    <input type="hidden" value="<?= $model->ubicacionDomicilio ?>" id="ubicacionDomicilio" name="ubicacionDomicilio" />
 
     <div class="form-group" style="height:350px; width:auto; padding-bottom:30px">
         <label class="control-label" for="pac-input">Ubicacion Domicilio:</label>
@@ -41,7 +41,7 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
     $('#usuarioForm').on('submit', function (e)
     {
         var errors = new Array();
-        if ($('#ubicacionDomicilio').val() == "")
+        if ( ($('#ubicacionDomicilio').val() == "") || ($('#ubicacionDomicilio').val() == "<?= $model->ubicacionDomicilio ?>"))
         {
             errors.push('Debe indicar la ubicacion del usuario.');
         }
@@ -52,6 +52,7 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
         } else {
             $("#usuarioForm").submit();
         }
+       // return false;
     });
 
     $(document).ready(function ()
@@ -65,12 +66,18 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
             }
         });
     });
+    <?php 
 
+        $latLong = explode(";", $model->ubicacionDomicilio); 
+        if( !sizeof($latLong) ) {
+            $latLong = "-34.8912486;-56.18716110000002";
+        }
+    ?>
     function initAutocomplete()
     {
         var map = new google.maps.Map(document.getElementById('map'), {
-            center: { lat: -34.8912486, lng: -56.187161100000026 },
-            zoom: 13,
+            center: { lat: <?= $latLong[0] ?>, lng: <?=$latLong[1] ?> },
+            zoom: 17,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         });
 
@@ -86,6 +93,12 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
         });
 
         var markers = [];
+        var myLatlng = new google.maps.LatLng(<?= $latLong[0] ?>, <?=$latLong[1] ?>);
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map
+        });
+        marker.setMap(map);
         // [START region_getplaces]
         // Listen for the event fired when the user selects a prediction and retrieve
         // more details for that place.
@@ -134,7 +147,8 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
                 {
                     bounds.extend(place.geometry.location);
                 }
-                $('#ubicacionDomicilio').val($('#pac-input').val())
+                $('#ubicacionDomicilio').val(markers[0].getPosition().lat() + ';' + markers[0].getPosition().lng());
+               // $('#ubicacionDomicilio').val($('#pac-input').val())
             });
             map.fitBounds(bounds);
         });

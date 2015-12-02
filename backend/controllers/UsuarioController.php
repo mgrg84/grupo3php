@@ -64,24 +64,27 @@ class UsuarioController extends Controller
     {
         $model = Yii::createObject(RegistrationForm::className());
 
+        
         if ($model->load(Yii::$app->request->post()) && $model->register()) {
+            $domicilio = Yii::$app->request->post()['ubicacionDomicilio'];
+            $nick = Yii::$app->request->post()['register-form']['username'];
+            
+            $connection = new \yii\db\Connection([
+                'dsn' => 'mysql:host=localhost;dbname=grupo3php',
+                'username' => 'root',
+                'password' => 'root',
+            ]);
+            $connection->open();
+
+            $command = $connection->createCommand("UPDATE user SET ubicacionDomicilio='".$domicilio."'WHERE username='".$nick."'");
+            $command->execute();
+
             return $this->redirect('index');
         } else {
             return $this->render('create', [
                 'model' => $model,
             ]);
         }
-        /*
-        $model = new User();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-        }
-        */
     }
 
     /**
@@ -92,16 +95,32 @@ class UsuarioController extends Controller
      */
     public function actionUpdate($id)
     {
+        //var_dump(Yii::$app->request->post());
+        
         $model = $this->findModel($id);
+        $model->scenario = 'update';
         
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $domicilio = Yii::$app->request->post()['ubicacionDomicilio'];
+            $nick = Yii::$app->request->post()['User']['username'];
+            
+            $connection = new \yii\db\Connection([
+                'dsn' => 'mysql:host=localhost;dbname=grupo3php',
+                'username' => 'root',
+                'password' => 'root',
+            ]);
+            $connection->open();
+
+            $command = $connection->createCommand("UPDATE user SET ubicacionDomicilio='".$domicilio."'WHERE username='".$nick."'");
+            $command->execute();
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
                 'model' => $model,
             ]);
         }
-        
+        /*
+        */
         //var_dump(Yii::$app->request->post());
 
     }
