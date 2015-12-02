@@ -172,11 +172,23 @@
     {
     "ProjRelPath" = "T"
     }
+    "backend\\controllers\\AdminController.php"
+    {
+    "ProjRelPath" = "T"
+    }
     "backend\\controllers\\CategoriaController.php"
     {
     "ProjRelPath" = "T"
     }
     "backend\\controllers\\ComerciosController.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\controllers\\EstadisticasController.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\controllers\\HomeController.php"
     {
     "ProjRelPath" = "T"
     }
@@ -189,6 +201,10 @@
     "ProjRelPath" = "T"
     }
     "backend\\controllers\\SiteController.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\controllers\\UsuarioController.php"
     {
     "ProjRelPath" = "T"
     }
@@ -1213,6 +1229,26 @@
     "ProjRelPath" = "T"
     }
     "backend\\views\\comercios\\view.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\estadisticas"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\estadisticas\\cumplimientoRecorridos.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\estadisticas\\index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\estadisticas\\pedidosComercios.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\estadisticas\\ventasPorComercio.php"
     {
     "ProjRelPath" = "T"
     }
@@ -2968,6 +3004,10 @@
     {
     "ProjRelPath" = "T"
     }
+    "backend\\web\\assets\\js\\jquery-ui.js"
+    {
+    "ProjRelPath" = "T"
+    }
     "backend\\web\\assets\\js\\jquery.ptTimeSelect.js"
     {
     "ProjRelPath" = "T"
@@ -3164,11 +3204,19 @@
     {
     "ProjRelPath" = "T"
     }
+    "common\\models\\ComercioPedidos.php"
+    {
+    "ProjRelPath" = "T"
+    }
     "common\\models\\ComercioSearch.php"
     {
     "ProjRelPath" = "T"
     }
     "common\\models\\LoginForm.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "common\\models\\Pedido.php"
     {
     "ProjRelPath" = "T"
     }

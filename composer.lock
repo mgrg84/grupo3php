@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f099674cf4d00e2f91d632a7f530125d",
-    "content-hash": "38a1f6f3630f7b693d857e4d23200517",
+    "hash": "655a58ed5499fa1b6b5eb8965a446bc8",
+    "content-hash": "68e1cc77441c7c9ab44ad8d6996e3082",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -900,6 +900,51 @@
                 "yii"
             ],
             "time": "2015-11-26 15:24:53"
+        },
+        {
+            "name": "sjaakp/yii2-gcharts",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sjaakp/yii2-gcharts.git",
+                "reference": "695335f4ac197ea40f0e399b29777468c0fe3829"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sjaakp/yii2-gcharts/zipball/695335f4ac197ea40f0e399b29777468c0fe3829",
+                "reference": "695335f4ac197ea40f0e399b29777468c0fe3829",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "sjaakp\\gcharts\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sjaak Priester",
+                    "email": "sjaak@sjaakpriester.nl",
+                    "homepage": "http://sjaakpriester.nl"
+                }
+            ],
+            "description": "Google Charts the Yii 2.0 way",
+            "keywords": [
+                "charts",
+                "extension",
+                "visualization",
+                "widget",
+                "yii",
+                "yii2"
+            ],
+            "time": "2015-10-29 11:10:36"
         },
         {
             "name": "swiftmailer/swiftmailer",

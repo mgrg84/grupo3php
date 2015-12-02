@@ -35,6 +35,20 @@ use yii\helpers\Html;
                 <li class="dropdown notifications-menu">
                     <?= Html::a('Recorridos', ['/rutas/']) ?>
                 </li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estadisticas <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li>
+						<?= Html::a('Productos mas Vendidos', ['/estadisticas/productsalesbymarket?marketId=']) ?>
+					</li>
+					<li>
+						<?= Html::a('Cumplimiento de Recorridos', ['/estadisticas/successroutesbyuser']) ?>
+					</li>
+					<li>
+						<?= Html::a('Pedidos por comercio', ['/estadisticas/productordersbymarket?dateFrom=&dateTo=']) ?>
+					</li>
+				  </ul>
+				</li>
                 <!-- Tasks: style can be found in dropdown.less -->
                 <li class="dropdown notifications-menu">
                     <?= Html::a('Usuarios', ['/usuario/']) ?>
