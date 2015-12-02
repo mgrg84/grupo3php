@@ -12,7 +12,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use backend\Code\Helpers;
-
+use yii\data\ActiveDataProvider;
+use yii\filters\AccessControl;
 /**
  * rutasController implements the CRUD actions for Ruta model.
  */
@@ -21,10 +22,21 @@ class RutasController extends Controller
 	public function behaviors()
 	{
 		return [
-			/*'pageCache' => [
-				'class' => 'yii\filters\PageCache',
-				'enabled' => false,
-			],*/
+			'access' => [
+				'class' => AccessControl::className(),
+				'rules' => [
+						// deny all POST requests
+					[
+						'allow' => false,
+						'verbs' => ['POST']
+					],
+					// allow authenticated users
+					[
+						'allow' => true,
+						'roles' => ['@'],
+					],
+				],
+			],
 			'verbs' => [
 					'class' => VerbFilter::className(),
 					'actions' => [
@@ -40,13 +52,16 @@ class RutasController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$searchModel = new RutaSearch();
-		$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		$dataProvider = new ActiveDataProvider([
+			'query' =>  Ruta::find()
+			->where('idUsuario ='.Yii::$app->user->id)
+			,
+			'pagination' => false
+		]);
 
 		return $this->render('index', [
-			'searchModel' => $searchModel,
 			'dataProvider' => $dataProvider,
-			]);
+		]);
 	}
 
 	/**
@@ -58,7 +73,7 @@ class RutasController extends Controller
 	{
 		return $this->render('view', [
 			'model' => $this->findModel($id),
-			]);
+		]);
 	}
 
 	/**
