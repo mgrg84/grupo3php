@@ -1240,10 +1240,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "backend\\views\\estadisticas\\index.php"
-    {
-    "ProjRelPath" = "T"
-    }
     "backend\\views\\estadisticas\\pedidosComercios.php"
     {
     "ProjRelPath" = "T"

@@ -88,15 +88,6 @@ class EstadisticasController extends Controller
 
 		return $this->render('pedidosComercios', ['dataProvider' => $dataProvider	]);
 	}
-
-	/**
-	 * Lists all ruta models.
-	 * @return mixed
-	 */
-	public function actionIndex()
-	{
-		return $this->render('index');
-	}
 	
 	/**
 	 * Finds the ruta model based on its primary key value.
