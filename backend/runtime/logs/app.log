@@ -1,0 +1,2063 @@
+2015-12-02 23:20:35 [::1][-][vnf18oosjdtdba7gf4al4q2vg0][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The file or directory to be published does not exist: C:\xampp\htdocs\grupo3php/vendor\bower/fontawesome' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\AssetManager.php:452
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\AssetBundle.php(163): yii\web\AssetManager->publish('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\AssetManager.php(266): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#2 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\AssetManager.php(237): yii\web\AssetManager->loadBundle('rmrevin\\yii\\fon...', Array, true)
+#3 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\View.php(284): yii\web\AssetManager->getBundle('rmrevin\\yii\\fon...')
+#4 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\View.php(289): yii\web\View->registerAssetBundle('rmrevin\\yii\\fon...', NULL)
+#5 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\AssetBundle.php(119): yii\web\View->registerAssetBundle('dmstr\\web\\Admin...')
+#6 C:\xampp\htdocs\grupo3php\backend\views\layouts\main-login.php(8): yii\web\AssetBundle::register(Object(yii\web\View))
+#7 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#9 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, NULL)
+#10 C:\xampp\htdocs\grupo3php\backend\views\layouts\main.php(15): yii\base\View->render('main-login', Array)
+#11 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#13 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(dektrium\user\controllers\SecurityController))
+#14 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Controller.php(372): yii\base\Controller->renderContent('')
+#15 C:\xampp\htdocs\grupo3php\vendor\dektrium\yii2-user\controllers\SecurityController.php(113): yii\base\Controller->render('login', Array)
+#16 [internal function]: dektrium\user\controllers\SecurityController->actionLogin()
+#17 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#18 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#19 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#20 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('user/security/l...', Array)
+#21 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#23 {main}
+2015-12-02 23:20:34 [::1][-][vnf18oosjdtdba7gf4al4q2vg0][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => 'vnf18oosjdtdba7gf4al4q2vg0'
+    '_csrf' => 'd2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=vnf18oosjdtdba7gf4al4q2vg0; _csrf=d2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '50446'
+    'REDIRECT_URL' => '/grupo3php/backend/web/user/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/user/login'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449094834.395
+    'REQUEST_TIME' => 1449094834
+]
+2015-12-02 23:20:35 [::1][-][-][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'The file or directory to be published does not exist: C:\xampp\htdocs\grupo3php/vendor\bower/fontawesome' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\AssetManager.php:452
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\AssetBundle.php(163): yii\web\AssetManager->publish('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\AssetManager.php(266): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#2 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\AssetManager.php(237): yii\web\AssetManager->loadBundle('rmrevin\\yii\\fon...', Array, true)
+#3 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\View.php(284): yii\web\AssetManager->getBundle('rmrevin\\yii\\fon...')
+#4 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\View.php(289): yii\web\View->registerAssetBundle('rmrevin\\yii\\fon...', NULL)
+#5 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\AssetBundle.php(119): yii\web\View->registerAssetBundle('dmstr\\web\\Admin...')
+#6 C:\xampp\htdocs\grupo3php\backend\views\layouts\main.php(24): yii\web\AssetBundle::register(Object(yii\web\View))
+#7 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#9 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(backend\controllers\HomeController))
+#10 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Controller.php(372): yii\base\Controller->renderContent('\r\n<div class="s...')
+#11 C:\xampp\htdocs\grupo3php\backend\controllers\HomeController.php(19): yii\base\Controller->render('index')
+#12 [internal function]: backend\controllers\HomeController->actionIndex()
+#13 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#14 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#16 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('home', Array)
+#17 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#19 {main}
+2015-12-02 23:20:35 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => 'vnf18oosjdtdba7gf4al4q2vg0'
+    '_csrf' => 'd2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=vnf18oosjdtdba7gf4al4q2vg0; _csrf=d2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '50447'
+    'REDIRECT_URL' => '/grupo3php/backend/web/home'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/home'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449094835.516
+    'REQUEST_TIME' => 1449094835
+]
+2015-12-02 23:20:36 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "sizzle.min.map".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('sizzle.min.map', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-02 23:20:36 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => 'vnf18oosjdtdba7gf4al4q2vg0'
+    '_csrf' => 'd2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=vnf18oosjdtdba7gf4al4q2vg0; _csrf=d2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '50449'
+    'REDIRECT_URL' => '/grupo3php/backend/web/sizzle.min.map'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/sizzle.min.map'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449094836.501
+    'REQUEST_TIME' => 1449094836
+]
+2015-12-02 23:21:11 [::1][-][vnf18oosjdtdba7gf4al4q2vg0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/js/jquery-ui.js".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('assets/js/jquer...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-02 23:21:11 [::1][-][vnf18oosjdtdba7gf4al4q2vg0][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => 'vnf18oosjdtdba7gf4al4q2vg0'
+    '_csrf' => 'd2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/home'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=vnf18oosjdtdba7gf4al4q2vg0; _csrf=d2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '50459'
+    'REDIRECT_URL' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449094871.326
+    'REQUEST_TIME' => 1449094871
+]
+2015-12-02 23:21:12 [::1][-][vnf18oosjdtdba7gf4al4q2vg0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/js/jquery-ui.js".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('assets/js/jquer...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-02 23:21:12 [::1][-][vnf18oosjdtdba7gf4al4q2vg0][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => 'vnf18oosjdtdba7gf4al4q2vg0'
+    '_csrf' => 'd2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/home'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=vnf18oosjdtdba7gf4al4q2vg0; _csrf=d2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '50460'
+    'REDIRECT_URL' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449094872.668
+    'REQUEST_TIME' => 1449094872
+]
+2015-12-02 23:21:21 [::1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'app' does not exist: C:\xampp\htdocs\grupo3php\backend/messages/es-UY/app.php Fallback file does not exist as well: C:\xampp\htdocs\grupo3php\backend/messages/es/app.php
+    in C:\xampp\htdocs\grupo3php\backend\views\usuario\index.php:10
+    in C:\xampp\htdocs\grupo3php\backend\controllers\UsuarioController.php:41
+2015-12-02 23:21:20 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => 'vnf18oosjdtdba7gf4al4q2vg0'
+    '_csrf' => 'd2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/home'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=vnf18oosjdtdba7gf4al4q2vg0; _csrf=d2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '50463'
+    'REDIRECT_URL' => '/grupo3php/backend/web/usuario'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/usuario'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449094880.808
+    'REQUEST_TIME' => 1449094880
+]
+2015-12-02 23:21:22 [::1][-][vnf18oosjdtdba7gf4al4q2vg0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/js/jquery-ui.js".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('assets/js/jquer...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-02 23:21:21 [::1][-][vnf18oosjdtdba7gf4al4q2vg0][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => 'vnf18oosjdtdba7gf4al4q2vg0'
+    '_csrf' => 'd2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/usuario'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=vnf18oosjdtdba7gf4al4q2vg0; _csrf=d2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '50465'
+    'REDIRECT_URL' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449094881.902
+    'REQUEST_TIME' => 1449094881
+]
+2015-12-02 23:21:45 [::1][-][vnf18oosjdtdba7gf4al4q2vg0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/js/jquery-ui.js".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('assets/js/jquer...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-02 23:21:45 [::1][-][vnf18oosjdtdba7gf4al4q2vg0][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => 'vnf18oosjdtdba7gf4al4q2vg0'
+    '_csrf' => 'd2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/home'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=vnf18oosjdtdba7gf4al4q2vg0; _csrf=d2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '50471'
+    'REDIRECT_URL' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449094905.229
+    'REQUEST_TIME' => 1449094905
+]
+2015-12-02 23:21:53 [::1][-][vnf18oosjdtdba7gf4al4q2vg0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "logout".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('logout', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-02 23:21:53 [::1][-][vnf18oosjdtdba7gf4al4q2vg0][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => 'vnf18oosjdtdba7gf4al4q2vg0'
+    '_csrf' => 'd2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=vnf18oosjdtdba7gf4al4q2vg0; _csrf=d2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '50477'
+    'REDIRECT_URL' => '/grupo3php/backend/web/logout'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/logout'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449094913.491
+    'REQUEST_TIME' => 1449094913
+]
+2015-12-02 23:21:54 [::1][-][vnf18oosjdtdba7gf4al4q2vg0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/js/jquery-ui.js".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('assets/js/jquer...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-02 23:21:54 [::1][-][vnf18oosjdtdba7gf4al4q2vg0][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => 'vnf18oosjdtdba7gf4al4q2vg0'
+    '_csrf' => 'd2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/logout'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=vnf18oosjdtdba7gf4al4q2vg0; _csrf=d2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '50478'
+    'REDIRECT_URL' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449094914.059
+    'REQUEST_TIME' => 1449094914
+]
+2015-12-02 23:21:54 [::1][-][vnf18oosjdtdba7gf4al4q2vg0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/js/jquery-ui.js".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('assets/js/jquer...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-02 23:21:54 [::1][-][vnf18oosjdtdba7gf4al4q2vg0][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => 'vnf18oosjdtdba7gf4al4q2vg0'
+    '_csrf' => 'd2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/logout'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=vnf18oosjdtdba7gf4al4q2vg0; _csrf=d2f8da8c07039e7d3514c856771c03e3aeb2c91bef23773edecd3b87a2eb8931a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mg-S1aBxItgj_J8JTCL4D02n2TpaWAdj%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '50477'
+    'REDIRECT_URL' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449094914.65
+    'REQUEST_TIME' => 1449094914
+]
+2015-12-03 14:34:23 [::1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'app' does not exist: C:\xampp\htdocs\grupo3php\backend/messages/es-UY/app.php Fallback file does not exist as well: C:\xampp\htdocs\grupo3php\backend/messages/es/app.php
+    in C:\xampp\htdocs\grupo3php\backend\views\admin\login.php:5
+    in C:\xampp\htdocs\grupo3php\backend\controllers\AdminController.php:46
+2015-12-03 14:34:23 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => '3bb1um0fathe82rke9bbrmoup1'
+    '_csrf' => '4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6UMqVKAReiOTSV30-QgpoWEKxIT5UNJA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=3bb1um0fathe82rke9bbrmoup1; _csrf=4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226UMqVKAReiOTSV30-QgpoWEKxIT5UNJA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '52190'
+    'REDIRECT_URL' => '/grupo3php/backend/web/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/admin/login'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449149663.709
+    'REQUEST_TIME' => 1449149663
+]
+2015-12-03 14:59:22 [::1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'app' does not exist: C:\xampp\htdocs\grupo3php\backend/messages/es-UY/app.php Fallback file does not exist as well: C:\xampp\htdocs\grupo3php\backend/messages/es/app.php
+    in C:\xampp\htdocs\grupo3php\backend\views\admin\login.php:5
+    in C:\xampp\htdocs\grupo3php\backend\controllers\AdminController.php:46
+2015-12-03 14:59:21 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => '3bb1um0fathe82rke9bbrmoup1'
+    '_csrf' => '4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6UMqVKAReiOTSV30-QgpoWEKxIT5UNJA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=3bb1um0fathe82rke9bbrmoup1; _csrf=4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226UMqVKAReiOTSV30-QgpoWEKxIT5UNJA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '52434'
+    'REDIRECT_URL' => '/grupo3php/backend/web/admin/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/admin/login'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449151161.045
+    'REQUEST_TIME' => 1449151161
+]
+2015-12-03 14:59:31 [::1][-][3bb1um0fathe82rke9bbrmoup1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/js/jquery-ui.js".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('assets/js/jquer...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-03 14:59:31 [::1][-][3bb1um0fathe82rke9bbrmoup1][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => '3bb1um0fathe82rke9bbrmoup1'
+    '_csrf' => '4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6UMqVKAReiOTSV30-QgpoWEKxIT5UNJA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/home'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=3bb1um0fathe82rke9bbrmoup1; _csrf=4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226UMqVKAReiOTSV30-QgpoWEKxIT5UNJA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '52447'
+    'REDIRECT_URL' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449151171.297
+    'REQUEST_TIME' => 1449151171
+]
+2015-12-03 14:59:42 [::1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'app' does not exist: C:\xampp\htdocs\grupo3php\backend/messages/es-UY/app.php Fallback file does not exist as well: C:\xampp\htdocs\grupo3php\backend/messages/es/app.php
+    in C:\xampp\htdocs\grupo3php\backend\views\usuario\index.php:10
+    in C:\xampp\htdocs\grupo3php\backend\controllers\UsuarioController.php:43
+2015-12-03 14:59:41 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => '3bb1um0fathe82rke9bbrmoup1'
+    '_csrf' => '4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6UMqVKAReiOTSV30-QgpoWEKxIT5UNJA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/home'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=3bb1um0fathe82rke9bbrmoup1; _csrf=4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226UMqVKAReiOTSV30-QgpoWEKxIT5UNJA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '52449'
+    'REDIRECT_URL' => '/grupo3php/backend/web/usuario'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/usuario'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449151181.829
+    'REQUEST_TIME' => 1449151181
+]
+2015-12-03 14:59:43 [::1][-][3bb1um0fathe82rke9bbrmoup1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/js/jquery-ui.js".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('assets/js/jquer...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-03 14:59:43 [::1][-][3bb1um0fathe82rke9bbrmoup1][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => '3bb1um0fathe82rke9bbrmoup1'
+    '_csrf' => '4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6UMqVKAReiOTSV30-QgpoWEKxIT5UNJA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/usuario'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=3bb1um0fathe82rke9bbrmoup1; _csrf=4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226UMqVKAReiOTSV30-QgpoWEKxIT5UNJA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '52455'
+    'REDIRECT_URL' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449151183.677
+    'REQUEST_TIME' => 1449151183
+]
+2015-12-03 14:59:44 [::1][-][3bb1um0fathe82rke9bbrmoup1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/js/jquery-ui.js".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('assets/js/jquer...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-03 14:59:44 [::1][-][3bb1um0fathe82rke9bbrmoup1][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => '3bb1um0fathe82rke9bbrmoup1'
+    '_csrf' => '4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6UMqVKAReiOTSV30-QgpoWEKxIT5UNJA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/usuario'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=3bb1um0fathe82rke9bbrmoup1; _csrf=4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226UMqVKAReiOTSV30-QgpoWEKxIT5UNJA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '52449'
+    'REDIRECT_URL' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449151184.333
+    'REQUEST_TIME' => 1449151184
+]
+2015-12-03 14:59:52 [::1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'app' does not exist: C:\xampp\htdocs\grupo3php\backend/messages/es-UY/app.php Fallback file does not exist as well: C:\xampp\htdocs\grupo3php\backend/messages/es/app.php
+    in C:\xampp\htdocs\grupo3php\backend\views\usuario\update.php:10
+    in C:\xampp\htdocs\grupo3php\backend\controllers\UsuarioController.php:120
+2015-12-03 14:59:52 [::1][-][-][info][application] $_GET = [
+    'id' => '25'
+]
+
+$_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => '3bb1um0fathe82rke9bbrmoup1'
+    '_csrf' => '4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6UMqVKAReiOTSV30-QgpoWEKxIT5UNJA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/usuario'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=3bb1um0fathe82rke9bbrmoup1; _csrf=4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226UMqVKAReiOTSV30-QgpoWEKxIT5UNJA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '52459'
+    'REDIRECT_URL' => '/grupo3php/backend/web/usuario/update/25'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/usuario/update/25'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449151192.255
+    'REQUEST_TIME' => 1449151192
+]
+2015-12-03 14:59:53 [::1][-][3bb1um0fathe82rke9bbrmoup1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/js/jquery-ui.js".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('assets/js/jquer...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-03 14:59:53 [::1][-][3bb1um0fathe82rke9bbrmoup1][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => '3bb1um0fathe82rke9bbrmoup1'
+    '_csrf' => '4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6UMqVKAReiOTSV30-QgpoWEKxIT5UNJA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/usuario/update/25'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=3bb1um0fathe82rke9bbrmoup1; _csrf=4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226UMqVKAReiOTSV30-QgpoWEKxIT5UNJA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '52466'
+    'REDIRECT_URL' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449151193.254
+    'REQUEST_TIME' => 1449151193
+]
+2015-12-03 14:59:53 [::1][-][3bb1um0fathe82rke9bbrmoup1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/js/jquery.ptTimeSelect.js".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('assets/js/jquer...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-03 14:59:53 [::1][-][3bb1um0fathe82rke9bbrmoup1][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => '3bb1um0fathe82rke9bbrmoup1'
+    '_csrf' => '4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6UMqVKAReiOTSV30-QgpoWEKxIT5UNJA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/usuario/update/25'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=3bb1um0fathe82rke9bbrmoup1; _csrf=4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226UMqVKAReiOTSV30-QgpoWEKxIT5UNJA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '52464'
+    'REDIRECT_URL' => '/grupo3php/backend/web/assets/js/jquery.ptTimeSelect.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/assets/js/jquery.ptTimeSelect.js'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449151193.199
+    'REQUEST_TIME' => 1449151193
+]
+2015-12-03 14:59:54 [::1][-][3bb1um0fathe82rke9bbrmoup1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/js/jquery-ui.js".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('assets/js/jquer...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-03 14:59:54 [::1][-][3bb1um0fathe82rke9bbrmoup1][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => '3bb1um0fathe82rke9bbrmoup1'
+    '_csrf' => '4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6UMqVKAReiOTSV30-QgpoWEKxIT5UNJA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/usuario/update/25'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=3bb1um0fathe82rke9bbrmoup1; _csrf=4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226UMqVKAReiOTSV30-QgpoWEKxIT5UNJA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '52462'
+    'REDIRECT_URL' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449151194.038
+    'REQUEST_TIME' => 1449151194
+]
+2015-12-03 14:59:54 [::1][-][3bb1um0fathe82rke9bbrmoup1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/js/jquery.ptTimeSelect.js".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('assets/js/jquer...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-03 14:59:54 [::1][-][3bb1um0fathe82rke9bbrmoup1][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => '3bb1um0fathe82rke9bbrmoup1'
+    '_csrf' => '4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6UMqVKAReiOTSV30-QgpoWEKxIT5UNJA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/usuario/update/25'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=3bb1um0fathe82rke9bbrmoup1; _csrf=4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226UMqVKAReiOTSV30-QgpoWEKxIT5UNJA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '52462'
+    'REDIRECT_URL' => '/grupo3php/backend/web/assets/js/jquery.ptTimeSelect.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/assets/js/jquery.ptTimeSelect.js'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449151194.859
+    'REQUEST_TIME' => 1449151194
+]
+2015-12-03 15:00:04 [::1][-][3bb1um0fathe82rke9bbrmoup1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/js/jquery-ui.js".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('assets/js/jquer...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-03 15:00:04 [::1][-][3bb1um0fathe82rke9bbrmoup1][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => '3bb1um0fathe82rke9bbrmoup1'
+    '_csrf' => '4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6UMqVKAReiOTSV30-QgpoWEKxIT5UNJA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/home'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=3bb1um0fathe82rke9bbrmoup1; _csrf=4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226UMqVKAReiOTSV30-QgpoWEKxIT5UNJA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '52480'
+    'REDIRECT_URL' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449151204.675
+    'REQUEST_TIME' => 1449151204
+]
+2015-12-03 15:16:49 [::1][-][3bb1um0fathe82rke9bbrmoup1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/js/jquery-ui.js".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('assets/js/jquer...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-03 15:16:48 [::1][-][3bb1um0fathe82rke9bbrmoup1][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => '3bb1um0fathe82rke9bbrmoup1'
+    '_csrf' => '4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6UMqVKAReiOTSV30-QgpoWEKxIT5UNJA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/home'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=3bb1um0fathe82rke9bbrmoup1; _csrf=4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226UMqVKAReiOTSV30-QgpoWEKxIT5UNJA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '52784'
+    'REDIRECT_URL' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449152208.397
+    'REQUEST_TIME' => 1449152208
+]
+2015-12-03 15:16:53 [::1][-][-][error][yii\i18n\PhpMessageSource::loadMessages] The message file for category 'app' does not exist: C:\xampp\htdocs\grupo3php\backend/messages/es-UY/app.php Fallback file does not exist as well: C:\xampp\htdocs\grupo3php\backend/messages/es/app.php
+    in C:\xampp\htdocs\grupo3php\backend\views\usuario\index.php:10
+    in C:\xampp\htdocs\grupo3php\backend\controllers\UsuarioController.php:43
+2015-12-03 15:16:51 [::1][-][-][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => '3bb1um0fathe82rke9bbrmoup1'
+    '_csrf' => '4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6UMqVKAReiOTSV30-QgpoWEKxIT5UNJA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/home'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=3bb1um0fathe82rke9bbrmoup1; _csrf=4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226UMqVKAReiOTSV30-QgpoWEKxIT5UNJA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '52786'
+    'REDIRECT_URL' => '/grupo3php/backend/web/usuario'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/usuario'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449152211.821
+    'REQUEST_TIME' => 1449152211
+]
+2015-12-03 15:16:53 [::1][-][3bb1um0fathe82rke9bbrmoup1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/js/jquery-ui.js".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('assets/js/jquer...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-03 15:16:53 [::1][-][3bb1um0fathe82rke9bbrmoup1][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => '3bb1um0fathe82rke9bbrmoup1'
+    '_csrf' => '4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6UMqVKAReiOTSV30-QgpoWEKxIT5UNJA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/usuario'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=3bb1um0fathe82rke9bbrmoup1; _csrf=4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226UMqVKAReiOTSV30-QgpoWEKxIT5UNJA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '52785'
+    'REDIRECT_URL' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449152213.688
+    'REQUEST_TIME' => 1449152213
+]
+2015-12-03 15:16:54 [::1][-][3bb1um0fathe82rke9bbrmoup1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "assets/js/jquery-ui.js".' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('assets/js/jquer...', Array)
+#1 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página no encontrada.' in C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\grupo3php\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\grupo3php\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2015-12-03 15:16:54 [::1][-][3bb1um0fathe82rke9bbrmoup1][info][application] $_COOKIE = [
+    '__utma' => '111872281.901632399.1445802274.1445802274.1445802274.1'
+    '__utmz' => '111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'PHPSESSID' => '3bb1um0fathe82rke9bbrmoup1'
+    '_csrf' => '4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6UMqVKAReiOTSV30-QgpoWEKxIT5UNJA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/grupo3php/backend/web/'
+    'admin' => true
+]
+
+$_SERVER = [
+    'REDIRECT_MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'REDIRECT_OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'REDIRECT_PHPRC' => '\\xampp\\php'
+    'REDIRECT_TMP' => '\\xampp\\tmp'
+    'REDIRECT_STATUS' => '200'
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/grupo3php/backend/web/usuario'
+    'HTTP_COOKIE' => '__utma=111872281.901632399.1445802274.1445802274.1445802274.1; __utmz=111872281.1445802274.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=3bb1um0fathe82rke9bbrmoup1; _csrf=4e7d3ebce651fdd82fd3ee5148bbf1222817b72ac88073d607ec2f5cfc36c732a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226UMqVKAReiOTSV30-QgpoWEKxIT5UNJA%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\AMD APP\\bin\\x86_64;C:\\Program Files (x86)\\AMD APP\\bin\\x86;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Common Files\\Autodesk Shared\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\Git\\cmd;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Ruby193\\bin;C:\\Program Files\\Common Files\\Microsoft Shared\\Windows Live'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Win32) OpenSSL/1.0.1p PHP/5.6.12'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/grupo3php/backend/web/index.php'
+    'REMOTE_PORT' => '52786'
+    'REDIRECT_URL' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/grupo3php/backend/web/assets/js/jquery-ui.js'
+    'SCRIPT_NAME' => '/grupo3php/backend/web/index.php'
+    'PHP_SELF' => '/grupo3php/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1449152214.22
+    'REQUEST_TIME' => 1449152214
+]
