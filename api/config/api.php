@@ -46,7 +46,11 @@ $config = [
                         'v1/pedido',   
                         'v1/stock',
                         'v1/user',
-                    ]
+                    ],
+                    'extraPatterns' => [
+                        'GET hola' => 'hola', // 'xxxxx' refers to 'actionXxxxx'
+                        'POST login' => 'login',
+                    ],
                 ],
             ],
         ], 
