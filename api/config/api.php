@@ -39,11 +39,14 @@ $config = [
             'enableStrictParsing' => true,
             'showScriptName' => false,
             'rules' => [
-                ['class' => 'yii\rest\UrlRule', 'controller' => [
+                [
+                    'class' => 'yii\rest\UrlRule', 
+                    'controller' => [
                         'v1/ruta', 
-                        'v1/user', 
-                        'v1/stock'
-                    ],
+                        'v1/pedido',   
+                        'v1/stock',
+                        'v1/user',
+                    ]
                 ],
             ],
         ], 
