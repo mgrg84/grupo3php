@@ -17,7 +17,10 @@ return [
             'class' => 'dektrium\user\Module',
             'enableConfirmation' => true,
             'enableUnconfirmedLogin' => false,
-            'cost' => 12
+            'cost' => 12,
+            'controllerMap' => [
+                'registration' => 'frontend\controllers\UsuarioController'
+            ],
         ],
     ],
     'components' => [

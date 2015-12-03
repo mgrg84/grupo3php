@@ -41,7 +41,7 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
     $('#usuarioForm').on('submit', function (e)
     {
         var errors = new Array();
-        if ( ($('#ubicacionDomicilio').val() == "") || ($('#ubicacionDomicilio').val() == "<?= $model->ubicacionDomicilio ?>"))
+        if ( ($('#ubicacionDomicilio').val() == "") )
         {
             errors.push('Debe indicar la ubicacion del usuario.');
         }
@@ -69,8 +69,8 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
     <?php 
 
         $latLong = explode(";", $model->ubicacionDomicilio); 
-        if( !sizeof($latLong) ) {
-            $latLong = "-34.8912486;-56.18716110000002";
+        if( sizeof($latLong) != 2 ) {
+            $latLong = ["-34.8912486","-56.18716110000002"];
         }
     ?>
     function initAutocomplete()

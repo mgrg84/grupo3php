@@ -11,6 +11,7 @@ $this->title = "Ruta del ".date("d-M-y",  strtotime($model->fecha));
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Recorridos'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
 <div class="comercio-view">
 
     <h1><?= Html::encode($this->title) ?></h1>

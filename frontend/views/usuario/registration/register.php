@@ -10,7 +10,11 @@ use yii\widgets\ActiveForm;
 
 $this->title = Yii::t('user', 'Sign up');
 $this->params['breadcrumbs'][] = $this->title;
+$baseUrl = Yii::$app->getUrlManager()->getBaseUrl();
+$this->registerCssFile($baseUrl .'/css/jquery-ui.css');
+$this->registerCssFile($baseUrl .'/css/maps.css');
 ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <div class="alert alert-success">
     <p>This view file has been overriden!</p>
 </div>
@@ -39,9 +43,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div id="map"></div>
                 </div>
                 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-                <script>
 
-
+    <script>
     $(document).ready(function ()
     {
         $(window).keydown(function (event)
@@ -132,7 +135,7 @@ $this->params['breadcrumbs'][] = $this->title;
     }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkBJbbLObz_qiBTkEgI-k3M2LkC08T7vg&libraries=places&callback=initAutocomplete" async="" defer=""></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkBJbbLObz_qiBTkEgI-k3M2LkC08T7vg&libraries=places&callback=initAutocomplete" async="" defer=""></script>
 
                 <?= Html::submitButton(Yii::t('user', 'Sign up'), ['class' => 'btn btn-success btn-block']) ?>
 
@@ -146,4 +149,3 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkBJbbLObz_qiBTkEgI-k3M2LkC08T7vg&libraries=places&callback=initAutocomplete" async="" defer=""></script>
