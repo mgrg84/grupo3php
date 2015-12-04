@@ -19,6 +19,7 @@ class UserController extends ActiveController
         $behaviors = parent::behaviors();
         $behaviors['authenticator'] = [
             'class' => HttpPostAuth::className(),
+            'except' => ['token', 'view'],
         ];
 
         return $behaviors;
@@ -39,6 +40,7 @@ class UserController extends ActiveController
         $token = "";
 
         if($loginOk) {
+
             $connection = Yii::$app->db;
             $connection->open();
             
@@ -46,6 +48,7 @@ class UserController extends ActiveController
             $command->bindValue(':id', $user->id);
             $tokenList = $command->query();
             $token = $tokenList->read()['code'];
+            
         }
         
         $resultado = ['status'=>$loginOk, 'token'=>$token];

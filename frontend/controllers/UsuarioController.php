@@ -56,4 +56,47 @@ class UsuarioController extends RegistrationController
         /*
         */
     }
+
+    /**
+     * Displays page where user can create new account that will be connected to social account.
+     *
+     * @param string $code
+     *
+     * @return string
+     * @throws NotFoundHttpException
+     */
+    public function actionConnect($code)
+    {
+        $account = $this->finder->findAccount()->byCode($code)->one();
+
+        if ($account === null || $account->getIsConnected()) {
+            throw new NotFoundHttpException();
+        }
+
+        /** @var User $user */
+        $user = Yii::createObject([
+            'class'    => User::className(),
+            'scenario' => 'connect',
+            'username' => $account->username,
+            'email'    => $account->email,
+        ]);
+
+        if ($user->load(Yii::$app->request->post()) && $user->create()) {
+            $account->connect($user);
+            $user->updateAttributes(['confirmed_at' => null]);
+            Yii::$app->session->setFlash('info', Yii::t('app', 
+                'Your application has been sent successfully.
+                An administrator of the site will review it. 
+                You will be notified when your account is activated.'));
+            return $this->redirect(array('/site/index'));
+            // TODO Enviar correo con el mismo mensaje.
+        }
+
+        return $this->render('connect', [
+            'model'   => $user,
+            'account' => $account,
+        ]);
+
+    }
+
 }

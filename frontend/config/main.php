@@ -19,7 +19,11 @@ return [
             'enableUnconfirmedLogin' => false,
             'cost' => 12,
             'controllerMap' => [
-                'registration' => 'frontend\controllers\UsuarioController'
+                'registration' => 'frontend\controllers\UsuarioController',
+            ],
+            'modelMap' => [
+                'User' => 'frontend\models\User',
+                'RegistrationForm' => 'frontend\models\RegistrationForm',
             ],
         ],
     ],

@@ -51,6 +51,7 @@ $config = [
                         'GET hola' => 'hola', // 'xxxxx' refers to 'actionXxxxx'
                         'POST token' => 'token',
                         'POST test' => 'test',
+                        'POST create' => 'create',
                     ],
                 ],
             ],

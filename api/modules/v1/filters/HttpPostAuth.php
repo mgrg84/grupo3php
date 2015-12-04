@@ -18,7 +18,10 @@ class HttpPostAuth extends AuthMethod
     public function authenticate($user, $request, $response)
     {
         $token = $request->post('token');        
-
+        if( !$token ) {
+            $token = $request->get('token');
+        }
+        
         if( TokenValidador::validarToken($token) )
         	return true;
         
