@@ -37,11 +37,7 @@ class UsuarioController extends RegistrationController
             $domicilio = Yii::$app->request->post()['ubicacionDomicilio'];
             $nick = Yii::$app->request->post()['register-form']['username'];
             
-            $connection = new \yii\db\Connection([
-                'dsn' => 'mysql:host=localhost;dbname=grupo3php',
-                'username' => 'root',
-                'password' => 'root',
-            ]);
+            $connection = Yii::$app->db;
             $connection->open();
 
             $command = $connection->createCommand("UPDATE user SET ubicacionDomicilio='".$domicilio."'WHERE username='".$nick."'");

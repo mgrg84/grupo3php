@@ -49,7 +49,8 @@ $config = [
                     ],
                     'extraPatterns' => [
                         'GET hola' => 'hola', // 'xxxxx' refers to 'actionXxxxx'
-                        'POST login' => 'login',
+                        'POST token' => 'token',
+                        'POST test' => 'test',
                     ],
                 ],
             ],
