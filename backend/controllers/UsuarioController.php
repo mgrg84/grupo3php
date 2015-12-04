@@ -92,13 +92,13 @@ class UsuarioController extends Controller
     public function actionUpdate($id)
     {
         //var_dump(Yii::$app->request->post());
-        
+        $POST = Yii::$app->request->post();
         $model = $this->findModel($id);
         $model->scenario = 'update';
-        
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            $domicilio = Yii::$app->request->post()['ubicacionDomicilio'];
-            $nick = Yii::$app->request->post()['User']['username'];
+
+        if ($model->load($POST) && $model->save()) {
+            $domicilio = $POST['ubicacionDomicilio'];
+            $nick = $POST['User']['username'];
             
             $connection = Yii::$app->db;
             $connection->open();

@@ -1,13 +1,23 @@
 <?php
+
+/*
+ * This file is part of the Dektrium project.
+ *
+ * (c) Dektrium project <http://github.com/dektrium>
+ *
+ * For the full copyright and license information, please view the LICENSE.md
+ * file that was distributed with this source code.
+ */
+
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /**
- * @var yii\web\View              $this
- * @var yii\widgets\ActiveForm    $form
- * @var dektrium\user\models\User $user
+ * @var yii\web\View $this
+ * @var yii\widgets\ActiveForm $form
+ * @var dektrium\user\models\User $model
+ * @var dektrium\user\models\Account $account
  */
-
 $this->title = Yii::t('user', 'Sign up');
 $this->params['breadcrumbs'][] = $this->title;
 $baseUrl = Yii::$app->getUrlManager()->getBaseUrl();
@@ -19,18 +29,21 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
     <div class="col-md-4 col-md-offset-4">
         <div class="panel panel-default">
             <div class="panel-heading">
-            <h3 class="panel-title"><?= Html::encode($this->title) ?></h3>
+                <h3 class="panel-title"><?= Html::encode($this->title) ?></h3>
             </div>
             <div class="panel-body">
+                <div class="alert alert-info">
+                    <p>
+                        <?= Yii::t('user', 'In order to finish your registration, we need you to enter following fields') ?>:
+                    </p>
+                </div>
                 <?php $form = ActiveForm::begin([
-                    'id' => 'registration-form',
+                    'id' => 'connect-account-form',
                 ]); ?>
-
-                <?= $form->field($model, 'username') ?>
 
                 <?= $form->field($model, 'email') ?>
 
-                <?= $form->field($model, 'password')->passwordInput() ?>
+                <?= $form->field($model, 'username') ?>
 
                 <input type="hidden" value="" id="ubicacionDomicilio" name="ubicacionDomicilio" />
 
@@ -39,15 +52,24 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
                     <input id="pac-input" class="controls" type="text" placeholder="Search Box" value=""/>
                     <div id="map"></div>
                 </div>
-
-
                 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
-    <script>
+                <?= Html::submitButton(Yii::t('user', 'Continue'), ['class' => 'btn btn-success btn-block',
+                'id' => 'registrar']) ?>
 
+                <?php ActiveForm::end(); ?>
+            </div>
+        </div>
+        <p class="text-center">
+            <?= Html::a(Yii::t('user', 'If you already registered, sign in and connect this account on settings page'), ['/user/settings/networks']) ?>.
+        </p>
+    </div>
+</div>
+
+<script>
     $(document).ready(function ()
     {
-        $('#registrar').click(function (e)
+    	$('#registrar').click(function (e)
         {
             e.preventDefault();
             var errors = new Array();
@@ -63,7 +85,7 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
                     $(error[1]).parent().addClass("has-error");
                 });
             } else {
-                $("#registration-form").submit();
+                $("#connect-account-form").submit();
             }
            return false;
         });
@@ -77,7 +99,7 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
             }
         });
     });
-    
+
     function initAutocomplete()
     {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -148,25 +170,11 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
                     bounds.extend(place.geometry.location);
                 }
                 $('#ubicacionDomicilio').val(markers[0].getPosition().lat() + ';' + markers[0].getPosition().lng());
+               // $('#ubicacionDomicilio').val($('#pac-input').val())
             });
             map.fitBounds(bounds);
         });
         // [END region_getplaces]
     }
 </script>
-
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkBJbbLObz_qiBTkEgI-k3M2LkC08T7vg&libraries=places&callback=initAutocomplete" async="" defer=""></script>
-
-                <?= Html::submitButton(Yii::t('user', 'Sign up'), ['class' => 'btn btn-success btn-block',
-                     'id' => 'registrar']) ?>
-
-                <?php ActiveForm::end(); ?>
-            </div>
-        </div>
-        <p class="text-center">
-            <?= Html::a(Yii::t('user', 'Already registered? Sign in!'), ['/user/security/login']) ?>
-        </p>
-    </div>
-</div>
-
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkBJbbLObz_qiBTkEgI-k3M2LkC08T7vg&libraries=places&callback=initAutocomplete" async="" defer=""></script>

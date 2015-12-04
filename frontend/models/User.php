@@ -18,6 +18,7 @@ use dektrium\user\models\Token;
 
 class User extends BaseUser
 {
+
     /**
      * This method is used to register new user account. If Module::enableConfirmation is set true, this method
      * will generate new confirmation token and use mailer to send it to the user.
