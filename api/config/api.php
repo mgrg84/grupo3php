@@ -48,36 +48,18 @@ $config = [
                         'v1/user',
                     ],
                     'extraPatterns' => [
-                        'GET hola' => 'hola', // 'xxxxx' refers to 'actionXxxxx'
+                        'GET hola' => 'hola', // 'xxxxx' refers to 'actionHola'
                         'POST token' => 'token',
                         'POST test' => 'test',
                         'POST create' => 'create',
                     ],
+                    
                 ],
             ],
         ], 
         'db' => $db,
     ],
     'modules' => [
-        'oauth2' => [
-            'class' => 'filsh\yii2\oauth2server\Module',
-            'options' => [
-                'token_param_name' => 'accessToken',
-                'access_lifetime' => 3600 * 24,
-            ],
-            'storageMap' => [
-                'user_credentials' => 'common\models\User',
-            ],
-            'grantTypes' => [
-                'user_credentials' => [
-                    'class' => 'OAuth2\GrantType\UserCredentials',
-                ],
-                'refresh_token' => [
-                    'class' => 'OAuth2\GrantType\RefreshToken',
-                    'always_issue_new_refresh_token' => true
-                ]
-            ]
-        ]
         'v1' => [
 			'class' => 'app\modules\v1\Module'
         ],
