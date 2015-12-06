@@ -1,6 +1,7 @@
-function getDataHash(datos, KEY, timestamp) {
+function getDataHash(datos, timestamp) {
 
-	var PK = "mierda";
+	var PRIVATE_KEY = "GRUPO3PHPPRIVADO";
+	var PUBLIC_KEY = "GRUPO3PHP"
 	var pares = [];
 	var keysPares = [];
 	var impares = [];
@@ -20,7 +21,7 @@ function getDataHash(datos, KEY, timestamp) {
 		i++;
 	}
 
-	var data = KEY + keysImpares.join("") + impares.join("") + PK + keysPares.join("")
+	var data = PUBLIC_KEY + keysImpares.join("") + impares.join("") + PRIVATE_KEY + keysPares.join("")
 			+ pares.join("") + timestamp;
 	console.log(data);
 	return CryptoJS.SHA256(data).toString();

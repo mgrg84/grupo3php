@@ -35,7 +35,7 @@ $this->title = 'My Yii Application';
             console.log(datos);
             var timestamp = Math.round(+new Date()/1000);
             console.log(timestamp);
-            var hash = getDataHash(datos, "caca", timestamp);
+            var hash = getDataHash(datos, timestamp);
             console.log(hash);
 
             return false;

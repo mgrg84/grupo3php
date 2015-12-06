@@ -39,10 +39,10 @@ class TokenValidador
     public static function validarDatos($POST) 
     {
         $TIMEOUT = 60;
-
-        if( !isset($POST['token']) )
+        if( !isset($POST['token']) || !isset($POST['timestamp'])
+            || !isset($POST['key']) || !isset($POST['datos']) || !is_array($POST['datos']) )
             return false;
-
+        
         $id = TokenValidador::validarToken($POST['token']);
         
         if( !$id )
@@ -50,15 +50,27 @@ class TokenValidador
 
         $time = time();
         
-        if ( !isset($POST['timestamp']) || ($time < $POST['timestamp']) || ($time - $POST['timestamp'] > $TIMEOUT) )
+        if ( ($time < $POST['timestamp']) || ($time - $POST['timestamp'] > $TIMEOUT) )
             return false;
         
-        $datos = $POST['datos'];
+
         $KEY = $POST['key'];
+
+        // ir a buscar la private key a la base!!
+        $connection = Yii::$app->db;
+        $connection->open();
+        $command = $connection->createCommand('SELECT * FROM hmac_keys WHERE public_key=:KEY');
+        $command->bindValue(':KEY', $KEY);
+        $tokenList = $command->query();
+
+        if( $tokenList->count() == 0 )
+            return false;
+        
+        $PK = $tokenList->read()['private_key'];
+        $datos = $POST['datos'];
         $hash = $POST['hash'];
         $timestamp = $POST['timestamp'];
-        $PK = "mierda";
-
+        
 
         $impares = array();
         $pares = array();
