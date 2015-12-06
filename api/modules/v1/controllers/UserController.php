@@ -30,31 +30,53 @@ class UserController extends ActiveController
     
     public function actionToken(){
         
-        $nick = Yii::$app->request->post()['username'];
-        $pass = Yii::$app->request->post()['password'];
+        $POST = Yii::$app->request->post();
+        $token = ""; 
+        $mensajes = [];
+        $loginOk = "ERROR";
 
-        $user = User::find()->where(['username' => $nick])->one();
-        
-        if($user) {
-            $loginOk = Password::validate($pass, $user->password_hash);
-        } else {
-            $loginOk = false;
+        if( isset($POST['datos']['username']) && isset($POST['datos']['password']) ) {
+
+            $nick = $POST['datos']['username'];
+            $pass = $POST['datos']['password'];
+
+            if( $nick == "" )
+                $mensajes["username"] = Yii::t('app', 'Username cant be blank.');
+
+            if( $pass == "" )
+                $mensajes["password"] = Yii::t('app', 'Password cant be blank.');
+
+            if( ($nick != "") && ($pass != "") ) {
+                $user = User::find()->where(['username' => $nick])->one();
+                
+                if($user && Password::validate($pass, $user->password_hash))
+                    $loginOk = "OK";
+
+                if($loginOk == "OK") {
+                    $connection = Yii::$app->db;
+                    $connection->open();
+                    
+                    $command = $connection->createCommand('SELECT * FROM token WHERE user_id=:id');
+                    $command->bindValue(':id', $user->id);
+                    $tokenList = $command->query();
+                    $token = $tokenList->read()['code'];
+                    $mensajes = "";
+                } else {
+                    $mensajes["error"] = Yii::t('app', 'Invalid Password or Username.');
+                }
+            }
+
         }
-        $token = "";
-
-        if($loginOk) {
-
-            $connection = Yii::$app->db;
-            $connection->open();
-            
-            $command = $connection->createCommand('SELECT * FROM token WHERE user_id=:id');
-            $command->bindValue(':id', $user->id);
-            $tokenList = $command->query();
-            $token = $tokenList->read()['code'];
-            
-        }
-        
-        $resultado = ['status'=>$loginOk, 'token'=>$token];
+        // /grupo3php/api
+        $url = Yii::$app->request->baseUrl;
+        $url = substr($url, 0, strlen($url) - 3) . "frontend/web/";
+        $resultado = [
+            'status'=>$loginOk,
+            'token'=>$token,
+            'username' => $nick,
+            'mensajes'=>$mensajes, 
+            'url'=> $url,
+        ];
 
         return $resultado;
     }

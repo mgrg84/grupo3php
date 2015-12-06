@@ -19,6 +19,7 @@ use yii\filters\AccessControl;
  */
 class RutasController extends Controller
 {
+	
 	public function behaviors()
 	{
 		return [
@@ -38,13 +39,14 @@ class RutasController extends Controller
 				],
 			],
 			'verbs' => [
-					'class' => VerbFilter::className(),
-					'actions' => [
-						'delete' => ['post'],
-						],
-					],
-				];
+				'class' => VerbFilter::className(),
+				'actions' => [
+					'delete' => ['post'],
+				],
+			],
+		];
 	}
+	
 
 	/**
 	 * Lists all ruta models.

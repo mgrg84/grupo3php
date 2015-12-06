@@ -34,23 +34,10 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    if (Yii::$app->user->isGuest) 
-	{
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/user/registration/register']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/user/security/login']];
-    }
-	else 
-	{
-		$menuItems = [
-    		['label' => 'Recorridos', 'url' => ['/rutas']],
-			['label' => 'Pedido', 'url' => ['/pedido']],
-		];
-        $menuItems[] = [
-            'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-            'url' => ['/user/security/logout'],
-            'linkOptions' => ['data-method' => 'post']
-        ];
-    }
+
+	$menuItems = [
+	];
+    
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => $menuItems,
@@ -77,5 +64,42 @@ AppAsset::register($this);
 
 <?php $this->endBody() ?>
 </body>
+
+<script>
+    
+    var username = cargarDeLocalStorage("username");
+    var barra;
+    console.log(username);
+    if( username == "NOT_FOUND" ) {
+        barra = $("<ul id='w1' class='navbar-nav navbar-right nav'>" +
+                    "<li>" +
+                        "<a href='/grupo3php/frontend/web/user/register'>Signup</a>" +
+                    "</li>" +
+                    "<li>" +
+                        "<a href='/grupo3php/frontend/web/user/login'>Login</a>" +
+                    "</li>" +
+                "</ul>");
+    } else {
+        barra = $("<ul id='w1' class='navbar-nav navbar-right nav'>" +
+                    "<li><a href='/grupo3php/frontend/web/rutas'>Recorridos</a></li>" +
+                    "<li><a href='/grupo3php/frontend/web/pedido'>Pedido</a></li>" +
+                    "<li><a id='logout' href='#' data-method='post'>Logout(" + username + ")</a></li>" +
+                "</ul>");
+    }
+
+    $("#w1").remove();
+    $("#w0-collapse").append(barra);
+
+    $(document).ready(function(){
+        $("#logout").click(function(){
+            destruirEnLocalStorage("username");
+            destruirEnLocalStorage("token");
+            var home = cargarDeLocalStorage("home");
+            destruirEnLocalStorage("home");
+            window.location.replace(home);
+            return false;
+        });
+    });0
+</script>
 </html>
 <?php $this->endPage() ?>

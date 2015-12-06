@@ -25,6 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <?= $this->render('/_alert', ['module' => Yii::$app->getModule('user')]) ?>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
         <div class="panel panel-default">
@@ -34,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="panel-body">
                 <?php $form = ActiveForm::begin([
                     'id'                     => 'login-form',
-                    'enableAjaxValidation'   => true,
+                    'enableAjaxValidation'   => false,
                     'enableClientValidation' => false,
                     'validateOnBlur'         => false,
                     'validateOnType'         => false,
@@ -62,4 +63,40 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </div>
 </div>
+
+<script>
+    $(document).ready(function(){
+        $("#login-form-login").attr('name', 'username');
+        $("#login-form-password").attr('name', 'password');
+        $("#login-form").on('submit', function(){
+            var response = enviarFormularioPOST("login-form", handleResponse, "../../../api/v1/users/token");
+            return false;
+        });
+
+        function handleResponse(data) {
+            if( data.status == "OK") {
+                guardarEnLocalStorage("token", data.token);
+                guardarEnLocalStorage("username", data.username);
+                guardarEnLocalStorage("home", data.url);
+                window.location.replace(data.url);
+            } else {
+                console.log("Error!");
+                console.log(data.mensajes);
+
+                var errors = new Array();
+                if ( data.mensajes.error != undefined )
+                    errors.push([data.mensajes.error, '#login-form']);
+                
+                if( data.mensajes.username != undefined )
+                    errors.push([data.mensajes.username, '#login-form-login']);
+
+                if( data.mensajes.password != undefined )
+                    errors.push([data.mensajes.password, '#login-form-password']);
+
+                agregarErrores("#login-form", errors);
+            }
+        }
+
+    });
+</script>
 

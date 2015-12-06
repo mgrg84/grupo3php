@@ -5,7 +5,7 @@ namespace app\modules\v1\models;
 use Yii;
 use dektrium\user\models\User as UserBase;
 
-class User extends UserBase implements \OAuth2\Storage\UserCredentialsInterface
+class User extends UserBase
 {
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
