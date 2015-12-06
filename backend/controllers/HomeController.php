@@ -14,6 +14,21 @@ use backend\filtros\AdminControl;
  */
 class HomeController extends Controller
 {
+	public function behaviors()
+	{
+		return [
+			'verbs' => [
+					'class' => VerbFilter::className(),
+					'actions' => [
+						'delete' => ['post'],
+						],
+					],
+			'access' => [
+				'class' => AdminControl::className(),
+			]
+		];
+	}
+	
     public function actionIndex()
     {
     	return $this->render('index');

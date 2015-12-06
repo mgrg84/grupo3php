@@ -8,6 +8,7 @@ use common\models\StockSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\filtros\AdminControl;
 
 /**
  * StockController implements the CRUD actions for Stock model.
@@ -23,6 +24,9 @@ class StockController extends Controller
                     'delete' => ['post'],
                 ],
             ],
+			'access' => [
+				'class' => AdminControl::className(),
+			]
         ];
     }
 
