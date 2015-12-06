@@ -20,14 +20,7 @@ class CategoriaTest extends DbTestCase
     {
         parent::setUp();
 
-        // Yii::configure(Yii::$app, [
-        //     'components' => [
-        //         'user' => [
-        //             'class' => 'yii\web\User',
-        //             'identityClass' => 'common\models\User',
-        //         ],
-        //     ],
-        // ]);
+        
     }
 
     protected function tearDown()
@@ -44,8 +37,7 @@ class CategoriaTest extends DbTestCase
         $model->save();
 
         $this->specify('Que se haya creado una Categoria', function () use ($model){
-            //$categoria = Categoria::find()->where(['nombre' => 'Nueva Categoria'])->one();
-            //var_dump($model);die;
+           
             expect('Que exista una categoria con el nombre creado', $model->attributes['nombre']=='Nueva Categoria')->true();
         });
     }

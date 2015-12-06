@@ -9,6 +9,8 @@ use yii\base\Model;
 
 class RegistrationForm extends RegistrationFormBase {
 
+
+
 	/**
      * Registers a new user account. If registration was successful it will set flash message.
      *
@@ -29,13 +31,39 @@ class RegistrationForm extends RegistrationFormBase {
             return false;
         }
 
+        
+        
         Yii::$app->session->setFlash(
             'info',
-            Yii::t('app', 'Your application has been sent successfully. 
+            Yii::t('app', ' Your application has been sent successfully. 
                 An administrator of the site will review it. You will be notified when your account is activated.')
         );
 
+         $user->sendEmail(Yii::$app->params['adminEmail']);
+
+
         return true;
     }
+
+
+
+//ESTA ES LA QUE ENVIA EN FORMA CORRECTA
+      public function sendEmail($email)
+    {
+        
+        return Yii::$app->mailer->compose()
+        
+            ->setTo($email)
+            ->setFrom([$this->email => $this->name])
+            ->send();
+    }
+
+
+
+
+
+
+
+
 
 }

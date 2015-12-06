@@ -1,7 +1,7 @@
 <?php
 return [
     [
-        //'nombre' => 'cat1',
+        
         'nombre' => 'Producto1',
         'idCategoria' => '1',
     ],

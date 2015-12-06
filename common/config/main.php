@@ -2,6 +2,7 @@
 
 //use kartik-v\datecontrol\Module;
 
+
 return [
 
     'language' => 'es-UY',//'es-UY', ver si tengo que dejar es-UY --- en-US es por defecto siempre
@@ -13,6 +14,26 @@ return [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+
+        //PARA ENVIO DE MAILS EN EL REGISTRO
+
+        'mailer' => [
+        'class' => 'yii\swiftmailer\Mailer',
+        'viewPath' => '@common/mail',
+        'useFileTransport' => false,//set this property to false to send mails to real email addresses
+        //comment the following array to send mail using php's mail function
+        'transport' => [
+            'class' => 'Swift_SmtpTransport',
+            'host' => 'smtp.gmail.com',
+            'username' => 'grupo3php@gmail.com',
+            'password' => 'Provisoria1',
+            'port' => '587',
+            'encryption' => 'tls',
+                        ],
+    ],
+
+
+
         //URL AMIGABLES
         'urlManager' => [
             'class' => 'yii\web\UrlManager',
@@ -42,7 +63,10 @@ return [
 
                         // fin de idiomas
 
+    
+
     ],
+
     'bootstrap' => ['gii'],
 
 
@@ -58,7 +82,8 @@ return [
     'gii' => [
         'class' => 'yii\gii\Module',
     ],
-    
+
+       
     // 'datecontrol' =>  [
     //     'class' => 'kartik-v\datecontrol\Module',
 
@@ -116,7 +141,10 @@ return [
 
     ],
     // FIN de módulo para la gestion de usuarios
+//'params' => $param,
 
 
+  
     
 ];
+

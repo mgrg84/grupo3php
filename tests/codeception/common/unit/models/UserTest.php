@@ -20,14 +20,6 @@ class UserTest extends DbTestCase
     {
         parent::setUp();
 
-        // Yii::configure(Yii::$app, [
-        //     'components' => [
-        //         'user' => [
-        //             'class' => 'yii\web\User',
-        //             'identityClass' => 'common\models\User',
-        //         ],
-        //     ],
-        // ]);
     }
 
     protected function tearDown()
@@ -55,7 +47,7 @@ class UserTest extends DbTestCase
 
         $model->save();
 
-        $this->specify('Que se haya creado una Categoria', function () use ($model){
+        $this->specify('Que se haya creado un Usuario', function () use ($model){
             
             expect('Que exista un usuario con el nombre creado', $model->attributes['username']=='Marianela')->true();
 

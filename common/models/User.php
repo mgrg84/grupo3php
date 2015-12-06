@@ -165,4 +165,11 @@ class User extends \yii\db\ActiveRecord
     {
         return $this->hasMany(UserRutas::className(), ['idUsuario' => 'id']);
     }
+
+
+    
+   
+
+
+
 }

@@ -13,7 +13,7 @@ return [
          'cantidad' => '5',
             'fecha' => '15-15-10',
             'idUsuario' => '1',
-            'idProducto' => '1',
+            'idProducto' => '2',
             'idComercio' => '1',
     ],
 ];

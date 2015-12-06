@@ -92,6 +92,7 @@ class UsuarioController extends RegistrationController
 
             $command = $connection->createCommand("UPDATE user SET ubicacionDomicilio='".$domicilio."'WHERE username='".$nick."'");
             $command->execute();
+
             Yii::$app->session->setFlash('info', Yii::t('app', 
                 'Your application has been sent successfully.
                 An administrator of the site will review it. 

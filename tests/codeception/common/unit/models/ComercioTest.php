@@ -29,7 +29,7 @@ class ComercioTest extends DbTestCase
 
     public function testCreate()
     {
-        $model = new Comercio([
+    $model = new Comercio([
             'nombre' => 'Nuevo Comercio',
             'ubicacion' => 'Ubicacion' ,
             'prioridad' => '1',

@@ -20,14 +20,6 @@ class ProductoTest extends DbTestCase
     {
         parent::setUp();
 
-        // Yii::configure(Yii::$app, [
-        //     'components' => [
-        //         'user' => [
-        //             'class' => 'yii\web\User',
-        //             'identityClass' => 'common\models\User',
-        //         ],
-        //     ],
-        // ]);
     }
 
     protected function tearDown()
