@@ -36,7 +36,7 @@ class RegistrationForm extends RegistrationFormBase {
         Yii::$app->session->setFlash(
             'info',
             Yii::t('app', ' Your application has been sent successfully. 
-                An administrator of the site will review it. You will be notified when your account is activated.')
+                An administrator of the site will review it.')
         );
 
          $user->sendEmail(Yii::$app->params['adminEmail']);

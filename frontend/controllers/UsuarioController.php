@@ -99,6 +99,10 @@ class UsuarioController extends RegistrationController
                 You will be notified when your account is activated.'));
             return $this->redirect(array('/site/index'));
             // TODO Enviar correo con el mismo mensaje.
+
+            
+
+
         }
 
         return $this->render('connect', [
