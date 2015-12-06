@@ -8,8 +8,8 @@ use app\models\PostSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use dektrium\user\models\RegistrationForm;
 use backend\filtros\AdminControl;
+use dektrium\user\models\RegistrationForm;
 
 /**
  * UsuarioController implements the CRUD actions for User model.
@@ -25,9 +25,6 @@ class UsuarioController extends Controller
                     'delete' => ['post'],
                 ],
             ],
-			'access' => [
-				'class' => AdminControl::className(),
-			]
         ];
     }
 
@@ -162,4 +159,10 @@ class UsuarioController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
+
+
+
+
+
 }

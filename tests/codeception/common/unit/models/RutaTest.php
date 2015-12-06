@@ -8,9 +8,7 @@ use Codeception\Specify;
 use common\models\Ruta;
 use tests\codeception\common\fixtures\RutaFixture;
 
-/**
- * Login form test
- */
+
 class RutaTest extends DbTestCase
 {
 
@@ -40,19 +38,17 @@ class RutaTest extends DbTestCase
 
         $this->specify('Que se haya creado una Ruta', function () use ($model){
             
-            expect('Que exista una ruta con la idUsuario', $model->attributes['idUsuario']=='1')->true();
-            expect('Que exista una ruta con la fecha creada', $model->attributes['fecha']=='2015-11-17')->true();
+            expect('idUsuario', $model->attributes['idUsuario']=='1')->true();
+            expect('fecha', $model->attributes['fecha']=='2015-11-17')->true();
         });
     }
 
 
-    /**
-     * @inheritdoc
-     */
+   
     public function fixtures()
     {
         return [
-             'fecha' => [
+             'ruta' => [
                 'class' => RutaFixture::className(),
                 'dataFile' => '@tests/codeception/common/unit/fixtures/data/models/ruta.php'
             ],

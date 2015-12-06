@@ -8,10 +8,10 @@ return [
             'password' => 'root',
             'charset' => 'utf8',
         ],
-        'mailer' => [
+        /*'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
             'viewPath' => '@common/mail',
-            'useFileTransport' => true,
-        ],
+            'useFileTransport' => false,
+        ],*/
     ],
 ];
