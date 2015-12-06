@@ -9,6 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use backend\Code\Helpers;
+use backend\filtros\AdminControl;
 
 /**
  * ComerciosController implements the CRUD actions for Comercio model.
@@ -24,6 +25,9 @@ class ComerciosController extends Controller
                     'delete' => ['post'],
                 ],
             ],
+			'access' => [
+				'class' => AdminControl::className(),
+			]
         ];
     }
 

@@ -14,6 +14,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\data\ActiveDataProvider;
 use backend\Code\Helpers;
+use backend\filtros\AdminControl;
 
 
 class EstadisticasController extends Controller
@@ -25,7 +26,10 @@ class EstadisticasController extends Controller
 					'class' => VerbFilter::className(),
 					'actions' => [	],
 					],
-				];
+			'access' => [
+				'class' => AdminControl::className(),
+				]
+		];
 	}
 
 
