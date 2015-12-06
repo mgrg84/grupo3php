@@ -1176,6 +1176,30 @@
     {
     "ProjRelPath" = "T"
     }
+    "backend\\views\\admin"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\admin\\login.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\admin\\registration"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\admin\\registration\\register.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\admin\\security"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\admin\\security\\login.php"
+    {
+    "ProjRelPath" = "T"
+    }
     "backend\\views\\categoria"
     {
     "ProjRelPath" = "T"
@@ -1248,6 +1272,14 @@
     {
     "ProjRelPath" = "T"
     }
+    "backend\\views\\home"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\home\\index.php"
+    {
+    "ProjRelPath" = "T"
+    }
     "backend\\views\\layouts"
     {
     "ProjRelPath" = "T"
@@ -1269,6 +1301,34 @@
     "ProjRelPath" = "T"
     }
     "backend\\views\\layouts\\main.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\pedido"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\pedido\\_form.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\pedido\\_search.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\pedido\\create.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\pedido\\index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\pedido\\update.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\pedido\\view.php"
     {
     "ProjRelPath" = "T"
     }
@@ -1341,6 +1401,66 @@
     "ProjRelPath" = "T"
     }
     "backend\\views\\site\\index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\stock"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\stock\\_form.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\stock\\_search.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\stock\\create.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\stock\\index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\stock\\update.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\stock\\view.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\usuario"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\usuario\\_form.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\usuario\\_form_bak.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\usuario\\_search.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\usuario\\create.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\usuario\\index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\usuario\\update.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\views\\usuario\\view.php"
     {
     "ProjRelPath" = "T"
     }
@@ -3820,10 +3940,6 @@
     {
     "ProjRelPath" = "T"
     }
-    "frontend\\web\\assets"
-    {
-    "ProjRelPath" = "T"
-    }
     "frontend\\web\\assets\\.gitignore"
     {
     "ProjRelPath" = "T"
@@ -4117,10 +4233,6 @@
     "ProjRelPath" = "T"
     }
     "tests\\codeception\\common\\unit\\fixtures\\data\\models\\user.php"
-    {
-    "ProjRelPath" = "T"
-    }
-    "tests\\codeception\\common\\unit\\models"
     {
     "ProjRelPath" = "T"
     }

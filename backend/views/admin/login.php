@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	</div>
 
 	<?php } ?>
-	<form method="POST" action="/grupo3php/backend/web/admin/login">
+	<form method="POST" action="<?php echo Yii::$app->request->baseUrl. '/admin/login' ?>">
 		<div class="form-group">
 			<label for="nickname"><?php Yii::t('app', 'Nickname'); ?></label>
 			<input type="text" class="form-control" id="nickname" placeholder="Nombre de usuario" name="nickname">
