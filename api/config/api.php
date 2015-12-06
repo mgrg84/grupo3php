@@ -48,11 +48,12 @@ $config = [
                         'v1/user',
                     ],
                     'extraPatterns' => [
-                        'GET hola' => 'hola', // 'xxxxx' refers to 'actionXxxxx'
+                        'GET hola' => 'hola', // 'xxxxx' refers to 'actionHola'
                         'POST token' => 'token',
                         'POST test' => 'test',
                         'POST create' => 'create',
                     ],
+                    
                 ],
             ],
         ], 

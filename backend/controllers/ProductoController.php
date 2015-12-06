@@ -8,7 +8,7 @@ use common\models\ProductoSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use backend\filtros\AdminControl;
 use yii\web\UploadedFile;
 
 /**
@@ -28,6 +28,9 @@ class ProductoController extends Controller
                     'delete' => ['post'],
                 ],
             ],
+			'access' => [
+				'class' => AdminControl::className(),
+			]
         ];
     }
 

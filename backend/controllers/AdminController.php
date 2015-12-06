@@ -8,7 +8,7 @@ use app\models\PostSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use backend\filtros\AdminControl;
+
 /**
  * UsuarioController implements the CRUD actions for User model.
  */
@@ -37,7 +37,6 @@ class AdminController extends Controller
                     $session->open();
 
                 $session['admin'] = true;
-                
     			return $this->redirect(array('home/'));
             } else {
                 return $this->render('login', ['error' => true]);

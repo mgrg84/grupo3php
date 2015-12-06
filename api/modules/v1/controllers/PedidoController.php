@@ -17,4 +17,6 @@ class PedidoController extends ActiveController
 
 		return $actions;
 	}
+
+	
 }

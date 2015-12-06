@@ -8,6 +8,7 @@ use common\models\PedidoSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\filtros\AdminControl;
 
 /**
  * PedidoController implements the CRUD actions for Pedido model.
@@ -23,6 +24,9 @@ class PedidoController extends Controller
                     'delete' => ['post'],
                 ],
             ],
+			'access' => [
+				'class' => AdminControl::className(),
+			]
         ];
     }
 

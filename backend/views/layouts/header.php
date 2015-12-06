@@ -61,6 +61,15 @@ use yii\helpers\Html;
                 <li class="dropdown notifications-menu">
                     <?= Html::a('Usuarios', ['/usuario/']) ?>
                 </li>
+				<li>
+					<?=
+					Html::a(
+						'Sign out',
+						['/admin/logout'],
+						['data-method' => 'post']
+						)
+					?>
+				</li>
                 <!-- User Account: style can be found in dropdown.less -->
 
             </ul>

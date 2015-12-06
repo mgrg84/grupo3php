@@ -12,6 +12,8 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use backend\Code\Helpers;
+use yii\filters\AccessControl;
+use backend\filtros\AdminControl;
 
 /**
  * rutasController implements the CRUD actions for Ruta model.
@@ -25,9 +27,12 @@ class RutasController extends Controller
 					'class' => VerbFilter::className(),
 					'actions' => [
 						'delete' => ['post'],
-						],
 					],
-				];
+				],
+			'access' => [
+					'class' => AdminControl::className(),
+				]
+		];
 	}
 
 	/**

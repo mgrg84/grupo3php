@@ -8,6 +8,7 @@ use common\models\CategoriaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\filtros\AdminControl;
 
 /**
  * CategoriaController implements the CRUD actions for Categoria model.
@@ -23,6 +24,9 @@ class CategoriaController extends Controller
                     'delete' => ['post'],
                 ],
             ],
+			'access' => [
+				'class' => AdminControl::className(),
+			]
         ];
     }
 
