@@ -3,11 +3,14 @@
 namespace app\modules\v1\controllers;
 
 use yii\rest\ActiveController;
-use yii\filters\auth\HttpBasicAuth;
-use yii\filters\auth\HttpBearerAuth;
 use dektrium\user\helpers\Password;
 use app\modules\v1\models\User;
 use app\modules\v1\filters\HttpPostAuth;
+use yii\helpers\ArrayHelper;
+use yii\filters\auth\HttpBearerAuth;
+use yii\filters\auth\QueryParamAuth;
+use filsh\yii2\oauth2server\filters\ErrorToExceptionFilter;
+use filsh\yii2\oauth2server\filters\auth\CompositeAuth;
 use Yii;
 
 class UserController extends ActiveController
@@ -24,7 +27,7 @@ class UserController extends ActiveController
 
         return $behaviors;
     }
-
+    
     public function actionToken(){
         
         $nick = Yii::$app->request->post()['username'];
@@ -61,9 +64,7 @@ class UserController extends ActiveController
     }
 
     public function actionTest() {
-        $token = Yii::$app->request->post()['token'];
-
-        return TokenValidador::validarToken($token);
+        return "VIVA!";
     }
 
 }
