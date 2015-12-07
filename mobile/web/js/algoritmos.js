@@ -23,7 +23,7 @@ function getDataHash(datos, timestamp) {
 
 	var data = PUBLIC_KEY + keysImpares.join("") + impares.join("") + PRIVATE_KEY + keysPares.join("")
 			+ pares.join("") + timestamp;
-	//console.log(data);
+
 	return CryptoJS.SHA256(data).toString();
 }
 
@@ -40,11 +40,13 @@ function obtenerDatosDeForm(form_id) {
       if( $(this).attr("name") != undefined )
         datos[$(this).attr("name")] = $(this).val();
     });
-    //console.log(datos);
+     $("#" + form_id + " select").each(function(){
+      if( $(this).attr("name") != undefined )
+        datos[$(this).attr("name")] = $(this).val();
+    });
+
     var timestamp = Math.round(+new Date()/1000);
-    //console.log(timestamp);
     var hash = getDataHash(datos, timestamp);
-    //console.log(hash);
 
     var request = {
     	"datos" : datos,
@@ -91,7 +93,7 @@ function destruirEnLocalStorage(id) {
 function enviarFormularioPOST(form_id, response, action) {
 
 	if( action == undefined ) {
-		action = $("#form_id").attr('action');
+		action = $("#" + form_id).attr('action');
 	}
 	console.log("accion:");
 	console.log(action);

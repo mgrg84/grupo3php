@@ -25,7 +25,7 @@ class HttpPostAuth extends AuthMethod
             if( TokenValidador::validarToken($request->get('token')) )
                 return true;
         }
-
+        
         return null;
     }
 }
