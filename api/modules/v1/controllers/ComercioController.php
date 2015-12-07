@@ -4,6 +4,7 @@ namespace app\modules\v1\controllers;
 
 use yii\rest\ActiveController;
 use app\modules\v1\filters\HttpPostAuth;
+use app\modules\v1\models\Comercio;
 use Yii;
 
 class ComercioController extends ActiveController
@@ -28,6 +29,14 @@ class ComercioController extends ActiveController
 		unset($actions['delete'], $actions['update'], $actions['create']);
 
 		return $actions;
+	}
+
+	public function actionDeldia() {
+		$POST = Yii::$app->request->post();
+
+		$idUsuario = TokenValidador::validarToken($POST['token']);
+
+		Comercio::
 	}
 
 }
