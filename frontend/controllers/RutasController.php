@@ -54,16 +54,15 @@ class RutasController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider = new ActiveDataProvider([
-			'query' =>  Ruta::find()
-			->where('idUsuario ='.Yii::$app->user->id)
-			,
-			'pagination' => false
-		]);
+		$searchModel = new RutaSearch();
+		$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+		
+		$dataProvider->query = $dataProvider->query
+			->where(count(Yii::$app->request->queryParams)> 0 && Yii::$app->request->queryParams['RutaSearch']['fecha'] != '' ? Yii::$app->request->queryParams['RutaSearch'] : true)
+			->andWhere('idUsuario ='.Yii::$app->user->id)
+		;
 
-		return $this->render('index', [
-			'dataProvider' => $dataProvider,
-		]);
+		return $this->render('index', ['dataProvider' => $dataProvider,	'searchModel' => $searchModel]);
 	}
 
 	/**

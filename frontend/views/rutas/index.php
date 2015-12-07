@@ -23,13 +23,16 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
+    	'filterModel' => $searchModel,
         'columns' => [
     		[
     			'attribute' => Yii::t('app', 'Fecha'),
     			'value' =>  function($model)
-    				{
-    					return date("d-M-y",  strtotime($model->fecha));
-    				},
+    			{
+    				return date("d-M-y",  strtotime($model->fecha));
+    			},
+    			'filter' => DateControl::widget(['name'=>'RutaSearch[fecha]', 'displayFormat' => 'php:d-M-y', 'saveFormat' => 'yyyy-MM-dd']),
+    			'format' => 'html',
     		],
     		[
     			'attribute' => Yii::t('app', 'Comercios'),
