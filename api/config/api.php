@@ -46,6 +46,8 @@ $config = [
                         'v1/pedido',   
                         'v1/stock',
                         'v1/user',
+                        'v1/producto',
+                        'v1/comercio',
                     ],
                     'extraPatterns' => [
                         'POST token' => 'token', // 'xxxxx' refers to 'actionToken'

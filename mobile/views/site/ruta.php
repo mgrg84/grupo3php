@@ -18,9 +18,9 @@ $this->params['breadcrumbs'][] = $this->title;
 		<table id="tablaComercios" class="table table-hover">
 			<thead>
 				<tr>
-					<th>Comercio</th>
-					<th>Prioridad</th>
-					<th>Horario</th>
+					<th><?= Yii::t('app', 'Store') ?></th>
+					<th><?= Yii::t('app', 'Priority') ?></th>
+					<th><?= Yii::t('app', 'Horary') ?></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -153,7 +153,7 @@ $this->params['breadcrumbs'][] = $this->title;
 						$(this).remove();
 					});
 					$(".comercio-view").append(
-						$("<h1>No tiene rutas asignadas para el día de hoy!</h1>")
+						$("<h1><?= Yii::t('app', 'You have no rutes assigned for today.') ?></h1>")
 					);
 				}
 
