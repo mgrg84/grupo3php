@@ -81,12 +81,4 @@ class UserController extends ActiveController
         return $resultado;
     }
 
-    public function actionHola() {
-        return  'hola';
-    }
-
-    public function actionTest() {
-        return "VIVA!";
-    }
-
 }
