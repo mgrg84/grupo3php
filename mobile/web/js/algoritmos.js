@@ -1,5 +1,5 @@
 var PRIVATE_KEY = "GRUPO3PHPPRIVADO";
-var PUBLIC_KEY = "GRUPO3PHP"
+var PUBLIC_KEY = "GRUPO3PHP";
 
 function getDataHash(datos, timestamp) {
 	var pares = [];
