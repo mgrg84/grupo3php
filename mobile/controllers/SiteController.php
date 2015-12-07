@@ -30,4 +30,17 @@ class SiteController extends Controller
     {
         return $this->goHome();
     }
+
+    public function actionRuta() {
+        return $this->render('ruta');
+    }
+
+    public function actionStock() {
+        return $this->render('stock');
+    }
+
+    public function actionPedido() {
+        return $this->render('pedido');
+    }
+
 }
