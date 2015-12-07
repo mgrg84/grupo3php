@@ -5,6 +5,9 @@ namespace frontend\controllers;
 use Yii;
 use common\models\Pedido;
 use common\models\PedidoSearch;
+use common\models\Ruta;
+use common\models\RutaComercios;
+use common\models\Comercio;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -45,14 +48,20 @@ class PedidoController extends Controller
      */
     public function actionIndex()
     {
+        if (($this->getRutaDeHoy()) == null) {
+            return $this->render('index');
+        } else {
         $model = new Pedido();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->render('create', ['model' => $model = new Pedido()]);
+            return $this->render('create', ['model' => $model = new Pedido(),
+                'comercios' => $this->comerciosByIdUByFecha()]);
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'comercios' => $this->comerciosByIdUByFecha()
             ]);
+        }
         }
     }
 
@@ -102,5 +111,27 @@ class PedidoController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    protected function getRutaDeHoy(){
+        $ruta = Ruta::find()->where([
+            'idUsuario' => Yii::$app->user->id,
+            'fecha' => date('Y-m-d')
+            ])->one();
+        return $ruta;
+    }
+
+    protected function comerciosByIdUByFecha() {
+        $ruta = $this->getRutaDeHoy();
+        $rComercios = RutaComercios::find()->where([
+            'idRuta' => $ruta->id
+            ])->all();
+        $idComercios = array();
+        foreach ($rComercios as $key => $value) {
+            array_push($idComercios, $value['idComercio']);
+        }
+        $comercios = Comercio::findAll($idComercios);
+        
+        return $comercios;
     }
 }

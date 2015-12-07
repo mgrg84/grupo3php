@@ -53,7 +53,8 @@ class StockController extends Controller
             } else {
                 $model->save();
             }
-            return $this->render('create', ['model' => new Stock()]);
+            return $this->render('create', ['model' => new Stock(),
+                'comercios' => $this->comerciosByIdUByFecha()]);
         } else {
             return $this->render('create', [
                 'model' => $model,
