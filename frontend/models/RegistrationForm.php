@@ -40,7 +40,8 @@ class RegistrationForm extends RegistrationFormBase {
         );
 
          $user->sendEmail(Yii::$app->params['adminEmail']);
-
+         //$user->getAttributes()['email'];
+       
 
         return true;
     }
@@ -51,11 +52,21 @@ class RegistrationForm extends RegistrationFormBase {
       public function sendEmail($email)
     {
         
-        return Yii::$app->mailer->compose()
+        /*return Yii::$app->mailer->compose()
         
             ->setTo($email)
             ->setFrom([$this->email => $this->name])
+            ->send();*/
+
+             return Yii::$app->mailer->compose()
+        
+            ->setTo([$this->email => $this->username])
+            ->setFrom($email)
+            ->setSubject(Yii::t('app', ' Welcome to StockManager'))
+            ->setTextBody(Yii::t('app', ' Your application has been sent successfully. An administrator of the site will review it. You will be notified when your account is activated.'))
             ->send();
+
+
     }
 
 
