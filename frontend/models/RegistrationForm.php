@@ -62,7 +62,7 @@ class RegistrationForm extends RegistrationFormBase {
         
             ->setTo([$this->email => $this->username])
             ->setFrom($email)
-            ->setSubject(Yii::t('app', ' Welcome to StockManager'))
+            ->setSubject(Yii::t('app', ' Welcome to StockManager REGISTRATION FORM'))
             ->setTextBody(Yii::t('app', ' Your application has been sent successfully. An administrator of the site will review it. You will be notified when your account is activated.'))
             ->send();
 

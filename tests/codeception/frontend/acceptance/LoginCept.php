@@ -1,8 +1,7 @@
 <?php
-use tests\codeception\frontend\AcceptanceTester;
+/*use tests\codeception\frontend\AcceptanceTester;
 use tests\codeception\common\_pages\LoginPage;
 
-/* @var $scenario Codeception\Scenario */
 
 $I = new AcceptanceTester($scenario);
 $I->wantTo('ensure login page works');
@@ -26,7 +25,7 @@ $loginPage->login('erau', 'password_0');
 $I->expectTo('see that user is logged');
 $I->seeLink('Logout (erau)');
 $I->dontSeeLink('Login');
-$I->dontSeeLink('Signup');
+$I->dontSeeLink('Signup');*/
 /** Uncomment if using WebDriver
  * $I->click('Logout (erau)');
  * $I->dontSeeLink('Logout (erau)');

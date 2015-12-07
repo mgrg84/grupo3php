@@ -8,14 +8,13 @@ function getDataHash(datos, timestamp) {
 	var keysImpares = [];
 
 	datosOrd = sortObject(datos);
-
 	var i = 1;
-	for(var key in datos ) {
+	for(var key in datosOrd ) {
 		if(  i%2 ) {
-			pares.push(datos[key]);
+			pares.push(datosOrd[key]);
 			keysPares.push(key);
 		} else {
-			impares.push(datos[key]);
+			impares.push(datosOrd[key]);
 			keysImpares.push(key);
 		}
 		i++;

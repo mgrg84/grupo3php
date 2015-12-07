@@ -31,26 +31,26 @@ class StockTest extends DbTestCase
     public function testCreate()
     {
         $model = new Stock([
-             [
-            'cantidad' => '1',
-            'fecha' =>  '12-10-18',
-            'idUsuario' => '2',
-            'idProducto' =>  '1',
+             
+            'cantidad' => '41',
+            'fecha' =>  '12-10-12',
+            'idUsuario' => '1',
+            'idProducto' =>  '2',
             'idComercio' => '1',
-    ],
+    
         ]);
 
         $model->save();
 
         $this->specify('Que se haya creado un Stock', function () use ($model){
             
-            expect('Que exista una categoria con el nombre creado', $model->attributes['cantidad']=='1')->true();
+            expect('Que exista una categoria con el nombre creado', $model->attributes['cantidad']=='41')->true();
 
-            expect('Que exista una fecha  creado', $model->attributes['fecha']=='12-10-18')->true();
+            expect('Que exista una fecha  creado', $model->attributes['fecha']=='12-10-12')->true();
 
-            expect('Que exista una usuario  creado', $model->attributes['idUsuario']=='2')->true();
+            expect('Que exista una usuario  creado', $model->attributes['idUsuario']=='1')->true();
 
-            expect('Que exista una producto  creado', $model->attributes['idProducto']=='1')->true();
+            expect('Que exista una producto  creado', $model->attributes['idProducto']=='2')->true();
 
             expect('Que exista una comercio  creado', $model->attributes['idComercio']=='1')->true();
 
