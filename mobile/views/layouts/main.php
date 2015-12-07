@@ -56,7 +56,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; Stock Manager <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
@@ -79,6 +79,7 @@ AppAsset::register($this);
         barra = $("<ul id='w1' class='navbar-nav navbar-right nav'>" +
                     "<li><a href='/grupo3php/mobile/web/site/ruta'>Recorridos</a></li>" +
                     "<li><a href='/grupo3php/mobile/web/site/pedido'>Pedido</a></li>" +
+					"<li><a href='/grupo3php/mobile/web/site/stock'>Stock</a></li>" +
                     "<li><a id='logout' href='#' data-method='post'>Logout(" + username + ")</a></li>" +
                 "</ul>");
     }
