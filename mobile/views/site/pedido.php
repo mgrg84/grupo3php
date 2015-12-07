@@ -54,14 +54,21 @@ $this->params['breadcrumbs'][] = $this->title;
 			}
 		});
 		$.ajax({
-			url: '../../../api/v1/comercios?token=' + cargarDeLocalStorage('token'),
+			url: '../../../api/v1/comercios/deldia?token=' + cargarDeLocalStorage('token'),
 			type: 'get',
 			success: function (data) {
-				data.forEach(function(item, index){
-					$("#comercio").append(
-						$("<option value='" + item.id + "'>" + item.nombre + "</option>")
+				if( !data.length ) {
+					$(".site-login").html("");
+					$(".site-login").append(
+						$("<h1><?= Yii::t('app', 'There are no routes assigned to you today! You cant make orders today.') ?></h1>")
 					);
-				});
+				} else {
+					data.forEach(function(item, index){
+						$("#comercio").append(
+							$("<option value='" + item.id + "'>" + item.nombre + "</option>")
+						);
+					});
+				}
 			}
 		});
 
