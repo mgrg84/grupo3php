@@ -69,7 +69,7 @@ class UserController extends ActiveController
         }
         // /grupo3php/api
         $url = Yii::$app->request->baseUrl;
-        $url = substr($url, 0, strlen($url) - 3) . "frontend/web/";
+        $url = substr($url, 0, strlen($url) - 3) . "mobile/web/";
         $resultado = [
             'status'=>$loginOk,
             'token'=>$token,
