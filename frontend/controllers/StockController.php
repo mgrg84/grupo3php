@@ -5,7 +5,9 @@ namespace frontend\controllers;
 use Yii;
 use common\models\Stock;
 use common\models\Ruta;
+use common\models\RutaComercios;
 use common\models\StockSearch;
+use common\models\Comercio;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,6 +37,9 @@ class StockController extends Controller
      */
     public function actionIndex()
     {
+        if (($this->getRutaDeHoy()) == null) {
+            return $this->render('index');
+        } else {
         $model = new Stock();
 
         if ($model->load(Yii::$app->request->post())) {
@@ -54,6 +59,7 @@ class StockController extends Controller
                 'model' => $model,
                 'comercios' => $this->comerciosByIdUByFecha()
             ]);
+        }
         }
     }
 
@@ -105,19 +111,25 @@ class StockController extends Controller
         }
     }
 
-    protected function comerciosByIdUByFecha() {
+    protected function getRutaDeHoy(){
         $ruta = Ruta::find()->where([
             'idUsuario' => Yii::$app->user->id,
             'fecha' => date('Y-m-d')
             ])->one();
-        if ($ruta == null) {
-            return array();
-        }
-        $rComercios = $ruta->getRutaComercios();
+        return $ruta;
+    }
+
+    protected function comerciosByIdUByFecha() {
+        $ruta = $this->getRutaDeHoy();
+        $rComercios = RutaComercios::find()->where([
+            'idRuta' => $ruta->id
+            ])->all();
         $idComercios = array();
         foreach ($rComercios as $key => $value) {
             array_push($idComercios, $value['idComercio']);
         }
-        return $comercios = Comercio::findAll([$idComercios]);
+        $comercios = Comercio::findAll($idComercios);
+        
+        return $comercios;
     }
 }
