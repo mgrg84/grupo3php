@@ -30,4 +30,11 @@ class ComercioController extends ActiveController
 		return $actions;
 	}
 
+	public function actionDeldia() {
+		$POST = Yii::$app->request->post();
+
+		$idUsuario = TokenValidador::validarToken($POST['token']);
+		
+	}
+
 }

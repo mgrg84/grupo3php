@@ -114,4 +114,28 @@ class Comercio extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Stock::className(), ['idComercio' => 'id']);
     }
+
+    public static function getRutaDeHoy($idusuario){
+        $ruta = Ruta::find()->where([
+            'idUsuario' => $idusuario,
+            'fecha' => date('Y-m-d')
+            ])->one();
+        return $ruta;
+    }
+
+    public static function comerciosByIdUByFecha() {
+        $ruta = $this->getRutaDeHoy();
+
+        $rComercios = RutaComercios::find()->where([
+            'idRuta' => $ruta->id
+            ])->all();
+        $idComercios = array();
+
+        foreach ($rComercios as $key => $value) {
+            array_push($idComercios, $value['idComercio']);
+        }
+        $comercios = Comercio::findAll($idComercios);
+        
+        return $comercios;
+    }
 }
