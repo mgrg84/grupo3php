@@ -136,7 +136,7 @@ class RutasController extends Controller
 			if(count($userLocation) > 1 && count($comercioLocation) > 1)
 			{
 				$distance = Helpers::GetDistance($userLocation[0], $userLocation[1], $comercioLocation[0], $comercioLocation[1], "M");
-				if($distance <= Yii::$app->params['MaxUserRadius'] * 1000 && $distance > 0)
+				if($distance <= (Yii::$app->params['MaxUserRadius'] * 1000) * 0.9 && $distance > 0)
 				{
 					array_push($filteredMarkets, ['comercio'=> $comercio, 'distancia' => $distance, 'ubicacionUsuario' => $userLocation]);
 				}
