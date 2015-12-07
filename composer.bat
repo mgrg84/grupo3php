@@ -1,1 +1,2 @@
-php 'composer.phar' update
+@ECHO OFF
+php "%~dp0composer.phar" %*
