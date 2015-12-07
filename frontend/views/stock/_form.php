@@ -25,7 +25,7 @@ date_default_timezone_set('America/Montevideo');
 
     <?= $form->field($model, 'idProducto')->dropDownList(ArrayHelper::map(Producto::find()->all(), 'id', 'nombre'))->label(Yii::t('app', 'Product'))?>
 
-    <?= $form->field($model, 'idComercio')->dropDownList(ArrayHelper::map(Comercio::find()->all(), 'id', 'nombre'))->label(Yii::t('app', 'Commerce')) ?>
+    <?= $form->field($model, 'idComercio')->dropDownList(ArrayHelper::map($comercios, 'id', 'nombre'))->label(Yii::t('app', 'Commerce')) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
