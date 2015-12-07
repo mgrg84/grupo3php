@@ -30,3 +30,4 @@ phpunit.phar
 /phpunit.xml
 
 tests/_output/*
+/frontend/runtime/HTML/4.6.0,bd08c5afbc77123dbd4e9e026a723c450e9f844b,1.ser
