@@ -1,48 +1,48 @@
 <?php
 
-namespace tests\codeception\frontend\functional;
+/*namespace tests\codeception\frontend\functional;
 
 use tests\codeception\frontend\_pages\SignupPage;
 use common\models\User;
 
 class SignupCest
 {
-
+*/
     /**
      * This method is called before each cest class test method
      * @param \Codeception\Event\TestEvent $event
      */
-    public function _before($event)
+   /* public function _before($event)
     {
-    }
+    }*/
 
     /**
      * This method is called after each cest class test method, even if test failed.
      * @param \Codeception\Event\TestEvent $event
      */
-    public function _after($event)
+    /*public function _after($event)
     {
         User::deleteAll([
             'email' => 'tester.email@example.com',
             'username' => 'tester',
         ]);
     }
-
+*/
     /**
      * This method is called when test fails.
      * @param \Codeception\Event\FailEvent $event
      */
-    public function _fail($event)
+   /* public function _fail($event)
     {
 
-    }
+    }*/
 
     /**
      *
      * @param \codeception_frontend\FunctionalTester $I
      * @param \Codeception\Scenario $scenario
      */
-    public function testUserSignup($I, $scenario)
+ /*   public function testUserSignup($I, $scenario)
     {
         $I->wantTo('ensure that signup works');
 
@@ -87,4 +87,4 @@ class SignupCest
         $I->expectTo('see that user logged in');
         $I->seeLink('Logout (tester)');
     }
-}
+}*/

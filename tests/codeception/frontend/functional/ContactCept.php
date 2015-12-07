@@ -1,8 +1,7 @@
 <?php
-use tests\codeception\frontend\FunctionalTester;
+/*use tests\codeception\frontend\FunctionalTester;
 use tests\codeception\frontend\_pages\ContactPage;
 
-/* @var $scenario Codeception\Scenario */
 
 $I = new FunctionalTester($scenario);
 $I->wantTo('ensure that contact works');
@@ -45,3 +44,4 @@ $contactPage->submit([
     'verifyCode' => 'testme',
 ]);
 $I->see('Thank you for contacting us. We will respond to you as soon as possible.');
+*/
