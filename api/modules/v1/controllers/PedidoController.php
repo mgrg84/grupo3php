@@ -11,7 +11,7 @@ use Yii;
 class PedidoController extends ActiveController
 {
 	public $modelClass = 'app\modules\v1\models\Pedido';
-	/*
+	
 	public function behaviors()
     {
         $behaviors = parent::behaviors();
@@ -21,7 +21,7 @@ class PedidoController extends ActiveController
 
         return $behaviors;
     }
-	*/
+	
 	public function actions()
 	{
 		$actions = parent::actions();
@@ -35,7 +35,7 @@ class PedidoController extends ActiveController
 		$POST = Yii::$app->request->post();
 		$pedido = [];
 		$errores = [];
-		return ['post'=>$POST, 'hash'=>TokenValidador::validarDatos($POST)];
+
 		foreach ($POST['datos'] as $key => $value) {
 			$pedido[$key] = $value;
 		}
