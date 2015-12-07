@@ -123,8 +123,8 @@ class Comercio extends \yii\db\ActiveRecord
         return $ruta;
     }
 
-    public static function comerciosByIdUByFecha() {
-        $ruta = $this->getRutaDeHoy();
+    public static function comerciosByIdUByFecha($idusuario) {
+        $ruta = $this->getRutaDeHoy($idusuario);
 
         $rComercios = RutaComercios::find()->where([
             'idRuta' => $ruta->id

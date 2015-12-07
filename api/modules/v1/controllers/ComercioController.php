@@ -36,7 +36,11 @@ class ComercioController extends ActiveController
 
 		$idUsuario = TokenValidador::validarToken($POST['token']);
 
-		Comercio::
+		if( Comercio::getRutaDeHoy($idusuario) )
+			return [];
+		$comercios = Comercio::comerciosByIdUByFecha($idusuario);
+
+		return $comercios;
 	}
 
 }
