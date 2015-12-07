@@ -52,7 +52,8 @@ $config = [
                     'extraPatterns' => [
                         'POST token' => 'token', // 'xxxxx' refers to 'actionToken'
                         'POST create' => 'create',
-                        'GET ruta' => 'ruta'
+                        'GET ruta' => 'ruta',
+                        'GET deldia' => 'deldia',
                     ],
                     
                 ],
