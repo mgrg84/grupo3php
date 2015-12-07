@@ -12,11 +12,6 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="stock-create">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <?= $this->render('_form', [
-        'model' => $model,
-        'comercios' => $comercios
-    ]) ?>
+    <h1>No tiene rutas asignadas para el día de hoy!</h1>
 
 </div>
