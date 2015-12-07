@@ -70,7 +70,7 @@ $this->params['breadcrumbs'][] = $this->title;
 		var routeID = $("#routeID").val();
 		
 		$.ajax({
-			url: '<?php echo Yii::$app->params['apiBaseUrl']. 'v1/rutas/';?>' + routeID,
+			url: '../../../api/v1/rutas/' + routeID + '?token=' + cargarDeLocalStorage('token'),
 			type: 'get',
 			format: JSON,
 			success: function (data)
