@@ -46,7 +46,7 @@ class User extends BaseUser
             $token->link('user', $this);
         }
 
-        $this->mailer->sendWelcomeMessage($this, isset($token) ? $token : null);
+        //$this->mailer->sendWelcomeMessage($this, isset($token) ? $token : null);
         // TODO enviar correo de bienvenida avisando que la cuenta debe ser activada por un administrador
         $this->trigger(self::AFTER_REGISTER);
 
@@ -61,10 +61,10 @@ class User extends BaseUser
         
         return Yii::$app->mailer->compose()
         
-            ->setTo($email)
+            ->setTo($this->getAttributes()['email'])
             ->setFrom([$this->email => $this->username])
-            //->setSubject($this->subject)
-            //->setTextBody($this->body)
+            ->setSubject(Yii::t('app', ' Welcome to StockManager USER'))
+            ->setTextBody(Yii::t('app', ' Your application has been sent successfully. An administrator of the site will review it. You will be notified when your account is activated.'))
             ->send();
     }
 
