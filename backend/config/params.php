@@ -1,6 +1,6 @@
 <?php
 return [
     'adminEmail' => 'grupo3php@gmail.com',
-	'MaxUserRadius' => '50', //kilometers,
+	'MaxUserRadius' => '5.5', //kilometers,
 	'marketDelay' => '1500', //seconds
 ];
