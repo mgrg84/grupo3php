@@ -32,13 +32,13 @@ class ComercioController extends ActiveController
 	}
 
 	public function actionDeldia() {
-		$POST = Yii::$app->request->post();
+		$GET = Yii::$app->request->get();
 
-		$idUsuario = TokenValidador::validarToken($POST['token']);
+		$idUsuario = TokenValidador::validarToken($GET['token']);
 
-		if( Comercio::getRutaDeHoy($idusuario) )
+		if( !Comercio::getRutaDeHoy($idUsuario) )
 			return [];
-		$comercios = Comercio::comerciosByIdUByFecha($idusuario);
+		$comercios = Comercio::comerciosByIdUByFecha($idUsuario);
 
 		return $comercios;
 	}
