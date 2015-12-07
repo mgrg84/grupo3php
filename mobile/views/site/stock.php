@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="row">
         <div class="col-md-6 col-md-offset-3 col-xs-12">
-        	<form id="form-pedido" action="../../../api/v1/stocks" method="POST" role="form">
+        	<form id="form-stock" action="../../../api/v1/stocks" method="POST" role="form">
         		<legend><?= Yii::t('app', 'Fill Stock') ?></legend>
         	
 				<div class="form-group">
@@ -65,9 +65,9 @@ $this->params['breadcrumbs'][] = $this->title;
 			}
 		});
 
-		$("#form-pedido").on('submit', function(){
+		$("#form-stock").on('submit', function(){
 
-			enviarFormularioPOST("form-pedido", function(data){
+			enviarFormularioPOST("form-stock", function(data){
 				if( data.status == "OK") {
 	                window.location.replace(data.url);
 	            } else {
@@ -76,7 +76,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 	                var errors = new Array();
 	                if ( data.mensajes.error != undefined )
-	                    errors.push([data.mensajes.error, '#form-pedido']);
+	                    errors.push([data.mensajes.error, '#form-stock']);
 	                
 	                if( data.mensajes.idComercio != undefined )
 	                    errors.push([data.mensajes.idComercio, '#comercio']);
