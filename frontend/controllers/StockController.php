@@ -3,16 +3,17 @@
 namespace frontend\controllers;
 
 use Yii;
-use common\models\Pedido;
-use common\models\PedidoSearch;
+use common\models\Stock;
+use common\models\StockSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use backend\filtros\AdminControl;
 
 /**
- * PedidoController implements the CRUD actions for Pedido model.
+ * StockController implements the CRUD actions for Stock model.
  */
-class PedidoController extends Controller
+class StockController extends Controller
 {
     public function behaviors()
     {
@@ -22,33 +23,31 @@ class PedidoController extends Controller
                 'actions' => [
                     'delete' => ['post'],
                 ],
-            ],
+            ]
         ];
     }
 
     /**
-     * Displays a single Pedido model.
-     * @param integer $id
-     * @return mixed
-     */
-    public function actionView($id)
-    {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
-    }
-
-    /**
-     * Creates a new Pedido model.
+     * Creates a new Stock model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionIndex()
     {
-        $model = new Pedido();
+        $model = new Stock();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->render('create', ['model' => $model = new Pedido()]);
+        if ($model->load(Yii::$app->request->post())) {
+            $model2 = Stock::find()->where([
+                'idProducto' => $model->idProducto,
+                'idComercio' => $model->idComercio
+            ])->one();
+            if ($model2 != null) {
+                $model2->cantidad = $model->cantidad;
+                $model2->save();
+            } else {
+                $model->save();
+            }
+            return $this->render('create', ['model' => new Stock()]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -57,7 +56,7 @@ class PedidoController extends Controller
     }
 
     /**
-     * Updates an existing Pedido model.
+     * Updates an existing Stock model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -76,7 +75,7 @@ class PedidoController extends Controller
     }
 
     /**
-     * Deletes an existing Pedido model.
+     * Deletes an existing Stock model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -89,15 +88,15 @@ class PedidoController extends Controller
     }
 
     /**
-     * Finds the Pedido model based on its primary key value.
+     * Finds the Stock model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Pedido the loaded model
+     * @return Stock the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Pedido::findOne($id)) !== null) {
+        if (($model = Stock::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

@@ -44,6 +44,7 @@ AppAsset::register($this);
         $menuItems = [
             ['label' => 'Recorridos', 'url' => ['/rutas']],
             ['label' => 'Pedido', 'url' => ['/pedido']],
+            ['label' => 'Stock', 'url' => ['/stock']]
         ];
         $menuItems[] = [
             'label' => 'Logout (' . Yii::$app->user->identity->username . ')',

@@ -8,13 +8,12 @@ use common\models\Producto;
 use common\models\Comercio;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Pedido */
+/* @var $model common\models\Stock */
 /* @var $form yii\widgets\ActiveForm */
 date_default_timezone_set('America/Montevideo');
 ?>
 
-
-<div class="pedido-form">
+<div class="stock-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
