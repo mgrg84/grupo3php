@@ -4,6 +4,7 @@ namespace frontend\controllers;
 
 use Yii;
 use common\models\Stock;
+use common\models\Ruta;
 use common\models\StockSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -51,6 +52,7 @@ class StockController extends Controller
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'comercios' => $this->comerciosByIdUByFecha()
             ]);
         }
     }
@@ -101,5 +103,21 @@ class StockController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    protected function comerciosByIdUByFecha() {
+        $ruta = Ruta::find()->where([
+            'idUsuario' => Yii::$app->user->id,
+            'fecha' => date('Y-m-d')
+            ])->one();
+        if ($ruta == null) {
+            return array();
+        }
+        $rComercios = $ruta->getRutaComercios();
+        $idComercios = array();
+        foreach ($rComercios as $key => $value) {
+            array_push($idComercios, $value['idComercio']);
+        }
+        return $comercios = Comercio::findAll([$idComercios]);
     }
 }
