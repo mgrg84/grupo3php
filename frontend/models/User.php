@@ -62,8 +62,8 @@ class User extends BaseUser
         return Yii::$app->mailer->compose()
         
             ->setTo($this->getAttributes()['email'])
-            ->setFrom([$this->email => $this->username])
-            ->setSubject(Yii::t('app', ' Welcome to StockManager USER'))
+            ->setFrom([$email => 'Stock Manager'])
+            ->setSubject(Yii::t('app', ' Welcome to StockManager'))
             ->setTextBody(Yii::t('app', ' Your application has been sent successfully. An administrator of the site will review it. You will be notified when your account is activated.'))
             ->send();
     }

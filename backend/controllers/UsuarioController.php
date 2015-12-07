@@ -141,6 +141,15 @@ class UsuarioController extends Controller
         $model = $this->findModel($id);
         $model->confirm();
 
+        Yii::$app->mailer->compose()
+        
+            ->setTo([$model->email => $model->username])
+            ->setFrom($model->email)
+            ->setSubject(Yii::t('app', 'Your account has been activated'))
+            ->setTextBody(Yii::t('app', ' Your account has been activated.'))
+            ->send();
+
+
         return $this->redirect(['view', 'id' => $model->id]);
     }
 
