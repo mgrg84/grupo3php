@@ -32,7 +32,7 @@ class PedidoTest extends DbTestCase
     {
         $model = new Pedido([
             'cantidad' => '5',
-            'fecha' => '18-07-15',
+            'fecha' => '20-07-15',
             'idUsuario' => '1',
             'idProducto' => '1',
             'idComercio' => '1',
@@ -44,7 +44,7 @@ class PedidoTest extends DbTestCase
           
             expect('Que exista una categoria con cantidad', $model->attributes['cantidad']=='5')->true();
 
-            expect('Que exista una categoria con fecha', $model->attributes['fecha']=='18-07-15')->true();
+            expect('Que exista una categoria con fecha', $model->attributes['fecha']=='20-07-15')->true();
 
             expect('Que exista una categoria con este idUsuario', $model->attributes['idUsuario']=='1')->true();
 

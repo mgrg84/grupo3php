@@ -1,6 +1,6 @@
 <?php
 
-namespace tests\codeception\common\unit\models;
+/*namespace tests\codeception\common\unit\models;
 
 use Yii;
 use tests\codeception\common\unit\DbTestCase;
@@ -11,7 +11,7 @@ use tests\codeception\common\fixtures\UserFixture;
 /**
  * Login form test
  */
-class UserTest extends DbTestCase
+/*class UserTest extends DbTestCase
 {
 
     use Specify;
@@ -80,9 +80,7 @@ class UserTest extends DbTestCase
     }
 
 
-    /**
-     * @inheritdoc
-     */
+    
     public function fixtures()
     {
         return [
@@ -92,4 +90,4 @@ class UserTest extends DbTestCase
             ],
         ];
     }
-}
+}*/

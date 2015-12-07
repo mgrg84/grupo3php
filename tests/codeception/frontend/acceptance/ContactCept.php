@@ -1,8 +1,7 @@
 <?php
-use tests\codeception\frontend\AcceptanceTester;
+/*use tests\codeception\frontend\AcceptanceTester;
 use tests\codeception\frontend\_pages\ContactPage;
 
-/* @var $scenario Codeception\Scenario */
 
 $I = new AcceptanceTester($scenario);
 $I->wantTo('ensure that contact works');
@@ -14,7 +13,7 @@ $I->see('Contact', 'h1');
 $I->amGoingTo('submit contact form with no data');
 $contactPage->submit([]);
 if (method_exists($I, 'wait')) {
-    $I->wait(3); // only for selenium
+    $I->wait(3); 
 }
 $I->expectTo('see validations errors');
 $I->see('Contact', 'h1');
@@ -33,7 +32,7 @@ $contactPage->submit([
     'verifyCode' => 'testme',
 ]);
 if (method_exists($I, 'wait')) {
-    $I->wait(3); // only for selenium
+    $I->wait(3); 
 }
 $I->expectTo('see that email adress is wrong');
 $I->dontSee('Name cannot be blank', '.help-block');
@@ -51,6 +50,7 @@ $contactPage->submit([
     'verifyCode' => 'testme',
 ]);
 if (method_exists($I, 'wait')) {
-    $I->wait(3); // only for selenium
+    $I->wait(3); 
 }
 $I->see('Thank you for contacting us. We will respond to you as soon as possible.');
+*/

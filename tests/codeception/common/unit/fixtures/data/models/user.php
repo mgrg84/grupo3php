@@ -1,6 +1,6 @@
 <?php
 
-return [
+/*return [
     [
         'username' => 'santiago.callejas',
         'email' => 'sancagon87@gmail.com',
@@ -16,4 +16,4 @@ return [
         'ubicacionDomicilio' => 'Esta es la ubicacion'    
         
     ],
-];
+];*/

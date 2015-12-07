@@ -1,9 +1,8 @@
 <?php
 
-use tests\codeception\backend\FunctionalTester;
+/*use tests\codeception\backend\FunctionalTester;
 use tests\codeception\common\_pages\LoginPage;
 
-/* @var $scenario Codeception\Scenario */
 
 $I = new FunctionalTester($scenario);
 $I->wantTo('ensure login page works');
@@ -28,3 +27,4 @@ $I->expectTo('see that user is logged');
 $I->seeLink('Logout (erau)');
 $I->dontSeeLink('Login');
 $I->dontSeeLink('Signup');
+*/
