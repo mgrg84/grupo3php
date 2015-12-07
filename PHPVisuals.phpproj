@@ -208,6 +208,18 @@
     {
     "ProjRelPath" = "T"
     }
+    "backend\\filtros"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\filtros\\AdminControl.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "backend\\filtros\\ControlDeAcceso.php"
+    {
+    "ProjRelPath" = "T"
+    }
     "backend\\models"
     {
     "ProjRelPath" = "T"
@@ -3244,6 +3256,10 @@
     {
     "ProjRelPath" = "T"
     }
+    "codeception.yml"
+    {
+    "ProjRelPath" = "T"
+    }
     "common"
     {
     "ProjRelPath" = "T"
@@ -3381,6 +3397,10 @@
     "ProjRelPath" = "T"
     }
     "composer.phar"
+    {
+    "ProjRelPath" = "T"
+    }
+    "composer_bak.lock"
     {
     "ProjRelPath" = "T"
     }
@@ -3940,7 +3960,143 @@
     {
     "ProjRelPath" = "T"
     }
+    "frontend\\web\\assets"
+    {
+    "ProjRelPath" = "T"
+    }
     "frontend\\web\\assets\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\1f30a355"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\1f30a355\\css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\1f30a355\\css\\bootstrap-theme.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\1f30a355\\css\\bootstrap-theme.css.map"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\1f30a355\\css\\bootstrap-theme.min.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\1f30a355\\css\\bootstrap.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\1f30a355\\css\\bootstrap.css.map"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\1f30a355\\css\\bootstrap.min.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\1f30a355\\fonts"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\1f30a355\\fonts\\glyphicons-halflings-regular.eot"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\1f30a355\\fonts\\glyphicons-halflings-regular.svg"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\1f30a355\\fonts\\glyphicons-halflings-regular.ttf"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\1f30a355\\fonts\\glyphicons-halflings-regular.woff"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\1f30a355\\fonts\\glyphicons-halflings-regular.woff2"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\1f30a355\\js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\1f30a355\\js\\bootstrap.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\1f30a355\\js\\bootstrap.min.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\1f30a355\\js\\npm.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\224b19bb"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\224b19bb\\bg.png"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\224b19bb\\main.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\224b19bb\\toolbar.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\224b19bb\\toolbar.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\30e3b0e8"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\30e3b0e8\\yii.activeForm.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\30e3b0e8\\yii.captcha.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\30e3b0e8\\yii.gridView.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\30e3b0e8\\yii.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\30e3b0e8\\yii.validation.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\918a51cc"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\918a51cc\\jquery.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\918a51cc\\jquery.min.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "frontend\\web\\assets\\918a51cc\\jquery.min.map"
     {
     "ProjRelPath" = "T"
     }
@@ -3980,6 +4136,158 @@
     {
     "ProjRelPath" = "T"
     }
+    "mobile"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\assets"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\assets\\AppAsset.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\config"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\config\\bootstrap.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\config\\main-local.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\config\\main.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\config\\params-local.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\config\\params.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\controllers"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\controllers\\SiteController.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\models"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\models\\.gitkeep"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\runtime"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\runtime\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\views"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\views\\layouts"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\views\\layouts\\main.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\views\\site"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\views\\site\\error.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\views\\site\\index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\views\\site\\login.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\views\\site\\pedido.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\views\\site\\ruta.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\views\\site\\stock.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\web"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\web\\.htaccess"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\web\\assets"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\web\\assets\\.gitignore"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\web\\css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\web\\css\\site.css"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\web\\favicon.ico"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\web\\index.php"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\web\\js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\web\\js\\algoritmos.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\web\\js\\CryptoJS v3.1.2.zip"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\web\\js\\sha256.js"
+    {
+    "ProjRelPath" = "T"
+    }
+    "mobile\\web\\robots.txt"
+    {
+    "ProjRelPath" = "T"
+    }
     "php.ini"
     {
     "ProjRelPath" = "T"
@@ -4001,6 +4309,10 @@
     "ProjRelPath" = "T"
     }
     "PHPVisuals.intellisense.cache"
+    {
+    "ProjRelPath" = "T"
+    }
+    "PHPVisuals.puo"
     {
     "ProjRelPath" = "T"
     }
@@ -4537,6 +4849,10 @@
     "ProjRelPath" = "T"
     }
     "tests\\README.md"
+    {
+    "ProjRelPath" = "T"
+    }
+    "TODO"
     {
     "ProjRelPath" = "T"
     }
