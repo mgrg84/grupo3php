@@ -27,7 +27,7 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
 
     <?= $form->field($model, 'password')->passwordInput() ?>
 
-    <input type="hidden" value="<?= $model->ubicacionDomicilio ?>" id="ubicacionDomicilio" name="ubicacionDomicilio" />
+    <input type="hidden" value="<?= $create ? '' : $model->ubicacionDomicilio ?>" id="ubicacionDomicilio" name="ubicacionDomicilio" />
 
     <div class="form-group" style="height:350px; width:auto; padding-bottom:30px">
         <label class="control-label" for="pac-input">Ubicacion Domicilio:</label>
@@ -68,7 +68,7 @@ $this->registerCssFile($baseUrl .'/css/maps.css');
     });
     <?php 
 
-        $latLong = explode(";", $model->ubicacionDomicilio); 
+    $latLong = explode(";", $create ? '' : $model->ubicacionDomicilio); 
         if( sizeof($latLong) != 2 ) {
             $latLong = ["-34.8912486","-56.18716110000002"];
         }

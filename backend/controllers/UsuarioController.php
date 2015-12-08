@@ -78,7 +78,7 @@ class UsuarioController extends Controller
             return $this->redirect('index');
         } else {
             return $this->render('create', [
-                'model' => $model,
+                'model' => $model
             ]);
         }
     }
